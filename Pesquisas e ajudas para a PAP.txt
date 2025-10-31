@@ -1,0 +1,6 @@
+Vídeo útil (Criptografia: Encriptação e decriptação na prática - Entenda sobre cifragem | Dias de Dev): 
+- https://www.youtube.com/watch?v=4MCO-FgukcA
+
+Artigo na Internet sobre criptografia:
+- https://www.kaspersky.com.br/resource-center/definitions/encryption
+
