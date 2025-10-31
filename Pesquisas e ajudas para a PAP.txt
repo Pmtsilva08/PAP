@@ -4,3 +4,10 @@ Vídeo útil (Criptografia: Encriptação e decriptação na prática - Entenda 
 Artigo na Internet sobre criptografia:
 - https://www.kaspersky.com.br/resource-center/definitions/encryption
 
+
+Vídeos importante sobre hashing:
+- https://www.youtube.com/watch?v=UtCcMuiE0TE
+-
+
+Artigo importante sobre hashing:
+- https://www.eset.com/br/artigos/hash-o-que-e-como-funciona/
