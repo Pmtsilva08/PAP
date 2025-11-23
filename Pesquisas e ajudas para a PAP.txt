@@ -7,7 +7,14 @@ Artigo na Internet sobre criptografia:
 
 Vídeos importante sobre hashing:
 - https://www.youtube.com/watch?v=UtCcMuiE0TE
--
+- https://www.youtube.com/watch?v=hcUBjPo5-jk
+- https://www.youtube.com/watch?v=tjDkjZ4xkL8
 
 Artigo importante sobre hashing:
 - https://www.eset.com/br/artigos/hash-o-que-e-como-funciona/
+
+Artigo importantissimo sobre hash na autenticação de passwords:
+- https://forense.io/glossario/o-que-e-password-hashing-e-sua-importancia-na-seguranca/
+
+A encriptação é muito mais fácil de quebrar do que um hash, e um hash também é unidirecional, enquanto a encriptação não é. A encriptação é para dados que precisam ser recuperados em algum momento (não a uses para recuperar e enviar a palavra-passe ao utilizador se ele se esquecer, isso é uma péssima ideia). Mesmo que saibamos como o hash funciona, não pode ser revertido porque usa uma função unidirecional, basicamente uma equação matemática que não pode ser revertida.
+É como fazer um bolo. sabemos o processo os ingredientes, mas depois de o bolo estar feito não conseguimos obter os ingredientes iniciais outra vez.
