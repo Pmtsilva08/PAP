@@ -21,7 +21,17 @@
 
         <Label>Nomes</Label>
         <!--Adiciona um rótulo (Label) com o texto "Nomes".-->
+        <ListBox Grid.Row="1" x:Name="lstNomes"/>
+        <!--Crio uma listbox na segunda linha. Uma ListBox (caixa de lista) é um controlo que mostra uma lista de itens que o utilizador pode ver e selecionar.-->
+        <!--O x:Name é um identificador único que dás ao controlo para poderes referenciá-lo no código C#. É como dar um nome próprio ao controlo para o poderes chamar mais tarde!-->
 
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <!--Colocar na linha 1 (segunda linha)
+            e na coluna 1 (segunda coluna) da Grid.
+            Margem de 5 pixels à esquerda-->
+            <TextBox x:Name="txtNome"/>
+            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Adicionar Nome</Button>
 
+        </StackPanel>
     </Grid>
 </Window>
