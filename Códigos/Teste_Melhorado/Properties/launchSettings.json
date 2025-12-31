@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Teste_Melhorado (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Teste_Melhorado (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

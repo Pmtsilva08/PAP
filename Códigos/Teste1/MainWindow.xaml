@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Teste1.MainWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Teste1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Teste1">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="Base"/>
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <!--Todo o meu visual pertence à classe MainWindow por causa de x:Class="Teste1.MainWindow" -->
+        <Grid.RowDefinitions>
+            <!--Define as linhas da grade-->
+            <RowDefinition Height="Auto"/>
+            <!-- auto - adapta-se ao conteudo do texto-->
+            <RowDefinition Height="*"/> 
+            <!-- * - Ocupa o restante do espaço disponivel-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <TitleBar x:Name="AppTitleBar"
+                  Title="Utilizador">
+            <TitleBar.IconSource>
+                <FontIconSource Glyph="&#xF4AA;"/>
+            </TitleBar.IconSource>
+        </TitleBar>
+        <StackPanel 
+            Orientation="Vertical"
+            Spacing="10"
+            HorizontalAlignment="Center"
+            Grid.Row="1">
+            <TextBlock Text="Nome de Utilizador:" FontSize="16" Margin="0,20,0,0"/> <!--Label-->
+            <TextBox x:Name="UserName" Width="300" PlaceholderText="Insira o seu nome de utilizador..."/>
+            <TextBlock Text="Palavra-Passe: " FontSize="16" Margin="0,20,0,0"/>
+            <!--Label-->
+            <TextBox x:Name="Password" Width="300" PlaceholderText="Insira a sua palavra-passe"/>
+            <Button x:Name="submit" Content="Guardar" Width="300" Margin="0,20,0,0" Click="SubmitClick"/>
+            <!-- Margin - left, top, right, bottom-->
+        </StackPanel>
+    </Grid>                                                                      
+</Window>

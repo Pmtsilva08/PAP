@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Nomes\\Nomes.csproj": {}
+    "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Nomes\\Nomes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Nomes\\Nomes.csproj": {
+    "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Nomes\\Nomes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Nomes\\Nomes.csproj",
+        "projectUniqueName": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Nomes\\Nomes.csproj",
         "projectName": "Nomes",
-        "projectPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Nomes\\Nomes.csproj",
+        "projectPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Nomes\\Nomes.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Nomes\\obj\\",
+        "outputPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Nomes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

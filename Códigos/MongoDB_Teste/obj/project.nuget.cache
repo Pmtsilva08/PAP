@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "DjNVgt/xWlE=",
+  "dgSpecHash": "czDj83MeRmc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\MongoDB_Teste\\MongoDB_Teste.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\MongoDB_Teste\\MongoDB_Teste.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pedro\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\mongodb.bson\\3.5.2\\mongodb.bson.3.5.2.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\mongodb.driver\\3.5.2\\mongodb.driver.3.5.2.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
+  ],
   "logs": []
 }
