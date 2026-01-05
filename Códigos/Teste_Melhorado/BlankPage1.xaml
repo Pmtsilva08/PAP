@@ -15,19 +15,21 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1"
-                    Orientation="Horizontal"
+                    Background="blue"
+                    Orientation="Vertical"
                     HorizontalAlignment="Center"
                     Spacing="10">
-            <TextBlock Text="Utilizador:" FontSize="16" Margin="0,20,0,0"/>
+            <TextBlock Text="Utilizador:" FontSize="16"/>
             <TextBlock x:Name="User" FontSize="16"/>
+            
 
-            <TextBlock Text="Email:" FontSize="16" Margin="0,20,0,0"/>
+            <TextBlock Text="Email:" FontSize="16" />
             <TextBlock x:Name="Email" FontSize="16"/>
 
-            <TextBlock Text="Nova Nota:" FontSize="16" Margin="0,20,0,0"/>
+            <TextBlock Text="Nova Nota:" FontSize="16" />
             <TextBox x:Name="Note_Title" Width="300" PlaceholderText="Escreva um título para a nota..."/>
             <TextBox x:Name="Note_Content" Width="300" PlaceholderText="Escreva o conteúdo da sua nota..."/>
-            <Button x:Name="Submit" Content="Guardar Nota"  Width="300" Margin="0,20,0,0" Click="Submit_Note"/> 
+            <Button x:Name="Submit" Content="Guardar Nota"  Width="300" Click="Submit_Note"/> 
         </StackPanel>
     </Grid>
 </Page>

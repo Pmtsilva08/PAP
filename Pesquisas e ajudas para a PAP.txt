@@ -42,3 +42,8 @@ https://learn.microsoft.com/pt-pt/windows/apps/winui/winui3/ - Interface gráfic
 
 
 para projeto final. Criar classe mais segura para guardar a sessão de um utilizador na navegação entre páginas
+
+
+
+
+

@@ -24,6 +24,8 @@
             x:Name="AppTitleBar"
             Title="Notas"/>
         <StackPanel
+            x:Name="FormPanel"
+            Background="red"
             Grid.Row="1"
             Orientation="Vertical"
             HorizontalAlignment="Center" 
@@ -37,5 +39,7 @@
             <TextBox x:Name="Email" Width="300" PlaceholderText="Insira o seu email"/>
             <Button x:Name="submit" Content="Guardar" Width="300" Margin="0,20,0,0" Click="Submit_Click"/>
         </StackPanel>
+
+        <Frame x:Name="MainFrame" Background="yellow" Grid.Row="1" Visibility="Collapsed"/>
     </Grid>
 </Window>

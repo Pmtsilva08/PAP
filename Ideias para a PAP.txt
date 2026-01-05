@@ -1,0 +1,11 @@
+Ideias para a PAP:
+
+verificação com o email;
+
+Melhorar o visual da page create account;
+
+colocar mais línguas no site;
+
+colocar política de password;
+
+fazer verificação de duas etapas

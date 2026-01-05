@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\MongoDB_Teste\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\mongodb_teste\\mongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|solutionrelative:mongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\mongodb_teste\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\mongodb_teste\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\mongodb_teste\\mongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|solutionrelative:mongo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75EFE366-6EA6-1DDE-7118-607FC94E12B3}|MongoDB_Teste.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\mongodb_teste\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Mongo.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\MongoDB_Teste\\Mongo.cs",
               "RelativeDocumentMoniker": "Mongo.cs",
@@ -43,18 +43,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\MongoDB_Teste\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\MongoDB_Teste\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-08T23:02:33.312Z"
+              "WhenOpened": "2025-12-08T23:02:33.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\MongoDB_Teste\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -62,7 +63,8 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T23:02:31.985Z"
+              "WhenOpened": "2025-12-08T23:02:31.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

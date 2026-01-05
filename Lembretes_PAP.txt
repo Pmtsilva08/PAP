@@ -1,0 +1,4 @@
+Textos para traduzir no final da app estar feita em cada page da minha app:
+
+Create Account:
+- 
