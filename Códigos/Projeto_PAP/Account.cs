@@ -11,7 +11,7 @@ namespace Projeto_PAP
     public class Account
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        public ObjectId Id { get; set; } 
         [BsonElement("first_name")]
         [BsonRequired]
         public string FirstName { get; set; } = string.Empty;

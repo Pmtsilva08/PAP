@@ -9,3 +9,19 @@ colocar mais línguas no site;
 colocar política de password;
 
 fazer verificação de duas etapas
+
+
+Check list envio de email:
+
+ Criar projeto no Google Cloud Console
+ Ativar Gmail API
+ Configurar ecrã de consentimento OAuth
+ Criar credenciais OAuth (Aplicação para computador)
+ Baixar credentials.json
+ Install-Package Google.Apis.Gmail.v1
+ Install-Package Google.Apis.Auth
+ Install-Package MimeKit
+ Criar EmailService.cs
+ Criar VerificationCode.cs
+ Adicionar credentials.json ao projeto
+ Testar!

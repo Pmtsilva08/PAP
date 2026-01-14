@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_PAP
 {
-    public static class Session
+    internal static class Session_User
     {
     }
 }

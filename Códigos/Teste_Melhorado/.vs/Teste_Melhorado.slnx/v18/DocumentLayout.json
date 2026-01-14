@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\blankpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:blankpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\sessao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:sessao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,8 @@
       "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\blankpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:blankpage1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\teste_melhorado\\blankpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F4FBCC0-A666-7500-B6EC-BC9D2FACA0B0}|Teste_Melhorado.csproj|solutionrelative:blankpage1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -44,14 +44,13 @@
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-01T17:08:40.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-01T17:08:40.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "sessao.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\sessao.cs",
               "RelativeDocumentMoniker": "sessao.cs",
@@ -59,12 +58,11 @@
               "RelativeToolTip": "sessao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T13:09:35.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T13:09:35.57Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\Account.cs",
               "RelativeDocumentMoniker": "Account.cs",
@@ -72,24 +70,24 @@
               "RelativeToolTip": "Account.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T16:33:34.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T16:33:34.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "BlankPage1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\BlankPage1.xaml.cs",
               "RelativeDocumentMoniker": "BlankPage1.xaml.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\BlankPage1.xaml.cs",
               "RelativeToolTip": "BlankPage1.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADEAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T17:35:03.933Z"
+              "WhenOpened": "2025-12-26T17:35:03.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BlankPage1.xaml",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\BlankPage1.xaml",
               "RelativeDocumentMoniker": "BlankPage1.xaml",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "BlankPage1.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-30T13:08:40.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T13:08:40.838Z"
             }
           ]
         },
@@ -108,13 +105,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Teste_Melhorado\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wCcAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-26T16:33:11.781Z",
               "EditorCaption": ""

@@ -34,7 +34,7 @@ namespace Teste_Melhorado
             var client = new MongoClient("mongodb+srv://Pmtsilva08:008421Apmcjmo!@cluster0.quvshkk.mongodb.net/?appName=Cluster0");
             var database = client.GetDatabase("testes"); 
             var collection = database.GetCollection<Account>("utilizadores");
-            //Estou a dizer: "Quando eu inserir ou ler documentos desta coleção, usa a classe Note como molde."
+            //Estou a dizer: "Quando eu inserir ou ler documentos desta coleção, usa a classe Account como molde."
             var note = new Note
             {
                 Title = Note_Title.Text,

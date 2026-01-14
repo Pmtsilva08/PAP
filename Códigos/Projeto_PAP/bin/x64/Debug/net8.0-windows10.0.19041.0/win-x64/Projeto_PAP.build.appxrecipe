@@ -595,6 +595,12 @@
     <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\dnsclient\1.6.1\lib\net5.0\DnsClient.dll">
       <PackagePath>DnsClient.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\konscious.security.cryptography.argon2\1.3.1\lib\net8.0\Konscious.Security.Cryptography.Argon2.dll">
+      <PackagePath>Konscious.Security.Cryptography.Argon2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\konscious.security.cryptography.blake2\1.1.1\lib\net8.0\Konscious.Security.Cryptography.Blake2.dll">
+      <PackagePath>Konscious.Security.Cryptography.Blake2.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\microsoft.extensions.logging.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
