@@ -59,13 +59,41 @@ namespace Projeto_PAP
                 });
 
                 // Cria o serviço Gmail configurado e pronto a enviar emails.
-                // BaseClientService.Initializer é o "formulário de configuração" usado por todos os serviços Google.
+                // BaseClientService.Initializer é o "formulário de configuração" usado por todos os serviços Google. Eu só uso o BaseClientService para "encontrar" a classe Initializer.
                 // HttpClientInitializer recebe o token OAuth2 (prova de autorização).
                 // ApplicationName identifica a app nos logs da Google.
                 // GmailService é o serviço específico para trabalhar com emails, baseado no modelo genérico BaseClientService.
 
+                var mimeMessage = new MimeMessage(); // Cria um novo email formatado(com a estrutura de um email) usando a biblioteca MimeKit(serve principalmente para emails)
+                mimeMessage.From.Add(new MailboxAddress(SenderName, SenderEmail)); // Define o remetente do email (quem envia)
+                mimeMessage.To.Add(new MailboxAddress("", recipientEmail));
+                mimeMessage.Subject = "Password Security - Verification Code";
+                mimeMessage.Body = new TextPart("html")
+                {
+                    Text = $@"
+                        <html>
+                        <body style='font-family: Arial, sans-serif; padding: 20px;'>
+                            <h2 style='color: #333;'>Email Verification</h2>
+                            <p>Your verification code is:</p>
+                            <h1 style='color: #007bff; font-size: 32px; letter-spacing: 5px;'>{code}</h1>
+                            <p>This code expires in <strong>1 minute</strong>.</p>
+                            <p style='color: #666; font-size: 12px;'>
+                                If you didn't request this code, please ignore this email.
+                            </p>
+                        </body>
+                        </html>"
+                };
+                using (var memoryStream = new MemoryStream()) // Cria um ficheiro temporario na RAM
+                {
+                    await mimeMessage.WriteToAsync(memoryStream); 
+                };
+                
 
             }
+            catch
+            {
+
+            }   
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dZRaTXvWHvo=",
+  "dgSpecHash": "MNIHRogYh/E=",
   "success": true,
   "projectFilePath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\Projeto_PAP.csproj",
   "expectedPackageFiles": [
@@ -44,16 +44,16 @@
     "C:\\Users\\pedro\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.22\\microsoft.netcore.app.runtime.win-x86.8.0.22.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.23\\microsoft.netcore.app.runtime.win-x86.8.0.23.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.22\\microsoft.aspnetcore.app.runtime.win-x86.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.22\\microsoft.netcore.app.runtime.win-arm64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.22\\microsoft.aspnetcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.22\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.22\\microsoft.netcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.22.nupkg.sha512"
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.23\\microsoft.aspnetcore.app.runtime.win-x86.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\8.0.23\\microsoft.netcore.app.runtime.win-arm64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.23\\microsoft.aspnetcore.app.runtime.win-x64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\8.0.23\\microsoft.windowsdesktop.app.runtime.win-arm64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.23\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\8.0.23\\microsoft.aspnetcore.app.runtime.win-arm64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.23\\microsoft.netcore.app.runtime.win-x64.8.0.23.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.23\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.23.nupkg.sha512"
   ],
   "logs": []
 }
