@@ -89,11 +89,13 @@ namespace Projeto_PAP
             var collection = database.GetCollection<Account>("Users"); //Quando eu ler documentos ou inserir documentos nesta coleção vou usar a classe Account como molde 
             var user = new Account
             {
-                FirstName = FirstNameTextBox.Text,
-                Lastname = LastNameTextBox.Text,
-                EmailAddress = EmailTextBox.Text,
+                FirstName = FirstNameTextBox.Text.Trim(),
+                Lastname = LastNameTextBox.Text.Trim(),
+                EmailAddress = EmailTextBox.Text.Trim().ToLower(),
                 Password = hashedPassword
             };
+
+
 
             try
             {

@@ -83,16 +83,35 @@ namespace Projeto_PAP
                         </body>
                         </html>"
                 };
-                using (var memoryStream = new MemoryStream()) // Cria um ficheiro temporario na RAM
+                using (var memoryStream = new MemoryStream()) // Cria um ficheiro temporario na RAM. Mas porque? Porque a Gmail API precisa de uma string de texto base64.
+                                                              // Mas o mimeMessage não consegue converter diretamente o objeto para string. Por isso é que faço um passo intermédio que é armazenar o objeto num ficheiro temporário na RAM e então depois converter para texto.
                 {
-                    await mimeMessage.WriteToAsync(memoryStream); 
-                };
-                
+                    await mimeMessage.WriteToAsync(memoryStream); // Escreve o conteúdo do email formatado para o ficheiro temporário na RAM e bytes.
+                    var rawMessage = Convert.ToBase64String(memoryStream.ToArray()) // Converte o conteúdo do ficheiro temporário (bytes) para uma string em base64.o memoryStream já está em bytes mas para converter para string é preciso usar o ToArray() para obter o array de bytes, é preciso mesmo um array de bytes.
+
+                        // A Gmail API exige que a mensagem seja codificada em base64url, que é uma variação da base64 padrão, é uma regra deles.
+                        //Existem certos caracteres que na Base64 normal não são seguros para URLs como '+' e '/'.
+                        .Replace('+', '-') //+ passa para -
+                        .Replace('/', '_') // / passa para _
+                        .Replace("=", ""); //o igual desaparece
+
+                    var gmailMessage = new Message // Crio o objeto Message da Gmail API que representa o email a ser enviado
+                    {
+                        Raw = rawMessage // Define o conteúdo do email codificado em base64url
+                    };
+
+                    await service.Users.Messages.Send(gmailMessage, "me").ExecuteAsync();
+
+                }
+
+                return true;
+
 
             }
-            catch
+            catch (Exception ex)
             {
-
+                System.Diagnostics.Debug.WriteLine($"Erro ao enviar email: {ex.Message}");
+                return false;
             }   
         }
     }
