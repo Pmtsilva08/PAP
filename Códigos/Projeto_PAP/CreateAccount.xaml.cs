@@ -95,6 +95,8 @@ namespace Projeto_PAP
                 Password = hashedPassword
             };
 
+            Frame.Navigate(typeof(CodeVerification));
+
 
 
             try
