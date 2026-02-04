@@ -12,6 +12,7 @@ Vídeos importante sobre hashing:
 
 Artigo importante sobre hashing:
 - https://www.eset.com/br/artigos/hash-o-que-e-como-funciona/
+- https://valorinveste.globo.com/objetivo/organize-as-contas/noticia/2022/06/23/quanto-tempo-leva-para-um-hacker-descobrir-sua-senha.ghtml
 
 Artigo importantissimo sobre hash na autenticação de passwords:
 - https://forense.io/glossario/o-que-e-password-hashing-e-sua-importancia-na-seguranca/

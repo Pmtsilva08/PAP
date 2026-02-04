@@ -227,7 +227,6 @@ C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Pr
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\hostfxr.dll
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\hostpolicy.dll
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordaccore.dll
-C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordaccore_amd64_amd64_8.0.2225.52707.dll
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordbi.dll
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscorrc.dll
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\msquic.dll
@@ -287,3 +286,15 @@ C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Pr
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\LoginPage.g.cs
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\LoginPage.xaml
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\LoginPage.xbf
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\credentials.json
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\BouncyCastle.Cryptography.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Google.Apis.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Google.Apis.Auth.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Google.Apis.Core.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Google.Apis.Gmail.v1.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MimeKit.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.CodeDom.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Management.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\System.Security.Cryptography.Pkcs.dll
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\mscordaccore_amd64_amd64_8.0.2325.60607.dll

@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\codeverification.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:codeverification.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\createaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:createaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\createaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:createaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\createaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:createaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:passwordhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|c:\\users\\pedro\\onedrive - agrupamento de escolas templ\u00E1rios\\12p\\pap\\c\u00F3digos\\projeto_pap\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10BE7EE7-5D7B-B43C-E534-73C63FD84FB1}|Projeto_PAP.csproj|solutionrelative:emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -40,7 +36,7 @@
               "RelativeDocumentMoniker": "PasswordHash.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\PasswordHash.cs",
               "RelativeToolTip": "PasswordHash.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T12:22:59.323Z",
               "IsPinned": true,
@@ -48,41 +44,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\EmailService.cs",
-              "RelativeDocumentMoniker": "EmailService.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\EmailService.cs",
-              "RelativeToolTip": "EmailService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA1wCMAAAC1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T16:56:42.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CreateAccount.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\CreateAccount.xaml.cs",
               "RelativeDocumentMoniker": "CreateAccount.xaml.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\CreateAccount.xaml.cs",
               "RelativeToolTip": "CreateAccount.xaml.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAowGEAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAAANYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-01T17:44:17.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CodeVerification.xaml",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\CodeVerification.xaml",
-              "RelativeDocumentMoniker": "CodeVerification.xaml",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\CodeVerification.xaml",
-              "RelativeToolTip": "CodeVerification.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-23T10:04:41.649Z",
               "EditorCaption": ""
             },
             {
@@ -93,9 +63,22 @@
               "RelativeDocumentMoniker": "CreateAccount.xaml",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\CreateAccount.xaml",
               "RelativeToolTip": "CreateAccount.xaml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-01T17:44:11.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\EmailService.cs",
+              "RelativeDocumentMoniker": "EmailService.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\EmailService.cs",
+              "RelativeToolTip": "EmailService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T16:56:42.163Z",
               "EditorCaption": ""
             }
           ]
