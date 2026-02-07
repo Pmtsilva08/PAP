@@ -14,7 +14,9 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using MongoDB.Driver;
 using System.Net.Mail;
-using System.Security.Cryptography; 
+using System.Security.Cryptography;
+using Windows.Storage;
+using System.Text.Json;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -68,7 +70,44 @@ namespace Projeto_PAP
                 return;
             }
 
-            if(ConfirmPasswordBox.Password != PasswordBox.Password)
+            string local_folder = ApplicationData.Current.LocalFolder.Path;
+            string path_file = Path.Combine(local_folder, "email_attempts.json"); 
+            Dictionary<string, List<DateTime>> emails = new Dictionary<string, List<DateTime>>(); 
+
+            if (File.Exists(path_file))
+            {
+                string json_content = File.ReadAllText(path_file);
+                emails = JsonSerializer.Deserialize<Dictionary<string, List<DateTime>>>(json_content);
+            }
+            else
+            {
+                File.Create(path_file).Close();
+            }
+
+            if (emails.ContainsKey(EmailTextBox.Text))
+            {
+                int amount_email_dateTime = emails[EmailTextBox.Text].Count;
+                DateTime last_time_email = emails[EmailTextBox.Text].Last();
+                if (amount_email_dateTime % 5 == 0 && (DateTime.Now - last_time_email).TotalSeconds < 300)
+                {
+                    ContentDialog erroAttempts = new ContentDialog()
+                    {
+                        Title = "Error",
+                        Content = "Number of attempts per email exceeded, try again in 5 minutes!",
+                        CloseButtonText = "OK",
+                        XamlRoot = this.XamlRoot
+                    };
+                    await erroAttempts.ShowAsync();
+                    return;
+                }
+            }
+            else
+            {
+                var time = DateTime.Now;
+                emails.Add(EmailTextBox.Text, time);
+            }
+
+            if (ConfirmPasswordBox.Password != PasswordBox.Password)
             {
                 ContentDialog erroMessage = new ContentDialog()
                 {
@@ -197,7 +236,7 @@ namespace Projeto_PAP
                         return;
                     }
                     else
-                    {
+                    {                         
                         string enteredCode = num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text;
                         if (enteredCode == codeVerification)
                         {
