@@ -53,8 +53,8 @@
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
         Background="white"
-        Height="580"
-        Width="450"
+        Height="595"
+        Width="460"
         CornerRadius="13,13,0,0"
         Orientation="Vertical"
         Spacing="5">
@@ -76,13 +76,15 @@
             <TextBlock
             Text="Email Address" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
             <TextBox x:Name="EmailTextBox" Width="300" PlaceholderText="Enter your email..." HorizontalAlignment="Center"/>
-            
+
             <TextBlock
             Text="Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
             <PasswordBox x:Name="PasswordBox" Width="300" PlaceholderText="Enter your password..." HorizontalAlignment="Center"/>
+            <TextBlock
+            x:Name="PasswordStrength" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0" Height="auto" Padding="0"/>
 
             <TextBlock
-            Text="Confirm Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
+            Text="Confirm Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,5,0,0"/>
             <PasswordBox x:Name="ConfirmPasswordBox" Width="300" PlaceholderText="Confirm your password..." HorizontalAlignment="Center"/>
 
             <Button
@@ -95,7 +97,7 @@
             Margin="0,20,0,0"/>
         </StackPanel>
 
-        <StackPanel Background="white" Width="450" Height="50" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 630, 0, 0" CornerRadius="0,0,13,13">
+        <StackPanel Background="white" Width="460" Height="50" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 641, 0, 0" CornerRadius="0,0,13,13">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
                 <TextBlock Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
                 <HyperlinkButton Content="Login" Click="Login_Click" FontSize="14" VerticalAlignment="Center"/>
@@ -103,3 +105,4 @@
         </StackPanel>
     </Grid>
 </Page>
+    

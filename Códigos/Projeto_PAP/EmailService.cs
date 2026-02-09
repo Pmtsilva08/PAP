@@ -76,7 +76,7 @@ namespace Projeto_PAP
                             <h2 style='color: #333;'>Email Verification</h2>
                             <p>Your verification code is:</p>
                             <h1 style='color: #007bff; font-size: 32px; letter-spacing: 5px;'>{code}</h1>
-                            <p>This code expires in <strong>1 minute</strong>.</p>
+                            <p>This code expires in <strong>5 minutes</strong>.</p>
                             <p style='color: #666; font-size: 12px;'>
                                 If you didn't request this code, please ignore this email.
                             </p>

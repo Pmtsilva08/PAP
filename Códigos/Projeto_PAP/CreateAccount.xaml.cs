@@ -17,6 +17,7 @@ using System.Net.Mail;
 using System.Security.Cryptography;
 using Windows.Storage;
 using System.Text.Json;
+using Microsoft.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -31,7 +32,45 @@ namespace Projeto_PAP
         public CreateAccount()
         {
             InitializeComponent();
+
+            var color_red = new SolidColorBrush(Colors.Red);
+            var color_orange = new SolidColorBrush(Colors.Orange);
+            var color_green = new SolidColorBrush(Colors.Green);
+
+            PasswordBox.PasswordChanged += (s, args) =>
+            {
+                string password = PasswordBox.Password;
+                int score = 0;
+
+                if (password.Length >= 8) score++;
+                if (password.Length >= 12) score++;
+                if (password.Any(char.IsUpper)) score++;
+                if (password.Any(char.IsLower)) score++;
+                if (password.Any(char.IsDigit)) score++;
+                if (password.Any(c => !char.IsLetterOrDigit(c))) score++; 
+
+                if (password.Length == 0)
+                {
+                    PasswordStrength.Text = "";
+                }
+                else if (score <= 3)
+                {
+                    PasswordStrength.Foreground = color_red;
+                    PasswordStrength.Text = "Weak! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.";
+                }
+                else if (score == 4)
+                {
+                    PasswordStrength.Foreground = color_orange;
+                    PasswordStrength.Text = "Medium! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.";
+                }
+                else
+                {
+                    PasswordStrength.Foreground = color_green;
+                    PasswordStrength.Text = "Strong";
+                }
+            };
         }
+
 
         private async void CreateAccountClick(object sender, RoutedEventArgs e)
         {
@@ -72,23 +111,33 @@ namespace Projeto_PAP
 
             string local_folder = ApplicationData.Current.LocalFolder.Path;
             string path_file = Path.Combine(local_folder, "email_attempts.json"); 
-            Dictionary<string, List<DateTime>> emails = new Dictionary<string, List<DateTime>>(); 
+            Dictionary<string, List<DateTime>>? emails = new Dictionary<string, List<DateTime>>();
+            bool new_email = false;
+            bool add_time_for_email = false;
 
-            if (File.Exists(path_file))
-            {
-                string json_content = File.ReadAllText(path_file);
-                emails = JsonSerializer.Deserialize<Dictionary<string, List<DateTime>>>(json_content);
-            }
-            else
+            if (!File.Exists(path_file))
             {
                 File.Create(path_file).Close();
             }
 
+            DateTime last_modified = File.GetLastWriteTime(path_file);
+
+            if ((DateTime.Now - last_modified).TotalSeconds > 3600)
+            {
+                File.WriteAllText(path_file, "");
+            }
+
+            string json_content = File.ReadAllText(path_file);
+            if (!string.IsNullOrWhiteSpace(json_content))
+            {
+                emails = JsonSerializer.Deserialize<Dictionary<string, List<DateTime>>>(json_content);
+            }
+            
             if (emails.ContainsKey(EmailTextBox.Text))
             {
                 int amount_email_dateTime = emails[EmailTextBox.Text].Count;
                 DateTime last_time_email = emails[EmailTextBox.Text].Last();
-                if (amount_email_dateTime % 5 == 0 && (DateTime.Now - last_time_email).TotalSeconds < 300)
+                if (amount_email_dateTime >= 5 && (DateTime.Now - last_time_email).TotalSeconds < 300)
                 {
                     ContentDialog erroAttempts = new ContentDialog()
                     {
@@ -100,11 +149,14 @@ namespace Projeto_PAP
                     await erroAttempts.ShowAsync();
                     return;
                 }
+                else
+                {
+                    add_time_for_email = true;
+                }
             }
             else
             {
-                var time = DateTime.Now;
-                emails.Add(EmailTextBox.Text, time);
+                new_email = true;
             }
 
             if (ConfirmPasswordBox.Password != PasswordBox.Password)
@@ -127,7 +179,16 @@ namespace Projeto_PAP
 
             if (result) 
             {
-                DateTime timeCode = DateTime.Now;
+                if (add_time_for_email)
+                {
+                    emails[EmailTextBox.Text].Add(DateTime.Now);
+                }
+                else if (new_email)
+                {
+                    emails[EmailTextBox.Text] = new List<DateTime> { DateTime.Now };
+                }
+
+                    DateTime timeCode = DateTime.Now;
                 TextBox num1 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
                 TextBox num2 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
                 TextBox num3 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
@@ -256,6 +317,9 @@ namespace Projeto_PAP
                             {
                                 collection.InsertOne(user);
                                 Frame.Navigate(typeof(LoginPage));
+                                emails.Remove(EmailTextBox.Text);
+                                json_content = JsonSerializer.Serialize(emails);
+                                File.WriteAllText(path_file, json_content);
                             }
                             catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey) //Erro de escrita do MongoDB (MongoWriteException) é guardado na variável "ex", mas só quando (when) a categoria do erro for igual a um erro de duplicação de chaves (ex.WriteError.Category == ServerErrorCategory.DuplicateKey). Na minha base de dados é se o email for repetido
                             {
@@ -292,6 +356,8 @@ namespace Projeto_PAP
                                 CloseButtonText = "OK",
                                 XamlRoot = this.XamlRoot
                             };
+                            json_content = JsonSerializer.Serialize(emails);
+                            File.WriteAllText(path_file, json_content);
                             await erroCodeVerification.ShowAsync();
                             return;
 
