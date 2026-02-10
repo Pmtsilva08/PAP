@@ -29,7 +29,7 @@
                 </Setter>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="CornerRadius" Value="10"/>
-                <Setter Property="BorderThickness" Value="0"/>
+                
                 <Setter Property="Template">
                     <!--Como vai ser construido cada botão que utilizar a propriedade style cujo x:Key é igual a x:Key="ButtonStyle"-->
                     <Setter.Value>
@@ -97,7 +97,7 @@
             Margin="0,20,0,0"/>
         </StackPanel>
 
-        <StackPanel Background="white" Width="460" Height="50" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 641, 0, 0" CornerRadius="0,0,13,13">
+        <StackPanel Background="white" Width="460" Height="70" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 666.1, 0, 0" CornerRadius="0,0,13,13">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
                 <TextBlock Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
                 <HyperlinkButton Content="Login" Click="Login_Click" FontSize="14" VerticalAlignment="Center"/>

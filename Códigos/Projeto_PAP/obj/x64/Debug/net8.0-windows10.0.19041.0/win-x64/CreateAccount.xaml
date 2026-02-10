@@ -29,7 +29,7 @@
                 </Setter>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="CornerRadius" Value="10"/>
-                <Setter Property="BorderThickness" Value="0"/>
+                
                 <Setter Property="Template">
                     <!--Como vai ser construido cada botão que utilizar a propriedade style cujo x:Key é igual a x:Key="ButtonStyle"-->
                     <Setter.Value>
@@ -81,7 +81,7 @@
             Text="Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
             <PasswordBox x:ConnectionId='8' x:Name="PasswordBox" Width="300" PlaceholderText="Enter your password..." HorizontalAlignment="Center"/>
             <TextBlock x:ConnectionId='9'
-            x:Name="PasswordStrength" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0" Height="auto"/>
+            x:Name="PasswordStrength" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0" Height="auto" Padding="0"/>
 
             <TextBlock
             Text="Confirm Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,5,0,0"/>
@@ -97,7 +97,7 @@
             Margin="0,20,0,0"/>
         </StackPanel>
 
-        <StackPanel Background="white" Width="460" Height="50" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 641, 0, 0" CornerRadius="0,0,13,13">
+        <StackPanel Background="white" Width="460" Height="70" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 666.1, 0, 0" CornerRadius="0,0,13,13">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
                 <TextBlock Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
                 <HyperlinkButton x:ConnectionId='4' Content="Login"                     FontSize="14" VerticalAlignment="Center"/>
