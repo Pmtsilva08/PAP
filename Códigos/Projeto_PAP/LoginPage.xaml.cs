@@ -27,4 +27,14 @@ public sealed partial class LoginPage : Page
     {
         InitializeComponent();
     }
+
+    private async void LoginClick(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Create_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(CreateAccount));
+    }
 }
