@@ -54,7 +54,7 @@ namespace Projeto_PAP
             };
 
             byte[] newHash = argon2.GetBytes(32); //gera o hash com 32 bytes de comprimento
-
+            
             return originalHash.SequenceEqual(newHash);
             
         }

@@ -97,7 +97,7 @@
             Margin="0,20,0,0"/>
         </StackPanel>
 
-        <StackPanel Background="white" Width="460" Height="70" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 666.1, 0, 0" CornerRadius="0,0,13,13">
+        <StackPanel Background="white" Width="460" Height="70" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 664, 0, 0" CornerRadius="0,0,13,13">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
                 <TextBlock Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
                 <HyperlinkButton Content="Login" Click="Login_Click" FontSize="14" VerticalAlignment="Center"/>

@@ -226,7 +226,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[28];
+            _typeNameTable = new string[29];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -236,27 +236,28 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.UserControl";
             _typeNameTable[8] = "Projeto_PAP.LoginPage";
-            _typeNameTable[9] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
-            _typeNameTable[10] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
-            _typeNameTable[11] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
-            _typeNameTable[12] = "System.Enum";
-            _typeNameTable[13] = "System.ValueType";
-            _typeNameTable[14] = "Microsoft.UI.Xaml.Controls.TitleBar";
-            _typeNameTable[15] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[16] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[17] = "String";
-            _typeNameTable[18] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
-            _typeNameTable[20] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.ImageIconSource";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.Media.ImageSource";
-            _typeNameTable[23] = "Projeto_PAP.MainWindow";
-            _typeNameTable[24] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[26] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[27] = "Int32";
+            _typeNameTable[9] = "Projeto_PAP.MainPage";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
+            _typeNameTable[11] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
+            _typeNameTable[12] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
+            _typeNameTable[13] = "System.Enum";
+            _typeNameTable[14] = "System.ValueType";
+            _typeNameTable[15] = "Microsoft.UI.Xaml.Controls.TitleBar";
+            _typeNameTable[16] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[17] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[18] = "String";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
+            _typeNameTable[21] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.ImageIconSource";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[24] = "Projeto_PAP.MainWindow";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[27] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[28] = "Int32";
 
-            _typeTable = new global::System.Type[28];
+            _typeTable = new global::System.Type[29];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -266,25 +267,26 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
             _typeTable[8] = typeof(global::Projeto_PAP.LoginPage);
-            _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
-            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
-            _typeTable[11] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
-            _typeTable[12] = typeof(global::System.Enum);
-            _typeTable[13] = typeof(global::System.ValueType);
-            _typeTable[14] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBar);
-            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[17] = typeof(global::System.String);
-            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings);
-            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
-            _typeTable[23] = typeof(global::Projeto_PAP.MainWindow);
-            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[26] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[27] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::Projeto_PAP.MainPage);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
+            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
+            _typeTable[12] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
+            _typeTable[13] = typeof(global::System.Enum);
+            _typeTable[14] = typeof(global::System.ValueType);
+            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBar);
+            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[18] = typeof(global::System.String);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings);
+            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[24] = typeof(global::Projeto_PAP.MainWindow);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[27] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[28] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -322,25 +324,27 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_5_CreateAccount() { return new global::Projeto_PAP.CreateAccount(); }
         private object Activate_8_LoginPage() { return new global::Projeto_PAP.LoginPage(); }
-        private object Activate_9_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_14_TitleBar() { return new global::Microsoft.UI.Xaml.Controls.TitleBar(); }
-        private object Activate_19_TitleBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings(); }
-        private object Activate_21_ImageIconSource() { return new global::Microsoft.UI.Xaml.Controls.ImageIconSource(); }
-        private object Activate_23_MainWindow() { return new global::Projeto_PAP.MainWindow(); }
-        private object Activate_25_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_9_MainPage() { return new global::Projeto_PAP.MainPage(); }
+        private object Activate_10_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
+        private object Activate_15_TitleBar() { return new global::Microsoft.UI.Xaml.Controls.TitleBar(); }
+        private object Activate_20_TitleBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings(); }
+        private object Activate_22_ImageIconSource() { return new global::Microsoft.UI.Xaml.Controls.ImageIconSource(); }
+        private object Activate_24_MainWindow() { return new global::Projeto_PAP.MainWindow(); }
+        private object Activate_26_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_5_CreateAccount() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.CreateAccount).TypeHandle);
         private void StaticInitializer_8_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.LoginPage).TypeHandle);
-        private void StaticInitializer_9_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
-        private void StaticInitializer_11_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
-        private void StaticInitializer_12_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
-        private void StaticInitializer_13_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
-        private void StaticInitializer_14_TitleBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBar).TypeHandle);
-        private void StaticInitializer_19_TitleBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings).TypeHandle);
-        private void StaticInitializer_21_ImageIconSource() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource).TypeHandle);
-        private void StaticInitializer_23_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainWindow).TypeHandle);
-        private void StaticInitializer_25_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_26_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_9_MainPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainPage).TypeHandle);
+        private void StaticInitializer_10_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
+        private void StaticInitializer_12_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
+        private void StaticInitializer_13_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
+        private void StaticInitializer_14_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
+        private void StaticInitializer_15_TitleBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBar).TypeHandle);
+        private void StaticInitializer_20_TitleBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings).TypeHandle);
+        private void StaticInitializer_22_ImageIconSource() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource).TypeHandle);
+        private void StaticInitializer_24_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainWindow).TypeHandle);
+        private void StaticInitializer_26_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_27_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -348,7 +352,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_26_IList(object instance, object item)
+        private void VectorAdd_27_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -414,42 +418,50 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
+            case 9:   //  Projeto_PAP.MainPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_MainPage;
+                userType.StaticInitializer = StaticInitializer_9_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
-                userType.Activator = Activate_9_MicaBackdrop;
-                userType.StaticInitializer = StaticInitializer_9_MicaBackdrop;
+                userType.Activator = Activate_10_MicaBackdrop;
+                userType.StaticInitializer = StaticInitializer_10_MicaBackdrop;
                 userType.AddMemberName("Kind");
                 xamlType = userType;
                 break;
 
-            case 10:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
+            case 11:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
+            case 12:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.StaticInitializer = StaticInitializer_11_MicaKind;
+                userType.StaticInitializer = StaticInitializer_12_MicaKind;
                 userType.AddEnumValue("Base", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base);
                 userType.AddEnumValue("BaseAlt", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt);
                 xamlType = userType;
                 break;
 
-            case 12:   //  System.Enum
+            case 13:   //  System.Enum
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.StaticInitializer = StaticInitializer_12_Enum;
+                userType.StaticInitializer = StaticInitializer_13_Enum;
                 xamlType = userType;
                 break;
 
-            case 13:   //  System.ValueType
+            case 14:   //  System.ValueType
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.StaticInitializer = StaticInitializer_13_ValueType;
+                userType.StaticInitializer = StaticInitializer_14_ValueType;
                 xamlType = userType;
                 break;
 
-            case 14:   //  Microsoft.UI.Xaml.Controls.TitleBar
+            case 15:   //  Microsoft.UI.Xaml.Controls.TitleBar
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_14_TitleBar;
-                userType.StaticInitializer = StaticInitializer_14_TitleBar;
+                userType.Activator = Activate_15_TitleBar;
+                userType.StaticInitializer = StaticInitializer_15_TitleBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TitleBar.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Title");
@@ -464,61 +476,61 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 15:   //  Microsoft.UI.Xaml.Controls.Control
+            case 16:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 16:   //  Microsoft.UI.Xaml.UIElement
+            case 17:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  String
+            case 18:   //  String
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 19:   //  Microsoft.UI.Xaml.Controls.IconSource
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
+            case 20:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.StaticInitializer = StaticInitializer_19_TitleBarTemplateSettings;
+                userType.StaticInitializer = StaticInitializer_20_TitleBarTemplateSettings;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Microsoft.UI.Xaml.DependencyObject
+            case 21:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.Controls.ImageIconSource
+            case 22:   //  Microsoft.UI.Xaml.Controls.ImageIconSource
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconSource"));
-                userType.Activator = Activate_21_ImageIconSource;
-                userType.StaticInitializer = StaticInitializer_21_ImageIconSource;
+                userType.Activator = Activate_22_ImageIconSource;
+                userType.StaticInitializer = StaticInitializer_22_ImageIconSource;
                 userType.AddMemberName("ImageSource");
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.UI.Xaml.Media.ImageSource
+            case 23:   //  Microsoft.UI.Xaml.Media.ImageSource
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Projeto_PAP.MainWindow
+            case 24:   //  Projeto_PAP.MainWindow
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_23_MainWindow;
-                userType.StaticInitializer = StaticInitializer_23_MainWindow;
+                userType.Activator = Activate_24_MainWindow;
+                userType.StaticInitializer = StaticInitializer_24_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  Microsoft.UI.Xaml.Window
+            case 25:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 26:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_25_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_25_TreeViewNode;
+                userType.Activator = Activate_26_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_26_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -530,15 +542,15 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 26:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 27:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_26_IList;
-                userType.CollectionAdd = VectorAdd_26_IList;
+                userType.StaticInitializer = StaticInitializer_27_IList;
+                userType.CollectionAdd = VectorAdd_27_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 27:   //  Int32
+            case 28:   //  Int32
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

@@ -23,6 +23,7 @@
     <None Remove="CreateAccount.xaml" />
     <None Remove="credentials.json" />
     <None Remove="LoginPage.xaml" />
+    <None Remove="MainPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +67,11 @@
     <Content Update="Assets\Icon_App_Grande.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="LoginPage.xaml">
