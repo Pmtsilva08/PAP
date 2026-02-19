@@ -186,6 +186,12 @@ public sealed partial class LoginPage : Page
                         string enteredCode = num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text;
                         if (enteredCode == code_verification)
                         {
+                            var user = new Account
+                            {
+                                EmailAddress = EmailTextBox.Text,
+                            };
+
+                            ActiveProfile.current_user = user;
                             Frame.Navigate(typeof(MainPage));
                         }
                         else
@@ -217,32 +223,44 @@ public sealed partial class LoginPage : Page
 
 
             }
-            else if (!result.Success)
+        }
+        else if (!result.Success)
+        {
+            if (result.Message == "Email not found")
             {
-                if (result.Message == "Email not found")
+                ContentDialog erroMailNotFound = new ContentDialog()
                 {
-                    ContentDialog erroMailNotFound = new ContentDialog()
-                    {
-                        Title = "Error",
-                        Content = "Email Not Found!",
-                        CloseButtonText = "OK",
-                        XamlRoot = this.XamlRoot
-                    };
-                    await erroMailNotFound.ShowAsync();
-                    return;
-                }
-                else
+                    Title = "Error",
+                    Content = "Email Not Found!",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                await erroMailNotFound.ShowAsync();
+                return;
+            }
+            else if (result.Message == "Connection to the Data Base was lost. Verify your Wifi connection")
+            {
+                ContentDialog erroPassword = new ContentDialog()
                 {
-                    ContentDialog erroPassword = new ContentDialog()
-                    {
-                        Title = "Error",
-                        Content = "Incorrect Password!",
-                        CloseButtonText = "OK",
-                        XamlRoot = this.XamlRoot
-                    };
-                    await erroPassword.ShowAsync();
-                    return;
-                }
+                    Title = "Error",
+                    Content = "Connection to the Data Base was lost. Verify your Wifi connection",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                await erroPassword.ShowAsync();
+                return;
+            }
+            else
+            {
+                ContentDialog erroPassword = new ContentDialog()
+                {
+                    Title = "Error",
+                    Content = "Incorrect Password!",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                await erroPassword.ShowAsync();
+                return;
             }
         }
     }

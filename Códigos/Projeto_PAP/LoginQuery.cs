@@ -15,27 +15,35 @@ namespace Projeto_PAP
             var database = client.GetDatabase("PAP");
             var collection = database.GetCollection<Account>("Users");
 
-            var filter = collection
+            try
+            {
+                var filter = collection
                 .Find(a => a.EmailAddress == email)
                 .FirstOrDefault();
+                if (filter == null)
+                {
+                    return (false, "Email not found");
+                }
 
-            if (filter == null)
+                var mongo_pass = filter.Password;
+
+                var verification = PasswordHash.VerifyPassword(password, mongo_pass);
+
+                if (verification)
+                {
+                    return (true, "Correct Password");
+                }
+                else
+                {
+                    return (false, "Incorrect Password");
+                }
+            }
+            catch (TimeoutException)
             {
-                return (false, "Email not found");
+                return (false, "Connection to the Data Base was lost. Verify your Wifi connection");
             }
 
-            var mongo_pass = filter.Password;
-
-            var verification = PasswordHash.VerifyPassword(password, mongo_pass);
-
-            if (verification) 
-            {
-                return(true, "Correct Password");
-            }
-            else
-            {
-                return (false, "Incorrect Password");
-            }
+            
 
         }
     }
