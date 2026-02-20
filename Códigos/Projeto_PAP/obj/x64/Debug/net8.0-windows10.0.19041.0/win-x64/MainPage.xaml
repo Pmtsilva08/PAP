@@ -9,7 +9,47 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Button x:ConnectionId='2'
+            x:Name="ToggleButton"
+                                      
+            Width="50" 
+            Height="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left">
+            ☰
+        </Button>
 
+        <!--(SplitView) É o menu lateral-->
+        <!--(DisplayMode) A maneira como o menu se vai comportar-->
+        <!--(CompactPaneLength) Largura do menu quando está fechado-->
+        <!--(OpenPaneLength) Largura do menu quando está aberto-->
+        <SplitView x:ConnectionId='3' 
+            x:Name="SplitView"
+            DisplayMode="CompactOverlay" 
+            IsPaneOpen="False"
+            CompactPaneLength="50"
+            OpenPaneLength="200">
+            
+            <!--(SplitView.Pane) é o conteúdo do painel lateral-->
+            <SplitView.Pane>
+                <StackPanel>
+                    <StackPanel.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#667eea" Offset="0.0"/>
+                            <GradientStop Color="#764ba2" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
+                    <Button Content="Home" Width="200"/>
+                    <Button Content="Passwords" Width="200"/>
+                    <Button Content="Settings" Width="200"/>
+                </StackPanel>
+            </SplitView.Pane>
+
+            <!--(SplitView.Content) é o conteúdo principal, o que fica ao lado do conteúdo principal-->
+            <SplitView.Content>
+                <Frame x:ConnectionId='4' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
 

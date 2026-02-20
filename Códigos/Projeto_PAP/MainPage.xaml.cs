@@ -27,5 +27,10 @@ namespace Projeto_PAP
         {
             InitializeComponent();
         }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
