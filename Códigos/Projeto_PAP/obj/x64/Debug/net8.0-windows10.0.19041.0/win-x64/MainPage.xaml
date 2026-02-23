@@ -9,22 +9,59 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button x:ConnectionId='2'
+
+        <Grid.Resources>
+            <Style x:ConnectionId='2' x:Name="ButtonStyle" TargetType="Button">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#667eea" Offset="0.0"/>
+                            <GradientStop Color="#764ba2" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                                        Background="{TemplateBinding Background}" 
+                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                        Padding="{TemplateBinding Padding}">
+                                <ContentPresenter 
+                                            Content="{TemplateBinding Content}"
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:ConnectionId='5'
             x:Name="ToggleButton"
+            Grid.Row="0"
                                       
-            Width="50" 
+            Content="☰"
+            Width="50"
             Height="50"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Left">
-            ☰
-        </Button>
+            HorizontalAlignment="Left"/>
 
         <!--(SplitView) É o menu lateral-->
         <!--(DisplayMode) A maneira como o menu se vai comportar-->
         <!--(CompactPaneLength) Largura do menu quando está fechado-->
         <!--(OpenPaneLength) Largura do menu quando está aberto-->
-        <SplitView x:ConnectionId='3' 
+        <SplitView x:ConnectionId='6' 
             x:Name="SplitView"
+            Grid.Row="1"
             DisplayMode="CompactOverlay" 
             IsPaneOpen="False"
             CompactPaneLength="50"
@@ -47,7 +84,7 @@
 
             <!--(SplitView.Content) é o conteúdo principal, o que fica ao lado do conteúdo principal-->
             <SplitView.Content>
-                <Frame x:ConnectionId='4' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
+                <Frame x:ConnectionId='7' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
             </SplitView.Content>
         </SplitView>
     </Grid>
