@@ -9,64 +9,19 @@
     mc:Ignorable="d">
 
     <Grid>
-
-        <Grid.Resources>
-            <Style x:ConnectionId='2' x:Name="ButtonStyle" TargetType="Button">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="#667eea" Offset="0.0"/>
-                            <GradientStop Color="#764ba2" Offset="1.0"/>
-                        </LinearGradientBrush>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="CornerRadius" Value="0"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border 
-                                        Background="{TemplateBinding Background}" 
-                                        CornerRadius="{TemplateBinding CornerRadius}"
-                                        Padding="{TemplateBinding Padding}">
-                                <ContentPresenter 
-                                            Content="{TemplateBinding Content}"
-                                            HorizontalAlignment="Center" 
-                                            VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Grid.Resources>
-        
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Button x:ConnectionId='5'
-            x:Name="ToggleButton"
-            Grid.Row="0"
-                                      
-            Content="☰"
-            Width="50"
-            Height="50"
-            HorizontalAlignment="Left"/>
-
         <!--(SplitView) É o menu lateral-->
         <!--(DisplayMode) A maneira como o menu se vai comportar-->
         <!--(CompactPaneLength) Largura do menu quando está fechado-->
         <!--(OpenPaneLength) Largura do menu quando está aberto-->
-        <SplitView x:ConnectionId='6' 
+        <SplitView x:ConnectionId='2' 
             x:Name="SplitView"
-            Grid.Row="1"
             DisplayMode="CompactOverlay" 
             IsPaneOpen="False"
             CompactPaneLength="50"
-            OpenPaneLength="200">
-            
+            OpenPaneLength="200"
+                                               
+                                               >
+
             <!--(SplitView.Pane) é o conteúdo do painel lateral-->
             <SplitView.Pane>
                 <StackPanel>
@@ -76,15 +31,119 @@
                             <GradientStop Color="#764ba2" Offset="1.0"/>
                         </LinearGradientBrush>
                     </StackPanel.Background>
-                    <Button Content="Home" Width="200"/>
-                    <Button Content="Passwords" Width="200"/>
-                    <Button Content="Settings" Width="200"/>
+
+                    <StackPanel.Resources>
+                        <Style x:Key="SlowHoverButtonStyle" TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            <Setter Property="Padding" Value="10,0,0,0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border
+                                            x:Name="ButtonBorder"
+                                            Background="Transparent"
+                                            Padding="{TemplateBinding Padding}">
+
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup x:Name="CommonStates">
+                                                    <VisualState x:Name="Normal">
+                                                        <Storyboard>
+                                                            <ColorAnimation 
+                                                                Storyboard.TargetName="ButtonBorder"
+                                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                Duration="0:0:0.3"/>
+                                                        </Storyboard>
+                                                    </VisualState>
+
+                                                    <VisualState x:Name="PointerOver">
+                                                        <Storyboard>
+                                                            <ColorAnimation 
+                                                                Storyboard.TargetName="ButtonBorder"
+                                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                                To="#40FFFFFF"
+                                                                Duration="0:0:0.3"/>
+                                                        </Storyboard>
+                                                    </VisualState>
+
+                                                    <VisualState x:Name="Pressed">
+                                                        <Storyboard>
+                                                            <ColorAnimation 
+                                                                Storyboard.TargetName="ButtonBorder"
+                                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                                To="#20FFFFFF"
+                                                                Duration="0:0:0.1"/>
+                                                        </Storyboard>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+
+                                            <ContentPresenter 
+                                                Content="{TemplateBinding Content}"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <!-- Botão Hamburger -->
+                    <Button x:ConnectionId='9' 
+                        x:Name="ToggleButton"
+                                                  
+                        Width="200"
+                        Height="50"
+                        Style="{StaticResource SlowHoverButtonStyle}">
+                        <FontIcon Glyph="&#xE700;" FontSize="20"/>
+                    </Button>
+
+                    <!-- Botão Home -->
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                        <Grid Width="170">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Grid.Column="0" Glyph="&#xE80F;" FontSize="16" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='12' x:Name="TextHome" x:Uid="MenuHome" Grid.Column="1" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Button>
+
+                    <!-- Botão Passwords -->
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                        <Grid Width="170">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Grid.Column="0" Glyph="&#xE72E;" FontSize="16" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='11' x:Name="TextPasswords" x:Uid="MenuPasswords" Grid.Column="1" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Button>
+
+                    <!-- Botão Settings -->
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                        <Grid Width="170">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Grid.Column="0" Glyph="&#xE713;" FontSize="16" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='10' x:Name="TextSettings" x:Uid="MenuSettings" Grid.Column="1" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Button>
+
                 </StackPanel>
             </SplitView.Pane>
 
             <!--(SplitView.Content) é o conteúdo principal, o que fica ao lado do conteúdo principal-->
             <SplitView.Content>
-                <Frame x:ConnectionId='7' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
+                <Frame x:ConnectionId='13' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
             </SplitView.Content>
         </SplitView>
     </Grid>

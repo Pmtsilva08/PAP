@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -26,11 +27,33 @@ namespace Projeto_PAP
         public MainPage()
         {
             InitializeComponent();
+
+            // Esconde os textos inicialmente
+            TextHome.Visibility = Visibility.Collapsed;
+            TextPasswords.Visibility = Visibility.Collapsed;
+            TextSettings.Visibility = Visibility.Collapsed;
         }
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
         }
+
+        private void SplitView_PaneOpening(SplitView sender, object args)
+        {
+            // Mostra os textos quando abre
+            TextHome.Visibility = Visibility.Visible;
+            TextPasswords.Visibility = Visibility.Visible;
+            TextSettings.Visibility = Visibility.Visible;
+        }
+
+        private void SplitView_PaneClosing(SplitView sender, SplitViewPaneClosingEventArgs args)
+        {
+            // Esconde os textos quando fecha
+            TextHome.Visibility = Visibility.Collapsed;
+            TextPasswords.Visibility = Visibility.Collapsed;
+            TextSettings.Visibility = Visibility.Collapsed;
+        }
+
     }
 }
