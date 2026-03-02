@@ -316,6 +316,13 @@ namespace Projeto_PAP
                             try
                             {
                                 collection.InsertOne(user);
+                                var current_user = new Account
+                                {
+                                    FirstName = user.FirstName,
+                                    Lastname = user.Lastname,
+                                    EmailAddress = user.EmailAddress
+                                };
+                                ActiveProfile.current_user = current_user;
                                 Frame.Navigate(typeof(LoginPage));
                                 emails.Remove(EmailTextBox.Text);
                                 json_content = JsonSerializer.Serialize(emails);

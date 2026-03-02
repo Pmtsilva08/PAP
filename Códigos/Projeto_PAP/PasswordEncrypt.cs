@@ -9,6 +9,6 @@ namespace Projeto_PAP
 {
     internal class PasswordEncrypt
     {
-
+        private readonly byte[] _key;
     }
 }
