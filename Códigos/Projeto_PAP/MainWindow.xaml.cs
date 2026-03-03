@@ -28,7 +28,7 @@ namespace Projeto_PAP
             InitializeComponent();
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
-            MainFrame.Navigate(typeof(MainPage));
+            MainFrame.Navigate(typeof(CreateAccount));
         }
         
 
