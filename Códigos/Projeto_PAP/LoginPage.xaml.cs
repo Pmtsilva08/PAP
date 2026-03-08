@@ -13,6 +13,7 @@ using System.Net.Http.Json;
 using System.Net.Mail;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
+using Windows.ApplicationModel.Appointments.DataProvider;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -192,7 +193,18 @@ public sealed partial class LoginPage : Page
                             };
 
                             ActiveProfile.current_user = user;
-                            Frame.Navigate(typeof(MainPage));
+
+                            byte[] key = Rfc2898DeriveBytes.Pbkdf2(
+                                    PasswordBox.Password,
+                                    result.Salt,
+                                    100000,
+                                    HashAlgorithmName.SHA256,
+                                    32
+                                );
+
+                            PasswordEncrypt encryptor = new PasswordEncrypt(key);
+                            Frame.Navigate(typeof(MainPage), encryptor);
+
                         }
                         else
                         {
