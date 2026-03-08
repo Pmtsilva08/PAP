@@ -55,9 +55,9 @@
               "Title": "PasswordEncrypt.cs",
               "DocumentMoniker": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\PasswordEncrypt.cs",
               "RelativeDocumentMoniker": "PasswordEncrypt.cs",
-              "ToolTip": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\PasswordEncrypt.cs*",
-              "RelativeToolTip": "PasswordEncrypt.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templ\u00E1rios\\12P\\PAP\\C\u00F3digos\\Projeto_PAP\\PasswordEncrypt.cs",
+              "RelativeToolTip": "PasswordEncrypt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-03T23:02:22.033Z",
               "IsPinned": true,
@@ -113,8 +113,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-03T23:14:58.68Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             }
           ]
         }

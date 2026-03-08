@@ -5405,23 +5405,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\forad\\.nuget\\packages\\": {},
+    "C:\\Users\\pedro\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\Projeto_PAP.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\Projeto_PAP.csproj",
       "projectName": "Projeto_PAP",
-      "projectPath": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\Projeto_PAP.csproj",
-      "packagesPath": "C:\\Users\\forad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\forad\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\obj\\",
+      "projectPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\Projeto_PAP.csproj",
+      "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pedro\\OneDrive - Agrupamento de Escolas Templários\\12P\\PAP\\Códigos\\Projeto_PAP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\forad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5448,7 +5448,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0-windows10.0.19041": {
@@ -5497,27 +5497,27 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -5525,15 +5525,15 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[8.0.23, 8.0.23]"
+            "version": "[8.0.24, 8.0.24]"
           }
         ],
         "frameworkReferences": {
@@ -5544,7 +5544,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -5558,5 +5558,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'MimeKit' 4.14.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g7hc-96xr-gvvx",
+      "libraryId": "MimeKit",
+      "targetGraphs": [
+        "net8.0-windows10.0.19041.0",
+        "net8.0-windows10.0.19041.0/win-arm64",
+        "net8.0-windows10.0.19041.0/win-x64",
+        "net8.0-windows10.0.19041.0/win-x86"
+      ]
+    }
+  ]
 }
