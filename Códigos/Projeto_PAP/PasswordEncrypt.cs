@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.PointOfService;
+using Windows.UI.WebUI;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -52,7 +53,28 @@ namespace Projeto_PAP
 
         public string Decrypt(string encryptedText)
         {
-            if ()
+            if (string.IsNullOrEmpty(encryptedText))
+            {
+                throw new ArgumentException("Text cannot be empty");
+            }
+
+            byte[] fullData = Convert.FromBase64String(encryptedText);
+            byte[] iv = new byte[12];
+            byte[] tag = new byte[16];
+            byte[] encryptedData = new byte[fullData.Length - iv.Length - tag.Length];
+
+            Buffer.BlockCopy(fullData, 0, iv, 0, 12);
+            Buffer.BlockCopy(fullData, 12, tag, 0, 16);
+            Buffer.BlockCopy(fullData, 28, encryptedData, 0, encryptedData.Length);
+
+            byte[] decryptedBytes = new byte[encryptedData.Length];
+
+            using (AesGcm aes = new AesGcm(_key, 16))
+            {
+                aes.Decrypt(iv, encryptedData, tag, decryptedBytes); //decryptedBytes é a saída onde os dados serão guardados
+            }
+
+            return Encoding.UTF8.GetString(decryptedBytes);
         }
 
     }

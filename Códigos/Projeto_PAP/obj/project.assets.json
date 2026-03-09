@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows10.0.19041": {
-      "BouncyCastle.Cryptography/2.6.1": {
+      "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -81,7 +81,7 @@
           }
         }
       },
-      "Google.Apis.Gmail.v1/1.73.0.3987": {
+      "Google.Apis.Gmail.v1/1.73.0.4029": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.73.0",
@@ -193,7 +193,7 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7463": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7705": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -207,29 +207,29 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.8.251106002": {
+      "Microsoft.WindowsAppSDK/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.AI": "[1.8.39]",
-          "Microsoft.WindowsAppSDK.Base": "[1.8.250831001]",
-          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25090401]",
-          "Microsoft.WindowsAppSDK.Foundation": "[1.8.251104000]",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.251104001]",
-          "Microsoft.WindowsAppSDK.ML": "[1.8.2109]",
-          "Microsoft.WindowsAppSDK.Runtime": "[1.8.251106002]",
-          "Microsoft.WindowsAppSDK.Widgets": "[1.8.250904007]",
-          "Microsoft.WindowsAppSDK.WinUI": "[1.8.251105000]"
+          "Microsoft.WindowsAppSDK.AI": "[1.8.47]",
+          "Microsoft.WindowsAppSDK.Base": "[1.8.251216001]",
+          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25122902]",
+          "Microsoft.WindowsAppSDK.Foundation": "[1.8.260203002]",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.260125001]",
+          "Microsoft.WindowsAppSDK.ML": "[1.8.2124]",
+          "Microsoft.WindowsAppSDK.Runtime": "[1.8.260209005]",
+          "Microsoft.WindowsAppSDK.Widgets": "[1.8.251231004]",
+          "Microsoft.WindowsAppSDK.WinUI": "[1.8.260204000]"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.AI/1.8.39": {
+      "Microsoft.WindowsAppSDK.AI/1.8.47": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Graphics.Imaging.Projection.dll": {},
@@ -252,7 +252,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.AI.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Base/1.8.250831001": {
+      "Microsoft.WindowsAppSDK.Base/1.8.251216001": {
         "type": "package",
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.4654",
@@ -263,21 +263,21 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Base.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.DWrite/1.8.25090401": {
+      "Microsoft.WindowsAppSDK.DWrite/1.8.25122902": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Foundation/1.8.251104000": {
+      "Microsoft.WindowsAppSDK.Foundation/1.8.260203002": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Security.Authentication.OAuth.Projection.dll": {},
@@ -408,10 +408,10 @@
           }
         }
       },
-      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.251104001": {
+      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260125001": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -428,11 +428,11 @@
           "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.ML/1.8.2109": {
+      "Microsoft.WindowsAppSDK.ML/1.8.2124": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001",
           "System.Numerics.Tensors": "9.0.0"
         },
         "compile": {
@@ -448,20 +448,20 @@
           "buildTransitive/Microsoft.WindowsAppSDK.ML.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Runtime/1.8.251106002": {
+      "Microsoft.WindowsAppSDK.Runtime/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Widgets/1.8.250904007": {
+      "Microsoft.WindowsAppSDK.Widgets/1.8.251231004": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll": {
@@ -478,13 +478,13 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Widgets.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.WinUI/1.8.251105000": {
+      "Microsoft.WindowsAppSDK.WinUI/1.8.260204000": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.3179.45",
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260203002",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll": {
@@ -501,10 +501,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets": {}
         }
       },
-      "MimeKit/4.14.0": {
+      "MimeKit/4.15.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.6.1",
+          "BouncyCastle.Cryptography": "2.6.2",
           "System.Security.Cryptography.Pkcs": "8.0.1"
         },
         "compile": {
@@ -518,7 +518,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.2": {
+      "MongoDB.Bson/3.7.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -535,12 +535,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.2": {
+      "MongoDB.Driver/3.7.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.5.2",
+          "MongoDB.Bson": "3.7.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -759,7 +759,7 @@
       }
     },
     "net8.0-windows10.0.19041/win-arm64": {
-      "BouncyCastle.Cryptography/2.6.1": {
+      "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -838,7 +838,7 @@
           }
         }
       },
-      "Google.Apis.Gmail.v1/1.73.0.3987": {
+      "Google.Apis.Gmail.v1/1.73.0.4029": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.73.0",
@@ -933,7 +933,7 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7463": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7705": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -947,29 +947,29 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.8.251106002": {
+      "Microsoft.WindowsAppSDK/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.AI": "[1.8.39]",
-          "Microsoft.WindowsAppSDK.Base": "[1.8.250831001]",
-          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25090401]",
-          "Microsoft.WindowsAppSDK.Foundation": "[1.8.251104000]",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.251104001]",
-          "Microsoft.WindowsAppSDK.ML": "[1.8.2109]",
-          "Microsoft.WindowsAppSDK.Runtime": "[1.8.251106002]",
-          "Microsoft.WindowsAppSDK.Widgets": "[1.8.250904007]",
-          "Microsoft.WindowsAppSDK.WinUI": "[1.8.251105000]"
+          "Microsoft.WindowsAppSDK.AI": "[1.8.47]",
+          "Microsoft.WindowsAppSDK.Base": "[1.8.251216001]",
+          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25122902]",
+          "Microsoft.WindowsAppSDK.Foundation": "[1.8.260203002]",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.260125001]",
+          "Microsoft.WindowsAppSDK.ML": "[1.8.2124]",
+          "Microsoft.WindowsAppSDK.Runtime": "[1.8.260209005]",
+          "Microsoft.WindowsAppSDK.Widgets": "[1.8.251231004]",
+          "Microsoft.WindowsAppSDK.WinUI": "[1.8.260204000]"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.AI/1.8.39": {
+      "Microsoft.WindowsAppSDK.AI/1.8.47": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Graphics.Imaging.Projection.dll": {},
@@ -992,7 +992,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.AI.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Base/1.8.250831001": {
+      "Microsoft.WindowsAppSDK.Base/1.8.251216001": {
         "type": "package",
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.4654",
@@ -1003,21 +1003,21 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Base.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.DWrite/1.8.25090401": {
+      "Microsoft.WindowsAppSDK.DWrite/1.8.25122902": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Foundation/1.8.251104000": {
+      "Microsoft.WindowsAppSDK.Foundation/1.8.260203002": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Security.Authentication.OAuth.Projection.dll": {},
@@ -1118,10 +1118,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Foundation.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.251104001": {
+      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260125001": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -1138,11 +1138,11 @@
           "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.ML/1.8.2109": {
+      "Microsoft.WindowsAppSDK.ML/1.8.2124": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001",
           "System.Numerics.Tensors": "9.0.0"
         },
         "compile": {
@@ -1158,20 +1158,20 @@
           "buildTransitive/Microsoft.WindowsAppSDK.ML.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Runtime/1.8.251106002": {
+      "Microsoft.WindowsAppSDK.Runtime/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Widgets/1.8.250904007": {
+      "Microsoft.WindowsAppSDK.Widgets/1.8.251231004": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll": {
@@ -1188,13 +1188,13 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Widgets.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.WinUI/1.8.251105000": {
+      "Microsoft.WindowsAppSDK.WinUI/1.8.260204000": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.3179.45",
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260203002",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll": {
@@ -1211,10 +1211,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets": {}
         }
       },
-      "MimeKit/4.14.0": {
+      "MimeKit/4.15.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.6.1",
+          "BouncyCastle.Cryptography": "2.6.2",
           "System.Security.Cryptography.Pkcs": "8.0.1"
         },
         "compile": {
@@ -1228,7 +1228,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.2": {
+      "MongoDB.Bson/3.7.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1245,12 +1245,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.2": {
+      "MongoDB.Driver/3.7.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.5.2",
+          "MongoDB.Bson": "3.7.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -1441,7 +1441,7 @@
       }
     },
     "net8.0-windows10.0.19041/win-x64": {
-      "BouncyCastle.Cryptography/2.6.1": {
+      "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -1520,7 +1520,7 @@
           }
         }
       },
-      "Google.Apis.Gmail.v1/1.73.0.3987": {
+      "Google.Apis.Gmail.v1/1.73.0.4029": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.73.0",
@@ -1615,7 +1615,7 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7463": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7705": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -1629,29 +1629,29 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.8.251106002": {
+      "Microsoft.WindowsAppSDK/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.AI": "[1.8.39]",
-          "Microsoft.WindowsAppSDK.Base": "[1.8.250831001]",
-          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25090401]",
-          "Microsoft.WindowsAppSDK.Foundation": "[1.8.251104000]",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.251104001]",
-          "Microsoft.WindowsAppSDK.ML": "[1.8.2109]",
-          "Microsoft.WindowsAppSDK.Runtime": "[1.8.251106002]",
-          "Microsoft.WindowsAppSDK.Widgets": "[1.8.250904007]",
-          "Microsoft.WindowsAppSDK.WinUI": "[1.8.251105000]"
+          "Microsoft.WindowsAppSDK.AI": "[1.8.47]",
+          "Microsoft.WindowsAppSDK.Base": "[1.8.251216001]",
+          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25122902]",
+          "Microsoft.WindowsAppSDK.Foundation": "[1.8.260203002]",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.260125001]",
+          "Microsoft.WindowsAppSDK.ML": "[1.8.2124]",
+          "Microsoft.WindowsAppSDK.Runtime": "[1.8.260209005]",
+          "Microsoft.WindowsAppSDK.Widgets": "[1.8.251231004]",
+          "Microsoft.WindowsAppSDK.WinUI": "[1.8.260204000]"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.AI/1.8.39": {
+      "Microsoft.WindowsAppSDK.AI/1.8.47": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Graphics.Imaging.Projection.dll": {},
@@ -1674,7 +1674,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.AI.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Base/1.8.250831001": {
+      "Microsoft.WindowsAppSDK.Base/1.8.251216001": {
         "type": "package",
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.4654",
@@ -1685,21 +1685,21 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Base.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.DWrite/1.8.25090401": {
+      "Microsoft.WindowsAppSDK.DWrite/1.8.25122902": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Foundation/1.8.251104000": {
+      "Microsoft.WindowsAppSDK.Foundation/1.8.260203002": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Security.Authentication.OAuth.Projection.dll": {},
@@ -1800,10 +1800,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Foundation.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.251104001": {
+      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260125001": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -1820,11 +1820,11 @@
           "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.ML/1.8.2109": {
+      "Microsoft.WindowsAppSDK.ML/1.8.2124": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001",
           "System.Numerics.Tensors": "9.0.0"
         },
         "compile": {
@@ -1840,20 +1840,20 @@
           "buildTransitive/Microsoft.WindowsAppSDK.ML.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Runtime/1.8.251106002": {
+      "Microsoft.WindowsAppSDK.Runtime/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Widgets/1.8.250904007": {
+      "Microsoft.WindowsAppSDK.Widgets/1.8.251231004": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll": {
@@ -1870,13 +1870,13 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Widgets.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.WinUI/1.8.251105000": {
+      "Microsoft.WindowsAppSDK.WinUI/1.8.260204000": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.3179.45",
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260203002",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll": {
@@ -1893,10 +1893,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets": {}
         }
       },
-      "MimeKit/4.14.0": {
+      "MimeKit/4.15.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.6.1",
+          "BouncyCastle.Cryptography": "2.6.2",
           "System.Security.Cryptography.Pkcs": "8.0.1"
         },
         "compile": {
@@ -1910,7 +1910,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.2": {
+      "MongoDB.Bson/3.7.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1927,12 +1927,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.2": {
+      "MongoDB.Driver/3.7.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.5.2",
+          "MongoDB.Bson": "3.7.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -2123,7 +2123,7 @@
       }
     },
     "net8.0-windows10.0.19041/win-x86": {
-      "BouncyCastle.Cryptography/2.6.1": {
+      "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -2202,7 +2202,7 @@
           }
         }
       },
-      "Google.Apis.Gmail.v1/1.73.0.3987": {
+      "Google.Apis.Gmail.v1/1.73.0.4029": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.73.0",
@@ -2297,7 +2297,7 @@
           }
         }
       },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7463": {
+      "Microsoft.Windows.SDK.BuildTools/10.0.26100.7705": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
@@ -2311,29 +2311,29 @@
           "buildTransitive/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK/1.8.251106002": {
+      "Microsoft.WindowsAppSDK/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.AI": "[1.8.39]",
-          "Microsoft.WindowsAppSDK.Base": "[1.8.250831001]",
-          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25090401]",
-          "Microsoft.WindowsAppSDK.Foundation": "[1.8.251104000]",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.251104001]",
-          "Microsoft.WindowsAppSDK.ML": "[1.8.2109]",
-          "Microsoft.WindowsAppSDK.Runtime": "[1.8.251106002]",
-          "Microsoft.WindowsAppSDK.Widgets": "[1.8.250904007]",
-          "Microsoft.WindowsAppSDK.WinUI": "[1.8.251105000]"
+          "Microsoft.WindowsAppSDK.AI": "[1.8.47]",
+          "Microsoft.WindowsAppSDK.Base": "[1.8.251216001]",
+          "Microsoft.WindowsAppSDK.DWrite": "[1.8.25122902]",
+          "Microsoft.WindowsAppSDK.Foundation": "[1.8.260203002]",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "[1.8.260125001]",
+          "Microsoft.WindowsAppSDK.ML": "[1.8.2124]",
+          "Microsoft.WindowsAppSDK.Runtime": "[1.8.260209005]",
+          "Microsoft.WindowsAppSDK.Widgets": "[1.8.251231004]",
+          "Microsoft.WindowsAppSDK.WinUI": "[1.8.260204000]"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.AI/1.8.39": {
+      "Microsoft.WindowsAppSDK.AI/1.8.47": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Graphics.Imaging.Projection.dll": {},
@@ -2356,7 +2356,7 @@
           "buildTransitive/Microsoft.WindowsAppSDK.AI.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Base/1.8.250831001": {
+      "Microsoft.WindowsAppSDK.Base/1.8.251216001": {
         "type": "package",
         "dependencies": {
           "Microsoft.Windows.SDK.BuildTools": "10.0.26100.4654",
@@ -2367,21 +2367,21 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Base.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.DWrite/1.8.25090401": {
+      "Microsoft.WindowsAppSDK.DWrite/1.8.25122902": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.DWrite.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Foundation/1.8.251104000": {
+      "Microsoft.WindowsAppSDK.Foundation/1.8.260203002": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Security.Authentication.OAuth.Projection.dll": {},
@@ -2482,10 +2482,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Foundation.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.251104001": {
+      "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260125001": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
@@ -2502,11 +2502,11 @@
           "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.ML/1.8.2109": {
+      "Microsoft.WindowsAppSDK.ML/1.8.2124": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260126001",
           "System.Numerics.Tensors": "9.0.0"
         },
         "compile": {
@@ -2522,20 +2522,20 @@
           "buildTransitive/Microsoft.WindowsAppSDK.ML.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Runtime/1.8.251106002": {
+      "Microsoft.WindowsAppSDK.Runtime/1.8.260209005": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.Runtime.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.Widgets/1.8.250904007": {
+      "Microsoft.WindowsAppSDK.Widgets/1.8.251231004": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll": {
@@ -2552,13 +2552,13 @@
           "buildTransitive/Microsoft.WindowsAppSDK.Widgets.targets": {}
         }
       },
-      "Microsoft.WindowsAppSDK.WinUI/1.8.251105000": {
+      "Microsoft.WindowsAppSDK.WinUI/1.8.260204000": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.3179.45",
-          "Microsoft.WindowsAppSDK.Base": "1.8.250831001",
-          "Microsoft.WindowsAppSDK.Foundation": "1.8.251104000",
-          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.251104001"
+          "Microsoft.WindowsAppSDK.Base": "1.8.251216001",
+          "Microsoft.WindowsAppSDK.Foundation": "1.8.260203002",
+          "Microsoft.WindowsAppSDK.InteractiveExperiences": "1.8.260125001"
         },
         "compile": {
           "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll": {
@@ -2575,10 +2575,10 @@
           "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets": {}
         }
       },
-      "MimeKit/4.14.0": {
+      "MimeKit/4.15.1": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.6.1",
+          "BouncyCastle.Cryptography": "2.6.2",
           "System.Security.Cryptography.Pkcs": "8.0.1"
         },
         "compile": {
@@ -2592,7 +2592,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.5.2": {
+      "MongoDB.Bson/3.7.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -2609,12 +2609,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.5.2": {
+      "MongoDB.Driver/3.7.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.5.2",
+          "MongoDB.Bson": "3.7.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -2806,16 +2806,16 @@
     }
   },
   "libraries": {
-    "BouncyCastle.Cryptography/2.6.1": {
-      "sha512": "vZsG2YILhthgRqO+ZVgRff4ZFKKTl0v7kqaVBLCtRvpREhfBP33pcWrdA3PRYgWuFL1RxiUFvjMUHTdBZlJcoA==",
+    "BouncyCastle.Cryptography/2.6.2": {
+      "sha512": "7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
       "type": "package",
-      "path": "bouncycastle.cryptography/2.6.1",
+      "path": "bouncycastle.cryptography/2.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "bouncycastle.cryptography.2.6.1.nupkg.sha512",
+        "bouncycastle.cryptography.2.6.2.nupkg.sha512",
         "bouncycastle.cryptography.nuspec",
         "lib/net461/BouncyCastle.Cryptography.dll",
         "lib/net461/BouncyCastle.Cryptography.xml",
@@ -2916,16 +2916,16 @@
         "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
-    "Google.Apis.Gmail.v1/1.73.0.3987": {
-      "sha512": "WE6i5z6MlbD6NH8JqeWBNjg3pfRYUNCIYxLWz961pJ2MQuiwnAnypdBLR+GjX2wH1blxSzDPXYfs8XTU7oSUjw==",
+    "Google.Apis.Gmail.v1/1.73.0.4029": {
+      "sha512": "xD94zsuXNPvUaZXqLwSe27JQlv/asK2pCAPD0DTCBMaAfZA+4TR4DwVCQ01P5DQ55bGey5tbcIzrDKVjG5WI8g==",
       "type": "package",
-      "path": "google.apis.gmail.v1/1.73.0.3987",
+      "path": "google.apis.gmail.v1/1.73.0.4029",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.gmail.v1.1.73.0.3987.nupkg.sha512",
+        "google.apis.gmail.v1.1.73.0.4029.nupkg.sha512",
         "google.apis.gmail.v1.nuspec",
         "lib/net462/Google.Apis.Gmail.v1.dll",
         "lib/net462/Google.Apis.Gmail.v1.pdb",
@@ -3148,10 +3148,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Windows.SDK.BuildTools/10.0.26100.7463": {
-      "sha512": "JQYm1B9VS6QDlonYJOglgp2GNl+w1LM2TfEzGOGHPY1UICcuFr20ljxaO1drwj21exbhA7pu23w1N2Tbg4mYvw==",
+    "Microsoft.Windows.SDK.BuildTools/10.0.26100.7705": {
+      "sha512": "HhD3TweZMpyor2t7vRJgJrASHJDWcDjYWQB2HSqsYWvpB10K8KgkdmXLtGUoKYwoztyIV2k1vjt1DdVsYs8jWw==",
       "type": "package",
-      "path": "microsoft.windows.sdk.buildtools/10.0.26100.7463",
+      "path": "microsoft.windows.sdk.buildtools/10.0.26100.7705",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3320,7 +3320,7 @@
         "build/Microsoft.Windows.SDK.BuildTools.targets",
         "buildTransitive/Microsoft.Windows.SDK.BuildTools.props",
         "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets",
-        "microsoft.windows.sdk.buildtools.10.0.26100.7463.nupkg.sha512",
+        "microsoft.windows.sdk.buildtools.10.0.26100.7705.nupkg.sha512",
         "microsoft.windows.sdk.buildtools.nuspec",
         "schemas/10.0.26100.0/winrt/AppxManifestSchema.xsd",
         "schemas/10.0.26100.0/winrt/AppxManifestSchema2010_v2.xsd",
@@ -3420,10 +3420,10 @@
         "tools/net6.0/Newtonsoft.Json.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK/1.8.251106002": {
-      "sha512": "IiDYOHJahku9GuajXLCNWkrhsG+Fbd2GsWpINLXhm3nF8mXzGPmFtateotJWnE0BKCa4Ua1+O4nYJ4gUC9+NXg==",
+    "Microsoft.WindowsAppSDK/1.8.260209005": {
+      "sha512": "AGHOiZcrDrpaxpHfEFKlI8MVnibfbSixI5DlbU6ozP/9dyWN5FkTFowg+dEOnaFRCnOzTSAjBQ1HuS4lAO+aMQ==",
       "type": "package",
-      "path": "microsoft.windowsappsdk/1.8.251106002",
+      "path": "microsoft.windowsappsdk/1.8.260209005",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3438,14 +3438,14 @@
         "buildTransitive/native/Microsoft.WindowsAppSDK.props",
         "buildTransitive/native/Microsoft.WindowsAppSDK.targets",
         "license.txt",
-        "microsoft.windowsappsdk.1.8.251106002.nupkg.sha512",
+        "microsoft.windowsappsdk.1.8.260209005.nupkg.sha512",
         "microsoft.windowsappsdk.nuspec"
       ]
     },
-    "Microsoft.WindowsAppSDK.AI/1.8.39": {
-      "sha512": "jYx8PqQZjB59MU+/IcelwWa0iUnNYkSIWyirDLb50/6uaSVK+FMKsdvV5ZxVuQmBIBUjqReOLRAdlsxxOVAE1Q==",
+    "Microsoft.WindowsAppSDK.AI/1.8.47": {
+      "sha512": "9il8KT8WR4T826hnm3M/USZTkPtVXFGE0IztmE1l7H9DPYsa3QHEUgGHFHQg88fsMjdr3vhyMvs23AB+1IYF1w==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.ai/1.8.39",
+      "path": "microsoft.windowsappsdk.ai/1.8.47",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3471,7 +3471,7 @@
         "metadata/Microsoft.Windows.AI.Text.winmd",
         "metadata/Microsoft.Windows.AI.winmd",
         "metadata/Microsoft.Windows.Workloads.winmd",
-        "microsoft.windowsappsdk.ai.1.8.39.nupkg.sha512",
+        "microsoft.windowsappsdk.ai.1.8.47.nupkg.sha512",
         "microsoft.windowsappsdk.ai.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/Microsoft.Graphics.Imaging.dll",
@@ -3497,6 +3497,7 @@
         "runtimes-framework/win-arm64/native/Microsoft.Windows.Workloads.pri",
         "runtimes-framework/win-arm64/native/NpuDetect/NPUDetect.dll",
         "runtimes-framework/win-arm64/native/SessionHandleIPCProxyStub.dll",
+        "runtimes-framework/win-arm64/native/workloads.j32.json",
         "runtimes-framework/win-arm64/native/workloads.json",
         "runtimes-framework/win-arm64/native/workloads.qnn.json",
         "runtimes-framework/win-arm64ec/native/Microsoft.Graphics.Imaging.dll",
@@ -3524,6 +3525,7 @@
         "runtimes-framework/win-arm64ec/native/NpuDetect/NPUDetect.dll",
         "runtimes-framework/win-arm64ec/native/SessionHandleIPCProxyStub.dll",
         "runtimes-framework/win-arm64ec/native/workloads.365.json",
+        "runtimes-framework/win-arm64ec/native/workloads.j32.json",
         "runtimes-framework/win-arm64ec/native/workloads.json",
         "runtimes-framework/win-arm64ec/native/workloads.lnl.json",
         "runtimes-framework/win-arm64ec/native/workloads.qnn.json",
@@ -3553,16 +3555,17 @@
         "runtimes-framework/win-x64/native/NpuDetect/NPUDetect.dll",
         "runtimes-framework/win-x64/native/SessionHandleIPCProxyStub.dll",
         "runtimes-framework/win-x64/native/workloads.365.json",
+        "runtimes-framework/win-x64/native/workloads.j32.json",
         "runtimes-framework/win-x64/native/workloads.json",
         "runtimes-framework/win-x64/native/workloads.lnl.json",
         "runtimes-framework/win-x64/native/workloads.qnn.json",
         "runtimes-framework/win-x64/native/workloads.stx.json"
       ]
     },
-    "Microsoft.WindowsAppSDK.Base/1.8.250831001": {
-      "sha512": "8LlfXBS2Hpw+OoVXViJmIOPXl0nMbqMaFR3j6+QHFNc62VULwPEcXiMRcP2WbV/+mtC7W2LH6yx6uu/Hrr9lVw==",
+    "Microsoft.WindowsAppSDK.Base/1.8.251216001": {
+      "sha512": "PS1wriuFknz3W2F2P/e6RvOTM35w89Lsj/f0QmUEPrJjKnc+jM0JLX1vfdytI14y1gNRUTm9uclwP0aH/SVU5w==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.base/1.8.250831001",
+      "path": "microsoft.windowsappsdk.base/1.8.251216001",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3585,14 +3588,14 @@
         "buildTransitive/native/Microsoft.WindowsAppSDK.Base.props",
         "buildTransitive/native/Microsoft.WindowsAppSDK.Base.targets",
         "license.txt",
-        "microsoft.windowsappsdk.base.1.8.250831001.nupkg.sha512",
+        "microsoft.windowsappsdk.base.1.8.251216001.nupkg.sha512",
         "microsoft.windowsappsdk.base.nuspec"
       ]
     },
-    "Microsoft.WindowsAppSDK.DWrite/1.8.25090401": {
-      "sha512": "WJ0p9yMgiNYqU2O5ZKCXcb7FBjryIUUopgeYMvnlf1yBUYgdjMFMkoJqYVqkz866wnntiB2IZhLxEzhFzvVs1A==",
+    "Microsoft.WindowsAppSDK.DWrite/1.8.25122902": {
+      "sha512": "zFNn07i7Cyz62Y8FnPQAyzeZK7ww3m9t42i9pzy4C04pNbyUDQ4fG7pB6VSh6n4EyFuYtuFQuDzt4mKmXFrkrg==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.dwrite/1.8.25090401",
+      "path": "microsoft.windowsappsdk.dwrite/1.8.25122902",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3612,7 +3615,7 @@
         "lib/native/x64/DWriteCore.lib",
         "lib/native/x86/DWriteCore.lib",
         "license.txt",
-        "microsoft.windowsappsdk.dwrite.1.8.25090401.nupkg.sha512",
+        "microsoft.windowsappsdk.dwrite.1.8.25122902.nupkg.sha512",
         "microsoft.windowsappsdk.dwrite.nuspec",
         "runtimes-framework/win-arm64/native/DWriteCore.dll",
         "runtimes-framework/win-arm64ec/native/DWriteCore.dll",
@@ -3620,10 +3623,10 @@
         "runtimes-framework/win-x86/native/DWriteCore.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK.Foundation/1.8.251104000": {
-      "sha512": "vvL3zpC8klGcaxUA7RbMuUMVAABD7jEMFhNKGAewOvey18i64mslbU0aIQM3+Bu4tQKsaGXSWYrJFsAU/Op4OA==",
+    "Microsoft.WindowsAppSDK.Foundation/1.8.260203002": {
+      "sha512": "eKQ/prWq98mW7+E+ffot47iZNbDnq/NVN9R9Gi8vmoU/3Ka6zNNivxdICXh6j7g6REFPCV9530/nQYQC0L3fwg==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.foundation/1.8.251104000",
+      "path": "microsoft.windowsappsdk.foundation/1.8.260203002",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3767,7 +3770,7 @@
         "metadata/Microsoft.Windows.System.Power.xml",
         "metadata/Microsoft.Windows.System.winmd",
         "metadata/Microsoft.Windows.System.xml",
-        "microsoft.windowsappsdk.foundation.1.8.251104000.nupkg.sha512",
+        "microsoft.windowsappsdk.foundation.1.8.260203002.nupkg.sha512",
         "microsoft.windowsappsdk.foundation.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/DeploymentAgent.exe",
@@ -3808,10 +3811,10 @@
         "runtimes/win-x86/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.251104001": {
-      "sha512": "t4Vs1eMJqUpa5CbZ5SvO4j5VdyhNwtarNfYJAWar8dHejpNol3g+/t0l0ovKye+DKQpinWdGkuQSUX8Oc8M3ug==",
+    "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260125001": {
+      "sha512": "CTGFd1zhIDbnOltZ6piPvpNXFR1OaNyW3vHvhaILzpGziAgj5DPuVnU3PUp1p5iOBd382FLCBVM6nEPyu/LCOA==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.interactiveexperiences/1.8.251104001",
+      "path": "microsoft.windowsappsdk.interactiveexperiences/1.8.260125001",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3886,7 +3889,7 @@
         "metadata/10.0.18362.0/Microsoft.Graphics.xml",
         "metadata/10.0.18362.0/Microsoft.UI.winmd",
         "metadata/10.0.18362.0/Microsoft.UI.xml",
-        "microsoft.windowsappsdk.interactiveexperiences.1.8.251104001.nupkg.sha512",
+        "microsoft.windowsappsdk.interactiveexperiences.1.8.260125001.nupkg.sha512",
         "microsoft.windowsappsdk.interactiveexperiences.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/CoreMessagingXP.dll",
@@ -3959,10 +3962,10 @@
         "runtimes-framework/win-x86/native/wuceffectsi.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK.ML/1.8.2109": {
-      "sha512": "gfsSXBJrlsfnl1IID3AEasUvZXFFZk6n4iD2JP5BfheySaoWr/1JJVbqKYyRr7APe2kRzyztVW3eaj7KMfgR5A==",
+    "Microsoft.WindowsAppSDK.ML/1.8.2124": {
+      "sha512": "l7ZptLbvOWHEJgxZtCQhUzDNCakNcqSJyAa7DNXBLKxGIUMDqq9LnWyYRZZFNQwN7hRfDAR8fEAblP1UHYHGgw==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.ml/1.8.2109",
+      "path": "microsoft.windowsappsdk.ml/1.8.2124",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4004,7 +4007,7 @@
         "lib/net8.0-windows10.0.17763.0/Microsoft.Windows.AI.MachineLearning.Projection.dll",
         "license.txt",
         "metadata/Microsoft.Windows.AI.MachineLearning.winmd",
-        "microsoft.windowsappsdk.ml.1.8.2109.nupkg.sha512",
+        "microsoft.windowsappsdk.ml.1.8.2124.nupkg.sha512",
         "microsoft.windowsappsdk.ml.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/DirectML.dll",
@@ -4020,10 +4023,10 @@
         "runtimes-framework/win-x64/native/onnxruntime_providers_shared.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK.Runtime/1.8.251106002": {
-      "sha512": "5piaqsoXOTFXdtiGoqLhVPkG0HE3UD0g/S4D2i7I8MPO48eoaESJ4y/oUHzZFmSaqLQROWe8NJ9rXXNxxiL/gw==",
+    "Microsoft.WindowsAppSDK.Runtime/1.8.260209005": {
+      "sha512": "aZjMu/glUGjzACowzzhj9drn/Ddfp1yA+f7CFXpkiSk6iZ2x32vhKfcqT64RpJ6R+Dj1hl9/79aXFhIavYNj9g==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.runtime/1.8.251106002",
+      "path": "microsoft.windowsappsdk.runtime/1.8.260209005",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4049,7 +4052,7 @@
         "include/WindowsAppSDK-VersionInfo.cs",
         "include/WindowsAppSDK-VersionInfo.h",
         "license.txt",
-        "microsoft.windowsappsdk.runtime.1.8.251106002.nupkg.sha512",
+        "microsoft.windowsappsdk.runtime.1.8.260209005.nupkg.sha512",
         "microsoft.windowsappsdk.runtime.nuspec",
         "tools/MSIX/win10-arm64/MSIX.inventory",
         "tools/MSIX/win10-arm64/Microsoft.WindowsAppRuntime.1.8.msix",
@@ -4070,10 +4073,10 @@
         "tools/MSIX/win10-x86/Microsoft.WindowsAppRuntime.Singleton.1.8.msix"
       ]
     },
-    "Microsoft.WindowsAppSDK.Widgets/1.8.250904007": {
-      "sha512": "sgwdXYhb8S4JjBmWWiFxALT1xK0fJeAbisolctmodMX7tlvBXDgUyvl/GHfTQ61DGIiW+kokX61WR46L2YlhAA==",
+    "Microsoft.WindowsAppSDK.Widgets/1.8.251231004": {
+      "sha512": "bIWqQYR8DCoB1SoPOMil5AtgtkTn438wJTdpsHgyO/6o7Eh7PMP5BzrR0KbDsFqy+4LhPWQ4vtwko5k93fECcA==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.widgets/1.8.250904007",
+      "path": "microsoft.windowsappsdk.widgets/1.8.251231004",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4090,7 +4093,7 @@
         "license.txt",
         "metadata/Microsoft.Windows.Widgets.winmd",
         "metadata/Microsoft.Windows.Widgets.xml",
-        "microsoft.windowsappsdk.widgets.1.8.250904007.nupkg.sha512",
+        "microsoft.windowsappsdk.widgets.1.8.251231004.nupkg.sha512",
         "microsoft.windowsappsdk.widgets.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/Microsoft.Windows.Widgets.dll",
@@ -4099,10 +4102,10 @@
         "runtimes-framework/win-x86/native/Microsoft.Windows.Widgets.dll"
       ]
     },
-    "Microsoft.WindowsAppSDK.WinUI/1.8.251105000": {
-      "sha512": "G/f0Z27ALjjrrfjCUPxPSBkG6eLB20pBja8AFIOI87oYMGUKGwuMuZn7LqPkeQJMFPo04FonfljdJCIpsfnnbw==",
+    "Microsoft.WindowsAppSDK.WinUI/1.8.260204000": {
+      "sha512": "DSpA01+iPXwky4O1uZCrdClSi2aRIYTIhmsTeC1EsJmWBFpSirwNAg4EGHejijV6u4ZVkTdyv3px0Y2P3fp72Q==",
       "type": "package",
-      "path": "microsoft.windowsappsdk.winui/1.8.251105000",
+      "path": "microsoft.windowsappsdk.winui/1.8.260204000",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -4163,7 +4166,7 @@
         "metadata/Microsoft.UI.Text.xml",
         "metadata/Microsoft.UI.Xaml.winmd",
         "metadata/Microsoft.UI.Xaml.xml",
-        "microsoft.windowsappsdk.winui.1.8.251105000.nupkg.sha512",
+        "microsoft.windowsappsdk.winui.1.8.260204000.nupkg.sha512",
         "microsoft.windowsappsdk.winui.nuspec",
         "runtimes-framework/package.appxfragment",
         "runtimes-framework/win-arm64/native/Microsoft.UI.Xaml.Controls.dll",
@@ -4927,16 +4930,20 @@
         "tools/x86/GenXbf.dll"
       ]
     },
-    "MimeKit/4.14.0": {
-      "sha512": "g0LtsMC8DCTkc030C3UgVqbltOJmV5cz4AX8ASowz2ZA+lxopXSYtC1XXYmenxy606aWFLwi5Xy4cC/zyYjbjQ==",
+    "MimeKit/4.15.1": {
+      "sha512": "cxCcQhD0zhboFoG136jJuJtQjNRDJ+BxBm3f2vWn+53bff/CRo+K1mAkWjsW4Wuyy5O22F40MdMG2nRzQu1cJw==",
       "type": "package",
-      "path": "mimekit/4.14.0",
+      "path": "mimekit/4.15.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "docs/FAQ.md",
         "docs/README.md",
         "icons/mimekit-50.png",
+        "lib/net10.0/MimeKit.dll",
+        "lib/net10.0/MimeKit.dll.config",
+        "lib/net10.0/MimeKit.pdb",
+        "lib/net10.0/MimeKit.xml",
         "lib/net462/MimeKit.dll",
         "lib/net462/MimeKit.pdb",
         "lib/net462/MimeKit.xml",
@@ -4958,14 +4965,14 @@
         "lib/netstandard2.1/MimeKit.dll.config",
         "lib/netstandard2.1/MimeKit.pdb",
         "lib/netstandard2.1/MimeKit.xml",
-        "mimekit.4.14.0.nupkg.sha512",
+        "mimekit.4.15.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
-    "MongoDB.Bson/3.5.2": {
-      "sha512": "aTlbKclBjXi4j3AkrHiaeuKCvdoGA029VbvXJUmmsCXDz+DEfBFq6n9uOvXJu2YXcJiW9Vay1ZctY5Iu0JRXdw==",
+    "MongoDB.Bson/3.7.0": {
+      "sha512": "u8f0UAYe2/LWdvLEwwIjkCd2Rx6vBo6Yab+i+D4B3E0AvK1ndzIsIHuGBCeYeg5r8+/V+m1TXLonlhwT9Vfdrg==",
       "type": "package",
-      "path": "mongodb.bson/3.5.2",
+      "path": "mongodb.bson/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4976,15 +4983,15 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.5.2.nupkg.sha512",
+        "mongodb.bson.3.7.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/3.5.2": {
-      "sha512": "Z1EW+CI18wOQqyAnhZkQXvUVXycrHoOb8/dlJzPHKFfNp9XPB6sEJJR67GUVYyB03B5xzt1RlwSyLXAx9B5+yQ==",
+    "MongoDB.Driver/3.7.0": {
+      "sha512": "3Xr9Z6GzfewLbPNCtC+9Z8AvU9rtWzPG0Dl7BPYF2MiMxGMsrU/dp2cYOY39yxzOJAye/lWIWYX/lVmyQLQbYQ==",
       "type": "package",
-      "path": "mongodb.driver/3.5.2",
+      "path": "mongodb.driver/3.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4995,7 +5002,7 @@
         "lib/net6.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.3.5.2.nupkg.sha512",
+        "mongodb.driver.3.7.0.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]
@@ -5396,12 +5403,12 @@
   "projectFileDependencyGroups": {
     "net8.0-windows10.0.19041": [
       "Google.Apis.Auth >= 1.73.0",
-      "Google.Apis.Gmail.v1 >= 1.73.0.3987",
+      "Google.Apis.Gmail.v1 >= 1.73.0.4029",
       "Konscious.Security.Cryptography.Argon2 >= 1.3.1",
-      "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.7463",
-      "Microsoft.WindowsAppSDK >= 1.8.251106002",
-      "MimeKit >= 4.14.0",
-      "MongoDB.Driver >= 3.5.2"
+      "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.7705",
+      "Microsoft.WindowsAppSDK >= 1.8.260209005",
+      "MimeKit >= 4.15.1",
+      "MongoDB.Driver >= 3.7.0"
     ]
   },
   "packageFolders": {
@@ -5460,7 +5467,7 @@
           },
           "Google.Apis.Gmail.v1": {
             "target": "Package",
-            "version": "[1.73.0.3987, )"
+            "version": "[1.73.0.4029, )"
           },
           "Konscious.Security.Cryptography.Argon2": {
             "target": "Package",
@@ -5468,19 +5475,19 @@
           },
           "Microsoft.Windows.SDK.BuildTools": {
             "target": "Package",
-            "version": "[10.0.26100.7463, )"
+            "version": "[10.0.26100.7705, )"
           },
           "Microsoft.WindowsAppSDK": {
             "target": "Package",
-            "version": "[1.8.251106002, )"
+            "version": "[1.8.260209005, )"
           },
           "MimeKit": {
             "target": "Package",
-            "version": "[4.14.0, )"
+            "version": "[4.15.1, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "[3.5.2, )"
+            "version": "[3.7.0, )"
           }
         },
         "imports": [
@@ -5558,20 +5565,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'MimeKit' 4.14.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g7hc-96xr-gvvx",
-      "libraryId": "MimeKit",
-      "targetGraphs": [
-        "net8.0-windows10.0.19041.0",
-        "net8.0-windows10.0.19041.0/win-arm64",
-        "net8.0-windows10.0.19041.0/win-x64",
-        "net8.0-windows10.0.19041.0/win-x86"
-      ]
-    }
-  ]
+  }
 }
