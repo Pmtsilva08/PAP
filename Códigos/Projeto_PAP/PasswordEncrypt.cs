@@ -77,6 +77,14 @@ namespace Projeto_PAP
             return Encoding.UTF8.GetString(decryptedBytes);
         }
 
+        public void Clear()
+        {
+            if (_key != null)
+            {
+                Array.Clear(_key, 0, _key.Length);
+            }
+        }
+
     }
 }
                                       
