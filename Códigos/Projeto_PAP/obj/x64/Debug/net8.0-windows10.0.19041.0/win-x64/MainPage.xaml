@@ -15,7 +15,7 @@
         <!--(OpenPaneLength) Largura do menu quando está aberto-->
         <SplitView x:ConnectionId='2' 
             x:Name="SplitView"
-            DisplayMode="CompactOverlay" 
+            DisplayMode="CompactInline" 
             IsPaneOpen="False"
             CompactPaneLength="50"
             OpenPaneLength="200"
@@ -110,19 +110,19 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <FontIcon Grid.Column="0" Glyph="&#xE80F;" FontSize="16" VerticalAlignment="Center"/>
-                            <TextBlock x:ConnectionId='12' x:Name="TextHome" x:Uid="MenuHome" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='13' x:Name="TextHome" x:Uid="MenuHome" Grid.Column="1" VerticalAlignment="Center"/>
                         </Grid>
                     </Button>
 
                     <!-- Botão Passwords -->
-                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                    <Button x:ConnectionId='10' Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}"                              >
                         <Grid Width="170">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <FontIcon Grid.Column="0" Glyph="&#xE72E;" FontSize="16" VerticalAlignment="Center"/>
-                            <TextBlock x:ConnectionId='11' x:Name="TextPasswords" x:Uid="MenuPasswords" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='12' x:Name="TextPasswords" x:Uid="MenuPasswords" Grid.Column="1" VerticalAlignment="Center"/>
                         </Grid>
                     </Button>
 
@@ -134,7 +134,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <FontIcon Grid.Column="0" Glyph="&#xE713;" FontSize="16" VerticalAlignment="Center"/>
-                            <TextBlock x:ConnectionId='10' x:Name="TextSettings" x:Uid="MenuSettings" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='11' x:Name="TextSettings" x:Uid="MenuSettings" Grid.Column="1" VerticalAlignment="Center"/>
                         </Grid>
                     </Button>
 
@@ -143,7 +143,7 @@
 
             <!--(SplitView.Content) é o conteúdo principal, o que fica ao lado do conteúdo principal-->
             <SplitView.Content>
-                <Frame x:ConnectionId='13' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
+                <Frame x:ConnectionId='14' x:Name="ContentFrame"/> <!--Este Frame é para poder navegar dentro da MainPage-->
             </SplitView.Content>
         </SplitView>
     </Grid>

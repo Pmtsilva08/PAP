@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -22,15 +23,30 @@ namespace Projeto_PAP
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PasswordPage : Page
+    public sealed partial class PasswordsPage : Page
     {
 
         public ObservableCollection<PasswordItem> Passwords { get; set; }
 
-        public PasswordPage()
+        public PasswordsPage()
         {
             InitializeComponent();
             Passwords = new ObservableCollection<PasswordItem>();
+            // Eventos de hover para o botão
+            AddButton.PointerEntered += AddButton_PointerEntered;
+            AddButton.PointerExited += AddButton_PointerExited;
+        }
+
+        private void AddButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            var storyboard = (Storyboard)AddButton.Resources["HoverIn"];
+            storyboard.Begin();
+        }
+
+        private void AddButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            var storyboard = (Storyboard)AddButton.Resources["HoverOut"];
+            storyboard.Begin();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -39,5 +55,53 @@ namespace Projeto_PAP
             LoadPasswords();
         }
 
+        private void LoadPasswords()
+        {
+            if (Passwords.Count == 0)
+            {
+                EmptyState.Visibility = Visibility.Visible;
+                PasswordsList.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                EmptyState.Visibility = Visibility.Collapsed;
+                PasswordsList.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void CategoryFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ViewPassword_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void CopyPassword_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void EditPassword_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void DeletePassword_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

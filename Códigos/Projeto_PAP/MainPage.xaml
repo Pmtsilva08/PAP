@@ -15,7 +15,7 @@
         <!--(OpenPaneLength) Largura do menu quando está aberto-->
         <SplitView 
             x:Name="SplitView"
-            DisplayMode="CompactOverlay" 
+            DisplayMode="CompactInline" 
             IsPaneOpen="False"
             CompactPaneLength="50"
             OpenPaneLength="200"
@@ -115,7 +115,7 @@
                     </Button>
 
                     <!-- Botão Passwords -->
-                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}" Click="PasswordsButton_Click">
                         <Grid Width="170">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>

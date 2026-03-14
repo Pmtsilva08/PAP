@@ -49,5 +49,51 @@
 	<data name="MenuSettings.Text" xml:space="preserve">
         <value>Paramètres</value>
     </data>
+
+	<data name="PasswordsPageTitle.Text" xml:space="preserve">
+    <value>Mes Mots de passe</value>
+  </data>
+	<data name="PasswordsAddButton.Text" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+	<data name="PasswordsSearchBox.PlaceholderText" xml:space="preserve">
+    <value>Rechercher des mots de passe...</value>
+  </data>
+	<data name="PasswordsCategoryFilter.PlaceholderText" xml:space="preserve">
+    <value>Toutes les Catégories</value>
+  </data>
+	<data name="CategoryAll.Content" xml:space="preserve">
+    <value>Toutes</value>
+  </data>
+	<data name="CategorySocial.Content" xml:space="preserve">
+    <value>Social</value>
+  </data>
+	<data name="CategoryWork.Content" xml:space="preserve">
+    <value>Travail</value>
+  </data>
+	<data name="CategoryBank.Content" xml:space="preserve">
+    <value>Banque</value>
+  </data>
+	<data name="CategoryOther.Content" xml:space="preserve">
+    <value>Autres</value>
+  </data>
+	<data name="PasswordsViewButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Voir le mot de passe</value>
+  </data>
+	<data name="PasswordsCopyButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copier le mot de passe</value>
+  </data>
+	<data name="PasswordsEditButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+	<data name="PasswordsDeleteButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+	<data name="PasswordsEmptyTitle.Text" xml:space="preserve">
+    <value>Pas encore de mots de passe</value>
+  </data>
+	<data name="PasswordsEmptySubtitle.Text" xml:space="preserve">
+    <value>Cliquez sur 'Ajouter' pour commencer</value>
+  </data>
 	
 </root>

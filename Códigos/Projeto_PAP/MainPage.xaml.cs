@@ -55,5 +55,10 @@ namespace Projeto_PAP
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
+        private void PasswordsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(PasswordsPage));
+        }
+
     }
 }
