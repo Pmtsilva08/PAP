@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,9 +24,20 @@ namespace Projeto_PAP
     /// </summary>
     public sealed partial class PasswordPage : Page
     {
+
+        public ObservableCollection<PasswordItem> Passwords { get; set; }
+
         public PasswordPage()
         {
             InitializeComponent();
+            Passwords = new ObservableCollection<PasswordItem>();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            LoadPasswords();
+        }
+
     }
 }

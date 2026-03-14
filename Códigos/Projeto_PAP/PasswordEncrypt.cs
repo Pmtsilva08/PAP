@@ -81,7 +81,7 @@ namespace Projeto_PAP
         {
             if (_key != null)
             {
-                Array.Clear(_key, 0, _key.Length);
+                Array.Clear(_key, 0, _key.Length); 
             }
         }
 
