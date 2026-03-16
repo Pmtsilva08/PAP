@@ -95,5 +95,59 @@
 	<data name="PasswordsEmptySubtitle.Text" xml:space="preserve">
     <value>Click 'Add Password' to get started</value>
   </data>
+
+	<data name="AddDialogSiteName.Text" xml:space="preserve">
+  <value>Site Name</value>
+</data>
+	<data name="AddDialogSiteNameBox.PlaceholderText" xml:space="preserve">
+  <value>e.g. Google, Facebook...</value>
+</data>
+	<data name="AddDialogUrl.Text" xml:space="preserve">
+  <value>URL</value>
+</data>
+	<data name="AddDialogUrlBox.PlaceholderText" xml:space="preserve">
+  <value>https://example.com</value>
+</data>
+	<data name="AddDialogEmail.Text" xml:space="preserve">
+  <value>Email / Username</value>
+</data>
+	<data name="AddDialogEmailBox.PlaceholderText" xml:space="preserve">
+  <value>your@email.com</value>
+</data>
+	<data name="AddDialogPassword.Text" xml:space="preserve">
+  <value>Password</value>
+</data>
+	<data name="AddDialogPasswordBox.PlaceholderText" xml:space="preserve">
+  <value>Enter password</value>
+</data>
+	<data name="AddDialogCategory.Text" xml:space="preserve">
+  <value>Category</value>
+</data>
+	<data name="AddDialogNotes.Text" xml:space="preserve">
+  <value>Notes (optional)</value>
+</data>
+	<data name="AddDialogNotesBox.PlaceholderText" xml:space="preserve">
+  <value>Additional notes...</value>
+</data>
+
+	<data name="ErrorTitle" xml:space="preserve">
+  <value>Error</value>
+</data>
+	<data name="ErrorFillAllFields" xml:space="preserve">
+  <value>Please fill in all required fields (Site Name, Email, Password).</value>
+</data>
+	<data name="AddDialogTitle" xml:space="preserve">
+  <value>Add Password</value>
+</data>
+	<data name="SaveButton" xml:space="preserve">
+  <value>Save</value>
+</data>
+	<data name="CancelButton" xml:space="preserve">
+  <value>Cancel</value>
+</data>
+
+	<data name="AddDialogError.Text" xml:space="preserve">
+  <value>Please fill in all required fields (Site Name, Email, Password).</value>
+</data>
 	
 </root>

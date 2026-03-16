@@ -192,8 +192,6 @@ public sealed partial class LoginPage : Page
                                 EmailAddress = EmailTextBox.Text,
                             };
 
-                            ActiveProfile.current_user = user;
-
                             byte[] key = Rfc2898DeriveBytes.Pbkdf2(
                                     PasswordBox.Password,
                                     result.Salt,
@@ -203,7 +201,12 @@ public sealed partial class LoginPage : Page
                                 );
 
                             PasswordEncrypt encryptor = new PasswordEncrypt(key);
-                            Frame.Navigate(typeof(MainPage), encryptor);
+                            var parameters = new NavigationsParameters
+                            {
+                                Encryptor = encryptor,
+                                UserEmail = EmailTextBox.Text.Trim()
+                            };
+                            Frame.Navigate(typeof(MainPage), parameters);
 
                         }
                         else

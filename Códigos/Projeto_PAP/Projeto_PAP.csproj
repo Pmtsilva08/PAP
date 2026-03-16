@@ -17,6 +17,7 @@
     <Content Remove="Assets\Icon_App.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="AddPasswordDialog.xaml" />
     <None Remove="Assets\Icon_App %281%29.png" />
     <None Remove="Assets\Icon_App.png" />
     <None Remove="Assets\Icon_App_Grande.png" />
@@ -60,6 +61,7 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260209005" />
     <PackageReference Include="MimeKit" Version="4.15.1" />
     <PackageReference Include="MongoDB.Driver" Version="3.7.0" />
+    <PackageReference Include="Otp.NET" Version="1.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Assets\Icon_App %281%29.png">
@@ -68,6 +70,11 @@
     <Content Update="Assets\Icon_App_Grande.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddPasswordDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="PasswordPage.xaml">

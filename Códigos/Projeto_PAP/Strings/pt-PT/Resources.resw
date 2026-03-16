@@ -95,5 +95,59 @@
 	<data name="PasswordsEmptySubtitle.Text" xml:space="preserve">
     <value>Clica em 'Adicionar' para começar</value>
   </data>
+
+	<data name="AddDialogSiteName.Text" xml:space="preserve">
+  <value>Nome do Site</value>
+</data>
+	<data name="AddDialogSiteNameBox.PlaceholderText" xml:space="preserve">
+  <value>ex: Google, Facebook...</value>
+</data>
+	<data name="AddDialogUrl.Text" xml:space="preserve">
+  <value>URL</value>
+</data>
+	<data name="AddDialogUrlBox.PlaceholderText" xml:space="preserve">
+  <value>https://exemplo.com</value>
+</data>
+	<data name="AddDialogEmail.Text" xml:space="preserve">
+  <value>Email / Nome de utilizador</value>
+</data>
+	<data name="AddDialogEmailBox.PlaceholderText" xml:space="preserve">
+  <value>o_teu@email.com</value>
+</data>
+	<data name="AddDialogPassword.Text" xml:space="preserve">
+  <value>Palavra-passe</value>
+</data>
+	<data name="AddDialogPasswordBox.PlaceholderText" xml:space="preserve">
+  <value>Introduz a palavra-passe</value>
+</data>
+	<data name="AddDialogCategory.Text" xml:space="preserve">
+  <value>Categoria</value>
+</data>
+	<data name="AddDialogNotes.Text" xml:space="preserve">
+  <value>Notas (opcional)</value>
+</data>
+	<data name="AddDialogNotesBox.PlaceholderText" xml:space="preserve">
+  <value>Notas adicionais...</value>
+</data>
+
+	<data name="ErrorTitle" xml:space="preserve">
+  <value>Erro</value>
+</data>
+	<data name="ErrorFillAllFields" xml:space="preserve">
+  <value>Por favor, preenche todos os campos obrigatórios (Nome do Site, Email, Palavra-passe).</value>
+</data>
+	<data name="AddDialogTitle" xml:space="preserve">
+  <value>Adicionar Palavra-passe</value>
+</data>
+	<data name="SaveButton" xml:space="preserve">
+  <value>Guardar</value>
+</data>
+	<data name="CancelButton" xml:space="preserve">
+  <value>Cancelar</value>
+</data>
+
+	<data name="AddDialogError.Text" xml:space="preserve">
+  <value>Por favor, preenche todos os campos obrigatórios (Nome do Site, Email, Palavra-passe).</value>
+</data>
 	
 </root>

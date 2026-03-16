@@ -11,9 +11,9 @@ namespace Projeto_PAP
     {
         internal static async Task<(bool Success, string Message, byte[] Salt)> LoginVerification(string email, string password)
         {
-            var client = new MongoClient("mongodb+srv://Pmtsilva08:008421Apmcjmo!@cluster0.quvshkk.mongodb.net/?appName=Cluster0");
-            var database = client.GetDatabase("PAP");
-            var collection = database.GetCollection<Account>("Users");
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
 
             try
             {

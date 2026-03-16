@@ -613,3 +613,8 @@ C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Pr
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PasswordPage.g.cs
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PasswordPage.xaml
 C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\PasswordPage.xbf
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AddPasswordDialog.xbf
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AddPasswordDialog.g.i.cs
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AddPasswordDialog.g.cs
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AddPasswordDialog.xaml
+C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AddPasswordDialog.xbf

@@ -21,9 +21,6 @@
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
-    <Resource Language="ES-ES" />
-    <Resource Language="FR-FR" />
-    <Resource Language="PT-PT" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Projeto_PAP.exe" EntryPoint="Windows.FullTrustApplication">

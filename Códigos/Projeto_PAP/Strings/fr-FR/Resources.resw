@@ -95,5 +95,59 @@
 	<data name="PasswordsEmptySubtitle.Text" xml:space="preserve">
     <value>Cliquez sur 'Ajouter' pour commencer</value>
   </data>
+
+	<data name="AddDialogSiteName.Text" xml:space="preserve">
+  <value>Nom du Site</value>
+</data>
+	<data name="AddDialogSiteNameBox.PlaceholderText" xml:space="preserve">
+  <value>ex: Google, Facebook...</value>
+</data>
+	<data name="AddDialogUrl.Text" xml:space="preserve">
+  <value>URL</value>
+</data>
+	<data name="AddDialogUrlBox.PlaceholderText" xml:space="preserve">
+  <value>https://exemple.com</value>
+</data>
+	<data name="AddDialogEmail.Text" xml:space="preserve">
+  <value>Email / Nom d'utilisateur</value>
+</data>
+	<data name="AddDialogEmailBox.PlaceholderText" xml:space="preserve">
+  <value>ton@email.com</value>
+</data>
+	<data name="AddDialogPassword.Text" xml:space="preserve">
+  <value>Mot de passe</value>
+</data>
+	<data name="AddDialogPasswordBox.PlaceholderText" xml:space="preserve">
+  <value>Entrez le mot de passe</value>
+</data>
+	<data name="AddDialogCategory.Text" xml:space="preserve">
+  <value>Catégorie</value>
+</data>
+	<data name="AddDialogNotes.Text" xml:space="preserve">
+  <value>Notes (facultatif)</value>
+</data>
+	<data name="AddDialogNotesBox.PlaceholderText" xml:space="preserve">
+  <value>Notes supplémentaires...</value>
+</data>
+
+	<data name="ErrorTitle" xml:space="preserve">
+  <value>Erreur</value>
+</data>
+	<data name="ErrorFillAllFields" xml:space="preserve">
+  <value>Veuillez remplir tous les champs obligatoires (Nom du Site, Email, Mot de passe).</value>
+</data>
+	<data name="AddDialogTitle" xml:space="preserve">
+  <value>Ajouter un Mot de passe</value>
+</data>
+	<data name="SaveButton" xml:space="preserve">
+  <value>Enregistrer</value>
+</data>
+	<data name="CancelButton" xml:space="preserve">
+  <value>Annuler</value>
+</data>
+
+	<data name="AddDialogError.Text" xml:space="preserve">
+  <value>Veuillez remplir tous les champs obligatoires (Nom du Site, Email, Mot de passe).</value>
+</data>
 	
 </root>

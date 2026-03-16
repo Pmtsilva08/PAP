@@ -14,24 +14,31 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace Projeto_PAP
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        private PasswordEncrypt _encryptor;
+        private string _userEmail;
+
         public MainPage()
         {
             InitializeComponent();
-
-            // Esconde os textos inicialmente
             TextHome.Visibility = Visibility.Collapsed;
             TextPasswords.Visibility = Visibility.Collapsed;
             TextSettings.Visibility = Visibility.Collapsed;
+        }
+
+        // ALTERAÇÃO AQUI - Receber NavigationParameters em vez de só PasswordEncrypt
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.Parameter is NavigationsParameters parameters)
+            {
+                _encryptor = parameters.Encryptor;
+                _userEmail = parameters.UserEmail;
+            }
         }
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
@@ -41,7 +48,6 @@ namespace Projeto_PAP
 
         private void SplitView_PaneOpening(SplitView sender, object args)
         {
-            // Mostra os textos quando abre
             TextHome.Visibility = Visibility.Visible;
             TextPasswords.Visibility = Visibility.Visible;
             TextSettings.Visibility = Visibility.Visible;
@@ -49,16 +55,20 @@ namespace Projeto_PAP
 
         private void SplitView_PaneClosing(SplitView sender, SplitViewPaneClosingEventArgs args)
         {
-            // Esconde os textos quando fecha
             TextHome.Visibility = Visibility.Collapsed;
             TextPasswords.Visibility = Visibility.Collapsed;
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
+        // ALTERAÇÃO AQUI - Passar NavigationParameters em vez de só _encryptor
         private void PasswordsButton_Click(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(typeof(PasswordsPage));
+            var parameters = new NavigationsParameters
+            {
+                Encryptor = _encryptor,
+                UserEmail = _userEmail
+            };
+            ContentFrame.Navigate(typeof(PasswordsPage), parameters);
         }
-
     }
 }

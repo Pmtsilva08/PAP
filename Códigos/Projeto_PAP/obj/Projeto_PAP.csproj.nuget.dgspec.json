@@ -77,6 +77,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.7.0, )"
+            },
+            "Otp.NET": {
+              "target": "Package",
+              "version": "[1.4.1, )"
             }
           },
           "imports": [

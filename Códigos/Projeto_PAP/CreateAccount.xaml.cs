@@ -301,10 +301,10 @@ namespace Projeto_PAP
                         string enteredCode = num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text;
                         if (enteredCode == codeVerification)
                         {
-                            var hashedPassword = PasswordHash.HashPassword(PasswordBox.Password); 
-                            var client = new MongoClient("mongodb+srv://Pmtsilva08:008421Apmcjmo!@cluster0.quvshkk.mongodb.net/?appName=Cluster0");
-                            var database = client.GetDatabase("PAP");
-                            var collection = database.GetCollection<Account>("Users"); //Quando eu ler documentos ou inserir documentos nesta coleção vou usar a classe Account como molde 
+                            var hashedPassword = PasswordHash.HashPassword(PasswordBox.Password);
+                            var client = new MongoClient(DataBaseConfig.ConnectionString);
+                            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+                            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName); //Quando eu ler documentos ou inserir documentos nesta coleção vou usar a classe Account como molde 
                             var user = new Account
                             {
                                 FirstName = FirstNameTextBox.Text.Trim(),
