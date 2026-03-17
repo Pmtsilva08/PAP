@@ -75,7 +75,7 @@
 
             <Button
             x:Name="CreateAccountButton"
-            Content="Create Account"
+            Content="Login" 
             Width="140"
             Click="LoginClick"
             HorizontalAlignment="Center"

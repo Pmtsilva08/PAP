@@ -29,17 +29,17 @@
     <AppXManifest Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-03-15T21:41:25.954</Modified>
+      <Modified>2026-03-16T10:51:54.395</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Projeto_PAP.runtimeconfig.json">
       <PackagePath>Projeto_PAP.runtimeconfig.json</PackagePath>
-      <Modified>2026-03-11T12:17:13.498</Modified>
+      <Modified>2026-03-16T10:17:10.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>Projeto_PAP.exe</PackagePath>
-      <Modified>2026-03-15T21:41:25.561</Modified>
+      <Modified>2026-03-16T10:51:53.919</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\Assets\Icon_App %281%29.png">
       <PackagePath>Assets\Icon_App %281%29.png</PackagePath>
@@ -55,7 +55,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Projeto_PAP.dll">
       <PackagePath>Projeto_PAP.dll</PackagePath>
-      <Modified>2026-03-15T21:41:25.552</Modified>
+      <Modified>2026-03-16T10:51:53.912</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.24\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -965,6 +965,10 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2025-09-16T08:04:24.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\otp.net\1.4.1\lib\net8.0\Otp.NET.dll">
+      <PackagePath>Otp.NET.dll</PackagePath>
+      <Modified>2025-12-01T19:32:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\sharpcompress\0.30.1\lib\net5.0\SharpCompress.dll">
       <PackagePath>SharpCompress.dll</PackagePath>
       <Modified>2021-11-22T09:21:32.000</Modified>
@@ -1015,7 +1019,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Projeto_PAP.deps.json">
       <PackagePath>Projeto_PAP.deps.json</PackagePath>
-      <Modified>2026-03-15T19:31:51.273</Modified>
+      <Modified>2026-03-16T10:17:10.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -1051,7 +1055,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-03-15T21:20:57.723</Modified>
+      <Modified>2026-03-16T10:51:54.077</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

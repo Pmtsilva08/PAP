@@ -75,7 +75,7 @@
 
             <Button x:ConnectionId='7'
             x:Name="CreateAccountButton"
-            Content="Create Account"
+            Content="Login"
             Width="140"
                               
             HorizontalAlignment="Center"

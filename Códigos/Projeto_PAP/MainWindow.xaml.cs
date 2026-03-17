@@ -30,7 +30,5 @@ namespace Projeto_PAP
             SetTitleBar(AppTitleBar);
             MainFrame.Navigate(typeof(LoginPage));
         }
-        
-
     }
 }

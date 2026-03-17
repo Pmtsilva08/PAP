@@ -29,6 +29,9 @@ namespace Projeto_PAP
         [BsonRequired]
         public string Password { get; set; } = string.Empty;
 
+        [BsonElement("totp_secret")]
+        public string? TotpSecret { get; set; } = null; //o ponto de interrogação indica que a propriedade pode ser nula
+
         [BsonElement("list_passwords")]
         public List<PasswordItem> PasswordItems { get; set; } = new List<PasswordItem>();
     }
