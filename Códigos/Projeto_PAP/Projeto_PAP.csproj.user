@@ -8,6 +8,12 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Setup2FAPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Setup2FADialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="PasswordPage.xaml">
       <SubType>Designer</SubType>
     </Page>

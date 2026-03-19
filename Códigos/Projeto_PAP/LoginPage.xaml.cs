@@ -187,12 +187,11 @@ public sealed partial class LoginPage : Page
                         string enteredCode = num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text;
                         if (enteredCode == code_verification)
                         {
-                            var user = new Account
+                            // Verifica se precisa configurar 2FA
+                            if (result.TotpSecret == null)
                             {
-                                EmailAddress = EmailTextBox.Text,
-                            };
-
-                            byte[] key = Rfc2898DeriveBytes.Pbkdf2(
+                                // Criar chave de encriptação
+                                byte[] key = Rfc2898DeriveBytes.Pbkdf2(
                                     PasswordBox.Password,
                                     result.Salt,
                                     100000,
@@ -200,14 +199,35 @@ public sealed partial class LoginPage : Page
                                     32
                                 );
 
-                            PasswordEncrypt encryptor = new PasswordEncrypt(key);
+                                PasswordEncrypt encryptor = new PasswordEncrypt(key);
+
+                                // Navegar para página de Setup 2FA
+                                var setup2FAParams = new Setup2FAParameters
+                                {
+                                    UserEmail = EmailTextBox.Text.Trim(),
+                                    Encryptor = encryptor
+                                };
+                                Frame.Navigate(typeof(Setup2FAPage), setup2FAParams);
+                                return;
+                            }
+
+                            // Já tem 2FA configurado - avança direto
+                            byte[] keyExisting = Rfc2898DeriveBytes.Pbkdf2(
+                                PasswordBox.Password,
+                                result.Salt,
+                                100000,
+                                HashAlgorithmName.SHA256,
+                                32
+                            );
+
+                            PasswordEncrypt encryptorExisting = new PasswordEncrypt(keyExisting);
                             var parameters = new NavigationsParameters
                             {
-                                Encryptor = encryptor,
-                                UserEmail = EmailTextBox.Text.Trim()
+                                Encryptor = encryptorExisting,
+                                UserEmail = EmailTextBox.Text.Trim(),
+                                TotpSecret = result.TotpSecret
                             };
                             Frame.Navigate(typeof(MainPage), parameters);
-
                         }
                         else
                         {

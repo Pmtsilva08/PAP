@@ -226,7 +226,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[38];
+            _typeNameTable = new string[40];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -262,11 +262,13 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeNameTable[32] = "System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>";
             _typeNameTable[33] = "Projeto_PAP.PasswordItem";
             _typeNameTable[34] = "MongoDB.Bson.ObjectId";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[36] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[37] = "Int32";
+            _typeNameTable[35] = "Projeto_PAP.Setup2FADialog";
+            _typeNameTable[36] = "Projeto_PAP.Setup2FAPage";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[38] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[39] = "Int32";
 
-            _typeTable = new global::System.Type[38];
+            _typeTable = new global::System.Type[40];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -302,9 +304,11 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeTable[32] = typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>);
             _typeTable[33] = typeof(global::Projeto_PAP.PasswordItem);
             _typeTable[34] = typeof(global::MongoDB.Bson.ObjectId);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[36] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[37] = typeof(global::System.Int32);
+            _typeTable[35] = typeof(global::Projeto_PAP.Setup2FADialog);
+            _typeTable[36] = typeof(global::Projeto_PAP.Setup2FAPage);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[38] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[39] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -354,7 +358,8 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private object Activate_31_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>(); }
         private object Activate_32_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>(); }
         private object Activate_33_PasswordItem() { return new global::Projeto_PAP.PasswordItem(); }
-        private object Activate_35_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_36_Setup2FAPage() { return new global::Projeto_PAP.Setup2FAPage(); }
+        private object Activate_37_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_ProgressBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar).TypeHandle);
         private void StaticInitializer_6_ProgressBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings).TypeHandle);
@@ -375,8 +380,10 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private void StaticInitializer_32_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>).TypeHandle);
         private void StaticInitializer_33_PasswordItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordItem).TypeHandle);
         private void StaticInitializer_34_ObjectId() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MongoDB.Bson.ObjectId).TypeHandle);
-        private void StaticInitializer_35_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_36_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_35_Setup2FADialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FADialog).TypeHandle);
+        private void StaticInitializer_36_Setup2FAPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FAPage).TypeHandle);
+        private void StaticInitializer_37_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_38_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -396,7 +403,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var newItem = (global::Projeto_PAP.PasswordItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_36_IList(object instance, object item)
+        private void VectorAdd_38_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -654,10 +661,26 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 35:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 35:   //  Projeto_PAP.Setup2FADialog
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.StaticInitializer = StaticInitializer_35_Setup2FADialog;
+                userType.AddMemberName("SecretKeyBase32");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  Projeto_PAP.Setup2FAPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_36_Setup2FAPage;
+                userType.StaticInitializer = StaticInitializer_36_Setup2FAPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_35_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_35_TreeViewNode;
+                userType.Activator = Activate_37_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_37_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -669,15 +692,15 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 38:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_36_IList;
-                userType.CollectionAdd = VectorAdd_36_IList;
+                userType.StaticInitializer = StaticInitializer_38_IList;
+                userType.CollectionAdd = VectorAdd_38_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 37:   //  Int32
+            case 39:   //  Int32
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -1009,52 +1032,57 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var that = (global::Projeto_PAP.PasswordItem)instance;
             that.Notes = (global::System.String)Value;
         }
-        private object get_31_TreeViewNode_Children(object instance)
+        private object get_31_Setup2FADialog_SecretKeyBase32(object instance)
+        {
+            var that = (global::Projeto_PAP.Setup2FADialog)instance;
+            return that.SecretKeyBase32;
+        }
+        private object get_32_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_32_TreeViewNode_Content(object instance)
+        private object get_33_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_32_TreeViewNode_Content(object instance, object Value)
+        private void set_33_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_33_TreeViewNode_Depth(object instance)
+        private object get_34_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_34_TreeViewNode_HasChildren(object instance)
+        private object get_35_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_35_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_36_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_35_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_36_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_36_TreeViewNode_IsExpanded(object instance)
+        private object get_37_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_36_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_37_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_37_TreeViewNode_Parent(object instance)
+        private object get_38_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -1269,50 +1297,56 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlMember.Getter = get_30_PasswordItem_Notes;
                 xamlMember.Setter = set_30_PasswordItem_Notes;
                 break;
+            case "Projeto_PAP.Setup2FADialog.SecretKeyBase32":
+                userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.Setup2FADialog");
+                xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "SecretKeyBase32", "String");
+                xamlMember.Getter = get_31_Setup2FADialog_SecretKeyBase32;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_31_TreeViewNode_Children;
+                xamlMember.Getter = get_32_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_TreeViewNode_Content;
-                xamlMember.Setter = set_32_TreeViewNode_Content;
+                xamlMember.Getter = get_33_TreeViewNode_Content;
+                xamlMember.Setter = set_33_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_TreeViewNode_Depth;
+                xamlMember.Getter = get_34_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_35_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_35_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_35_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_36_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_36_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_36_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_37_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_37_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_37_TreeViewNode_Parent;
+                xamlMember.Getter = get_38_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

@@ -149,5 +149,36 @@
 	<data name="AddDialogError.Text" xml:space="preserve">
   <value>Por favor, preenche todos os campos obrigatórios (Nome do Site, Email, Palavra-passe).</value>
 </data>
+
+	<data name="Setup2FA_WarningTitle.Text" xml:space="preserve">
+  <value>Autenticação de Dois Fatores Obrigatória</value>
+</data>
+	<data name="Setup2FA_WarningText.Text" xml:space="preserve">
+  <value>Para continuar a usar esta aplicação, tens de configurar a autenticação de dois fatores para a tua segurança.</value>
+</data>
+	<data name="Setup2FA_Step1.Text" xml:space="preserve">
+  <value>1. Instala o Google Authenticator no teu telemóvel</value>
+</data>
+	<data name="Setup2FA_Step2.Text" xml:space="preserve">
+  <value>2. Lê o QR Code abaixo</value>
+</data>
+	<data name="Setup2FA_Step3.Text" xml:space="preserve">
+  <value>3. Introduz o código de 6 dígitos da app:</value>
+</data>
+	<data name="Setup2FA_ManualEntry.Text" xml:space="preserve">
+  <value>Não consegues ler? Introduz este código manualmente:</value>
+</data>
+	<data name="Setup2FA_CodeBox.PlaceholderText" xml:space="preserve">
+  <value>000000</value>
+</data>
+	<data name="Setup2FA_Error.Text" xml:space="preserve">
+  <value>Código inválido. Tenta novamente.</value>
+</data>
+	<data name="Setup2FA_Title" xml:space="preserve">
+  <value>Configurar Autenticação de Dois Fatores</value>
+</data>
+	<data name="Setup2FA_ConfirmButton" xml:space="preserve">
+  <value>Confirmar</value>
+</data>
 	
 </root>
