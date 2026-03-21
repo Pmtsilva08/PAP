@@ -20,6 +20,7 @@ namespace Projeto_PAP
     {
         private PasswordEncrypt _encryptor;
         private string _userEmail;
+        private string _totpSecret;  
 
         public MainPage()
         {
@@ -29,7 +30,6 @@ namespace Projeto_PAP
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
-        // ALTERAÇÃO AQUI - Receber NavigationParameters em vez de só PasswordEncrypt
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -38,6 +38,7 @@ namespace Projeto_PAP
             {
                 _encryptor = parameters.Encryptor;
                 _userEmail = parameters.UserEmail;
+                _totpSecret = parameters.TotpSecret;  
             }
         }
 
@@ -60,13 +61,13 @@ namespace Projeto_PAP
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
-        // ALTERAÇÃO AQUI - Passar NavigationParameters em vez de só _encryptor
         private void PasswordsButton_Click(object sender, RoutedEventArgs e)
         {
             var parameters = new NavigationsParameters
             {
                 Encryptor = _encryptor,
-                UserEmail = _userEmail
+                UserEmail = _userEmail,
+                TotpSecret = _totpSecret  
             };
             ContentFrame.Navigate(typeof(PasswordsPage), parameters);
         }

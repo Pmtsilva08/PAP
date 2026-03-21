@@ -17,6 +17,12 @@ namespace Projeto_PAP
         private string _secretKeyBase32;
         private Setup2FAParameters _parameters;
 
+        // Controlo de tentativas
+        private int _attempts = 0;
+        private const int MaxAttempts = 2;
+        private DateTime? _lockoutEndTime = null;
+        private readonly TimeSpan LockoutDuration = TimeSpan.FromMinutes(30);
+
         public Setup2FAPage()
         {
             InitializeComponent();
@@ -75,33 +81,86 @@ namespace Projeto_PAP
             }
         }
 
+        private bool IsLockedOut()
+        {
+            if (_lockoutEndTime == null)
+                return false;
+
+            if (DateTime.Now < _lockoutEndTime)
+                return true;
+
+            // Lockout expirou - reset
+            _lockoutEndTime = null;
+            _attempts = 0;
+            return false;
+        }
+
+        private string GetRemainingLockoutTime()
+        {
+            if (_lockoutEndTime == null)
+                return "";
+
+            var remaining = _lockoutEndTime.Value - DateTime.Now;
+            return $"{remaining.Minutes}m {remaining.Seconds}s";
+        }
+
         private async void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
+
+            // Verificar se está bloqueado
+            if (IsLockedOut())
+            {
+                ErrorMessage.Text = $"{resourceLoader.GetString("Setup2FA_LockedOut")} {GetRemainingLockoutTime()}";
+                ErrorMessage.Visibility = Visibility.Visible;
+                return;
+            }
+
             string code = CodeBox.Text.Trim();
 
             if (string.IsNullOrEmpty(code) || code.Length != 6)
             {
+                ErrorMessage.Text = resourceLoader.GetString("Setup2FA_Error");
                 ErrorMessage.Visibility = Visibility.Visible;
                 return;
             }
 
             // Verificar o código TOTP
-            bool isValid = _totp.VerifyTotp(code, out long timeStepMatched, VerificationWindow.RfcSpecifiedNetworkDelay);
+            bool isValid = _totp.VerifyTotp(code, out long timeStepMatched, new VerificationWindow(previous: 0, future: 0));
 
             if (!isValid)
             {
+                _attempts++;
+
+                if (_attempts >= MaxAttempts)
+                {
+                    // Bloquear por 30 minutos
+                    _lockoutEndTime = DateTime.Now.Add(LockoutDuration);
+                    ErrorMessage.Text = $"{resourceLoader.GetString("Setup2FA_TooManyAttempts")} {GetRemainingLockoutTime()}";
+                }
+                else
+                {
+                    int remaining = MaxAttempts - _attempts;
+                    ErrorMessage.Text = $"{resourceLoader.GetString("Setup2FA_Error")} ({remaining} {resourceLoader.GetString("Setup2FA_AttemptsRemaining")})";
+                }
+
                 ErrorMessage.Visibility = Visibility.Visible;
+                CodeBox.Text = ""; // Limpa o campo
                 return;
             }
 
-            // Código válido - Guardar no MongoDB
+            // Código válido - Reset tentativas
+            _attempts = 0;
+            _lockoutEndTime = null;
+
+            // Guardar no MongoDB
             bool saved = await LoginQuery.SaveTotpSecret(_parameters.UserEmail, _secretKeyBase32);
 
             if (!saved)
             {
                 ContentDialog errorDialog = new ContentDialog()
                 {
-                    Title = "Error",
+                    Title = resourceLoader.GetString("ErrorTitle"),
                     Content = "Failed to save 2FA settings. Please try again.",
                     CloseButtonText = "OK",
                     XamlRoot = this.XamlRoot
@@ -118,6 +177,11 @@ namespace Projeto_PAP
                 TotpSecret = _secretKeyBase32
             };
             Frame.Navigate(typeof(MainPage), navigationParams);
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
         }
     }
 }

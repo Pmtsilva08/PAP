@@ -812,30 +812,60 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.SiteName;
         }
+        private void set_5_AddPasswordDialog_SiteName(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.SiteName = (global::System.String)Value;
+        }
         private object get_6_AddPasswordDialog_Url(object instance)
         {
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.Url;
+        }
+        private void set_6_AddPasswordDialog_Url(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.Url = (global::System.String)Value;
         }
         private object get_7_AddPasswordDialog_Email(object instance)
         {
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.Email;
         }
+        private void set_7_AddPasswordDialog_Email(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.Email = (global::System.String)Value;
+        }
         private object get_8_AddPasswordDialog_Password(object instance)
         {
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.Password;
+        }
+        private void set_8_AddPasswordDialog_Password(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.Password = (global::System.String)Value;
         }
         private object get_9_AddPasswordDialog_Category(object instance)
         {
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.Category;
         }
+        private void set_9_AddPasswordDialog_Category(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.Category = (global::System.String)Value;
+        }
         private object get_10_AddPasswordDialog_Notes(object instance)
         {
             var that = (global::Projeto_PAP.AddPasswordDialog)instance;
             return that.Notes;
+        }
+        private void set_10_AddPasswordDialog_Notes(object instance, object Value)
+        {
+            var that = (global::Projeto_PAP.AddPasswordDialog)instance;
+            that.Notes = (global::System.String)Value;
         }
         private object get_11_MicaBackdrop_Kind(object instance)
         {
@@ -1133,37 +1163,37 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "SiteName", "String");
                 xamlMember.Getter = get_5_AddPasswordDialog_SiteName;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_5_AddPasswordDialog_SiteName;
                 break;
             case "Projeto_PAP.AddPasswordDialog.Url":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Url", "String");
                 xamlMember.Getter = get_6_AddPasswordDialog_Url;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_6_AddPasswordDialog_Url;
                 break;
             case "Projeto_PAP.AddPasswordDialog.Email":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Email", "String");
                 xamlMember.Getter = get_7_AddPasswordDialog_Email;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_7_AddPasswordDialog_Email;
                 break;
             case "Projeto_PAP.AddPasswordDialog.Password":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Password", "String");
                 xamlMember.Getter = get_8_AddPasswordDialog_Password;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_8_AddPasswordDialog_Password;
                 break;
             case "Projeto_PAP.AddPasswordDialog.Category":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Category", "String");
                 xamlMember.Getter = get_9_AddPasswordDialog_Category;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_9_AddPasswordDialog_Category;
                 break;
             case "Projeto_PAP.AddPasswordDialog.Notes":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Projeto_PAP.AddPasswordDialog");
                 xamlMember = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlMember(this, "Notes", "String");
                 xamlMember.Getter = get_10_AddPasswordDialog_Notes;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_10_AddPasswordDialog_Notes;
                 break;
             case "Microsoft.UI.Xaml.Media.MicaBackdrop.Kind":
                 userType = (global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.MicaBackdrop");

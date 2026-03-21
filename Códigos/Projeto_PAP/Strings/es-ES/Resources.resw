@@ -180,5 +180,52 @@
 	<data name="Setup2FA_ConfirmButton" xml:space="preserve">
   <value>Confirmar</value>
 </data>
+
+	<data name="Setup2FA_TooManyAttempts" xml:space="preserve">
+  <value>Demasiados intentos. Inténtalo de nuevo en</value>
+</data>
+	<data name="Setup2FA_LockedOut" xml:space="preserve">
+  <value>Cuenta bloqueada. Inténtalo de nuevo en</value>
+</data>
+	<data name="Setup2FA_AttemptsRemaining" xml:space="preserve">
+  <value>intento(s) restante(s)</value>
+</data>
+
+	<data name="Setup2FA_BackButton.Text" xml:space="preserve">
+  <value>Volver</value>
+</data>
+
+	<data name="TOTP_DialogTitle" xml:space="preserve">
+  <value>Autenticação Necessária</value>
+</data>
+	<data name="TOTP_DialogInstructions" xml:space="preserve">
+  <value>Abre o Google Authenticator e introduz o código de 6 dígitos para Password Manager.</value>
+</data>
+
+	
+	<data name="TOTP_DialogInstructionsWithPassword" xml:space="preserve">
+  <value>Introduce el código de autenticación y la contraseña maestra para continuar.</value>
+</data>
+	<data name="TOTP_CodeLabel" xml:space="preserve">
+  <value>Código de Autenticación:</value>
+</data>
+	<data name="TOTP_PasswordLabel" xml:space="preserve">
+  <value>Contraseña Maestra:</value>
+</data>
+	<data name="TOTP_InvalidCode" xml:space="preserve">
+  <value>Código inválido. Inténtalo de nuevo.</value>
+</data>
+	<data name="TOTP_PasswordRequired" xml:space="preserve">
+  <value>Introduce tu contraseña maestra.</value>
+</data>
+	<data name="TOTP_InvalidPassword" xml:space="preserve">
+  <value>Contraseña incorrecta.</value>
+</data>
+	<data name="TOTP_VerifyButton" xml:space="preserve">
+  <value>Verificar</value>
+</data>
+	<data name="DeleteDialog_Success" xml:space="preserve">
+  <value>¡Contraseña eliminada con éxito!</value>
+</data>
 	
 </root>

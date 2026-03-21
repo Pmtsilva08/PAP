@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-03-18T18:56:52.157</Modified>
+      <Modified>2026-03-20T20:28:26.960</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +39,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>Projeto_PAP.exe</PackagePath>
-      <Modified>2026-03-18T18:56:50.949</Modified>
+      <Modified>2026-03-20T20:23:56.993</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\Assets\Icon_App %281%29.png">
       <PackagePath>Assets\Icon_App %281%29.png</PackagePath>
@@ -55,7 +55,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Projeto_PAP.dll">
       <PackagePath>Projeto_PAP.dll</PackagePath>
-      <Modified>2026-03-18T18:56:50.928</Modified>
+      <Modified>2026-03-20T20:23:56.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.25\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1067,7 +1067,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Códigos\Projeto_PAP\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-03-18T18:56:51.733</Modified>
+      <Modified>2026-03-20T20:28:26.590</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

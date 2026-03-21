@@ -33,12 +33,52 @@ namespace Projeto_PAP
         }
 
         // Properties to get values
-        public string SiteName => SiteNameBox.Text.Trim();
-        public string Url => UrlBox.Text.Trim();
-        public string Email => EmailBox.Text.Trim();
-        public string Password => PasswordBox.Password;
-        public string Category => (CategoryBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Other";
-        public string Notes => NotesBox.Text.Trim();
+        // Properties to get and set values
+        public string SiteName
+        {
+            get => SiteNameBox.Text.Trim();
+            set => SiteNameBox.Text = value;
+        }
+
+        public string Url
+        {
+            get => UrlBox.Text.Trim();
+            set => UrlBox.Text = value;
+        }
+
+        public string Email
+        {
+            get => EmailBox.Text.Trim();
+            set => EmailBox.Text = value;
+        }
+
+        public string Password
+        {
+            get => PasswordBox.Password;
+            set => PasswordBox.Password = value;
+        }
+
+        public string Category
+        {
+            get => (CategoryBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "Other";
+            set
+            {
+                foreach (ComboBoxItem item in CategoryBox.Items)
+                {
+                    if (item.Content?.ToString() == value)
+                    {
+                        CategoryBox.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+        }
+
+        public string Notes
+        {
+            get => NotesBox.Text.Trim();
+            set => NotesBox.Text = value;
+        }
 
         // Validate form
         public bool IsValid()
