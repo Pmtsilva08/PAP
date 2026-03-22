@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Projeto_PAP.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projeto_PAP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#f0f0f0">
+
+    <ScrollViewer>
+        <StackPanel Spacing="30" MaxWidth="1000" Padding="40" HorizontalAlignment="Center">
+
+            <!-- Saudação -->
+            <StackPanel Spacing="5">
+                <TextBlock 
+                    x:Name="GreetingText"
+                    x:Uid="HomePage_Greeting"
+                    Text="Welcome!"
+                    FontSize="32"
+                    FontWeight="Bold"
+                    Foreground="#1a1a2e"/>
+                <TextBlock 
+                    x:Uid="HomePage_Subtitle"
+                    Text="Here's an overview of your password vault."
+                    FontSize="14"
+                    Foreground="#888888"/>
+            </StackPanel>
+
+            <!-- Cards de Estatísticas -->
+            <StackPanel Spacing="15">
+                <TextBlock 
+                    x:Uid="HomePage_Statistics"
+                    Text="Statistics"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="#1a1a2e"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Total -->
+                    <Border Grid.Column="0" Background="#667eea" CornerRadius="12" Padding="20" Margin="0,0,10,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock x:Name="TotalCount" Text="0" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBlock x:Uid="HomePage_Total" Text="Total" FontSize="13" Foreground="#ffffffcc" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Social -->
+                    <Border Grid.Column="1" Background="#3498db" CornerRadius="12" Padding="20" Margin="5,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock x:Name="SocialCount" Text="0" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBlock x:Uid="HomePage_Social" Text="Social" FontSize="13" Foreground="#ffffffcc" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Work -->
+                    <Border Grid.Column="2" Background="#9b59b6" CornerRadius="12" Padding="20" Margin="5,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock x:Name="WorkCount" Text="0" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBlock x:Uid="HomePage_Work" Text="Work" FontSize="13" Foreground="#ffffffcc" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Bank -->
+                    <Border Grid.Column="3" Background="#27ae60" CornerRadius="12" Padding="20" Margin="5,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock x:Name="BankCount" Text="0" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBlock x:Uid="HomePage_Bank" Text="Bank" FontSize="13" Foreground="#ffffffcc" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Other -->
+                    <Border Grid.Column="4" Background="#e67e22" CornerRadius="12" Padding="20" Margin="10,0,0,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock x:Name="OtherCount" Text="0" FontSize="36" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+                            <TextBlock x:Uid="HomePage_Other" Text="Other" FontSize="13" Foreground="#ffffffcc" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+
+            <!-- Alertas de Segurança -->
+            <StackPanel Spacing="15">
+                <TextBlock 
+                    x:Uid="HomePage_SecurityAlerts"
+                    Text="Security Alerts"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="#1a1a2e"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Passwords Fracas -->
+                    <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="25" Margin="0,0,10,0"
+                            BorderBrush="#e0e0e0" BorderThickness="1">
+                        <StackPanel Spacing="15">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Border Background="#FFF3CD" CornerRadius="10" Width="45" Height="45">
+                                    <FontIcon Glyph="&#xE7BA;" FontSize="22" Foreground="#856404"
+                                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock x:Uid="HomePage_WeakPasswords" Text="Weak Passwords" 
+                                               FontSize="15" FontWeight="SemiBold" Foreground="#1a1a2e"/>
+                                    <TextBlock x:Uid="HomePage_WeakPasswordsDesc" Text="Passwords that are easy to guess"
+                                               FontSize="12" Foreground="#888888"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <TextBlock x:Name="WeakPasswordsCount" Text="0" FontSize="32" FontWeight="Bold" Foreground="#e67e22"/>
+
+                            <ListView x:Name="WeakPasswordsList" 
+                                      MaxHeight="150" 
+                                      SelectionMode="None"
+                                      Visibility="Collapsed">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Spacing="8" Padding="5">
+                                            <FontIcon Glyph="&#xE72E;" FontSize="14" Foreground="#e67e22"/>
+                                            <TextBlock Text="{Binding}" FontSize="13"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Passwords Duplicadas -->
+                    <Border Grid.Column="1" Background="White" CornerRadius="12" Padding="25" Margin="10,0,0,0"
+                            BorderBrush="#e0e0e0" BorderThickness="1">
+                        <StackPanel Spacing="15">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Border Background="#F8D7DA" CornerRadius="10" Width="45" Height="45">
+                                    <FontIcon Glyph="&#xE8C8;" FontSize="22" Foreground="#721c24"
+                                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock x:Uid="HomePage_DuplicatePasswords" Text="Duplicate Passwords" 
+                                               FontSize="15" FontWeight="SemiBold" Foreground="#1a1a2e"/>
+                                    <TextBlock x:Uid="HomePage_DuplicatePasswordsDesc" Text="Same password used in multiple sites"
+                                               FontSize="12" Foreground="#888888"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <TextBlock x:Name="DuplicatePasswordsCount" Text="0" FontSize="32" FontWeight="Bold" Foreground="#e74c3c"/>
+
+                            <ListView x:Name="DuplicatePasswordsList" 
+                                      MaxHeight="150" 
+                                      SelectionMode="None"
+                                      Visibility="Collapsed">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Spacing="8" Padding="5">
+                                            <FontIcon Glyph="&#xE8C8;" FontSize="14" Foreground="#e74c3c"/>
+                                            <TextBlock Text="{Binding}" FontSize="13"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+
+            <!-- Mensagem de Segurança OK -->
+            <Border x:Name="AllSecurePanel" 
+                    Background="#D4EDDA" 
+                    CornerRadius="12" 
+                    Padding="20"
+                    Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal" Spacing="15" HorizontalAlignment="Center">
+                    <FontIcon Glyph="&#xE73E;" FontSize="28" Foreground="#155724"/>
+                    <TextBlock x:Uid="HomePage_AllSecure" 
+                               Text="All your passwords are secure!" 
+                               FontSize="16" 
+                               FontWeight="SemiBold"
+                               Foreground="#155724"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

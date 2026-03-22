@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Projeto_PAP.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projeto_PAP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#f0f0f0">
+
+    <ScrollViewer>
+        <StackPanel Spacing="25" MaxWidth="600" Padding="40" HorizontalAlignment="Center">
+
+            <!-- Título -->
+            <StackPanel Spacing="5">
+                <TextBlock 
+                    x:Uid="SettingsPage_Title"
+                    Text="Settings"
+                    FontSize="32"
+                    FontWeight="Bold"
+                    Foreground="#1a1a2e"/>
+                <TextBlock 
+                    x:Uid="SettingsPage_Subtitle"
+                    Text="Manage your account preferences."
+                    FontSize="14"
+                    Foreground="#888888"/>
+            </StackPanel>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- DADOS DO UTILIZADOR -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <Border Background="White" CornerRadius="12" Padding="25" BorderBrush="#e0e0e0" BorderThickness="1">
+                <StackPanel Spacing="20">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Background="#E8F0FE" CornerRadius="10" Width="45" Height="45">
+                            <FontIcon Glyph="&#xE77B;" FontSize="20" Foreground="#667eea"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock x:Uid="SettingsPage_AccountInfo" Text="Account Information" 
+                                   FontSize="18" FontWeight="SemiBold" Foreground="#1a1a2e"
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Nome -->
+                    <StackPanel Spacing="5">
+                        <TextBlock x:Uid="SettingsPage_FirstName" Text="First Name" 
+                                   FontSize="12" Foreground="#888888"/>
+                        <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
+                            <TextBlock x:ConnectionId='8' x:Name="FirstNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- Apelido -->
+                    <StackPanel Spacing="5">
+                        <TextBlock x:Uid="SettingsPage_LastName" Text="Last Name" 
+                                   FontSize="12" Foreground="#888888"/>
+                        <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
+                            <TextBlock x:ConnectionId='7' x:Name="LastNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- Email -->
+                    <StackPanel Spacing="5">
+                        <TextBlock x:Uid="SettingsPage_Email" Text="Email" 
+                                   FontSize="12" Foreground="#888888"/>
+                        <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
+                            <TextBlock x:ConnectionId='6' x:Name="EmailText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- IDIOMA -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <Border Background="White" CornerRadius="12" Padding="25" BorderBrush="#e0e0e0" BorderThickness="1">
+                <StackPanel Spacing="15">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Background="#E8F0FE" CornerRadius="10" Width="45" Height="45">
+                            <FontIcon Glyph="&#xE774;" FontSize="20" Foreground="#667eea"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Uid="SettingsPage_Language" Text="Language" 
+                                       FontSize="16" FontWeight="SemiBold" Foreground="#1a1a2e"/>
+                            <TextBlock x:Uid="SettingsPage_LanguageDesc" Text="Choose your preferred language"
+                                       FontSize="12" Foreground="#888888"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <ComboBox x:ConnectionId='5' x:Name="LanguageComboBox" 
+                              Width="250"
+                                                                                  >
+                        <ComboBoxItem Content="English" Tag="en-US"/>
+                        <ComboBoxItem Content="Português" Tag="pt-PT"/>
+                        <ComboBoxItem Content="Español" Tag="es-ES"/>
+                        <ComboBoxItem Content="Français" Tag="fr-FR"/>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- SEGURANÇA - MUDAR PASSWORD -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <Border Background="White" CornerRadius="12" Padding="25" BorderBrush="#e0e0e0" BorderThickness="1">
+                <StackPanel Spacing="15">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <Border Background="#FFF3E0" CornerRadius="10" Width="45" Height="45">
+                            <FontIcon Glyph="&#xE8D7;" FontSize="20" Foreground="#e67e22"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Uid="SettingsPage_Security" Text="Security" 
+                                       FontSize="16" FontWeight="SemiBold" Foreground="#1a1a2e"/>
+                            <TextBlock x:Uid="SettingsPage_SecurityDesc" Text="Manage your account security"
+                                       FontSize="12" Foreground="#888888"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Button x:ConnectionId='4' x:Name="ChangePasswordButton"
+                            x:Uid="SettingsPage_ChangePasswordButton"
+                            Content="Change Master Password"
+                                                              
+                            Background="#667eea"
+                            Foreground="White"
+                            Padding="20,12"
+                            CornerRadius="8"
+                            FontWeight="SemiBold"/>
+                </StackPanel>
+            </Border>
+
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <!-- LOGOUT E APAGAR CONTA -->
+            <!-- ═══════════════════════════════════════════════════════════════ -->
+            <Border Background="White" CornerRadius="12" Padding="25" BorderBrush="#e0e0e0" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Logout -->
+                    <Button x:ConnectionId='2' Grid.Column="0"
+                            x:Name="LogoutButton"
+                                                      
+                            Background="#e67e22"
+                            Foreground="White"
+                            Padding="20,15"
+                            CornerRadius="8"
+                            HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE7E8;" FontSize="18"/>
+                            <TextBlock x:Uid="SettingsPage_LogoutButton" Text="Logout" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Apagar Conta -->
+                    <Button x:ConnectionId='3' Grid.Column="2"
+                            x:Name="DeleteAccountButton"
+                                                             
+                            Background="#e74c3c"
+                            Foreground="White"
+                            Padding="20,15"
+                            CornerRadius="8"
+                            HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE74D;" FontSize="18"/>
+                            <TextBlock x:Uid="SettingsPage_DeleteAccountButton" Text="Delete Account" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

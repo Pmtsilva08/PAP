@@ -103,7 +103,7 @@
                     </Button>
 
                     <!-- Botão Home -->
-                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}" Click="HomeButton_Click">
                         <Grid Width="170">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
@@ -127,7 +127,7 @@
                     </Button>
 
                     <!-- Botão Settings -->
-                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}">
+                    <Button Width="200" Height="45" Style="{StaticResource SlowHoverButtonStyle}" Click="SettingsButton_Click">
                         <Grid Width="170">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>

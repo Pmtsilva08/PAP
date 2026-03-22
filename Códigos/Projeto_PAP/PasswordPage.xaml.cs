@@ -24,9 +24,10 @@ namespace Projeto_PAP
     public sealed partial class PasswordsPage : Page
     {
         public ObservableCollection<PasswordItem> Passwords { get; set; }
+        private List<PasswordItem> _allPasswords;
         private PasswordEncrypt _encryptor;
         private string _userEmail;
-        private string _totpSecret;  // ADICIONAR
+        private string _totpSecret;
         private PasswordQuery _passwordQuery;
 
         public PasswordsPage()
@@ -58,11 +59,19 @@ namespace Projeto_PAP
 
             var passwordsFromDb = await _passwordQuery.GetPasswordsAsync(_userEmail);
 
-            foreach (var password in passwordsFromDb)
+            // Guardar lista completa
+            _allPasswords = passwordsFromDb.ToList();
+
+            foreach (var password in _allPasswords)
             {
                 Passwords.Add(password);
             }
 
+            UpdateEmptyState();
+        }
+
+        private void UpdateEmptyState()
+        {
             if (Passwords.Count == 0)
             {
                 EmptyState.Visibility = Visibility.Visible;
@@ -73,6 +82,47 @@ namespace Projeto_PAP
                 EmptyState.Visibility = Visibility.Collapsed;
                 PasswordsList.Visibility = Visibility.Visible;
             }
+        }
+
+        private void ApplyFilters()
+        {
+            if (_allPasswords == null) return;
+
+            // Obter texto de pesquisa
+            string searchText = SearchBox.Text?.Trim().ToLower() ?? "";
+
+            // Obter categoria selecionada
+            string selectedCategory = "All";
+            if (CategoryFilter.SelectedItem is ComboBoxItem selectedItem)
+            {
+                selectedCategory = selectedItem.Content?.ToString() ?? "All";
+            }
+
+            // Filtrar passwords
+            var filtered = _allPasswords.Where(p =>
+            {
+                // Filtro de pesquisa (procura no nome do site, email e URL)
+                bool matchesSearch = string.IsNullOrEmpty(searchText) ||
+                                     p.SiteName.ToLower().Contains(searchText);
+
+                // Filtro de categoria
+                bool matchesCategory = selectedCategory == "All" ||
+                                       selectedCategory == "Todas" ||      // pt-PT
+                                       selectedCategory == "Todas" ||      // es-ES
+                                       selectedCategory == "Toutes" ||     // fr-FR
+                                       p.Category == selectedCategory;
+
+                return matchesSearch && matchesCategory;
+            }).ToList();
+
+            // Atualizar ObservableCollection
+            Passwords.Clear();
+            foreach (var password in filtered)
+            {
+                Passwords.Add(password);
+            }
+
+            UpdateEmptyState();
         }
 
         // ═══════════════════════════════════════════════════════════════
@@ -638,19 +688,6 @@ namespace Projeto_PAP
             storyboard.Begin();
         }
 
-        private void LoadPasswords()
-        {
-            if (Passwords.Count == 0)
-            {
-                EmptyState.Visibility = Visibility.Visible;
-                PasswordsList.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                EmptyState.Visibility = Visibility.Collapsed;
-                PasswordsList.Visibility = Visibility.Visible;
-            }
-        }
 
         private async void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -704,12 +741,12 @@ namespace Projeto_PAP
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            // TODO: Implementar pesquisa
+            ApplyFilters();
         }
 
         private void CategoryFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // TODO: Implementar filtro
+            ApplyFilters();
         }
     }
 }

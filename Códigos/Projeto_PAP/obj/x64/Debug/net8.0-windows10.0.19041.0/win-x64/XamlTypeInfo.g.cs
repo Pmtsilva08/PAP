@@ -226,7 +226,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[40];
+            _typeNameTable = new string[43];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -238,37 +238,40 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeNameTable[8] = "Projeto_PAP.AddPasswordDialog";
             _typeNameTable[9] = "Microsoft.UI.Xaml.Controls.UserControl";
             _typeNameTable[10] = "String";
-            _typeNameTable[11] = "Microsoft.UI.Xaml.Controls.Button";
-            _typeNameTable[12] = "Projeto_PAP.CreateAccount";
-            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[14] = "Projeto_PAP.LoginPage";
-            _typeNameTable[15] = "Projeto_PAP.MainPage";
-            _typeNameTable[16] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
-            _typeNameTable[17] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
-            _typeNameTable[18] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
-            _typeNameTable[19] = "System.Enum";
-            _typeNameTable[20] = "System.ValueType";
-            _typeNameTable[21] = "Microsoft.UI.Xaml.Controls.TitleBar";
-            _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[23] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.ImageIconSource";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.Media.ImageSource";
-            _typeNameTable[28] = "Projeto_PAP.MainWindow";
-            _typeNameTable[29] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[30] = "Projeto_PAP.PasswordsPage";
-            _typeNameTable[31] = "System.Collections.ObjectModel.ObservableCollection`1<Projeto_PAP.PasswordItem>";
-            _typeNameTable[32] = "System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>";
-            _typeNameTable[33] = "Projeto_PAP.PasswordItem";
-            _typeNameTable[34] = "MongoDB.Bson.ObjectId";
-            _typeNameTable[35] = "Projeto_PAP.Setup2FADialog";
-            _typeNameTable[36] = "Projeto_PAP.Setup2FAPage";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[38] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[39] = "Int32";
+            _typeNameTable[11] = "Projeto_PAP.ChangePasswordPage";
+            _typeNameTable[12] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.Button";
+            _typeNameTable[14] = "Projeto_PAP.CreateAccount";
+            _typeNameTable[15] = "Projeto_PAP.HomePage";
+            _typeNameTable[16] = "Projeto_PAP.LoginPage";
+            _typeNameTable[17] = "Projeto_PAP.MainPage";
+            _typeNameTable[18] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
+            _typeNameTable[20] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
+            _typeNameTable[21] = "System.Enum";
+            _typeNameTable[22] = "System.ValueType";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.TitleBar";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.ImageIconSource";
+            _typeNameTable[29] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[30] = "Projeto_PAP.MainWindow";
+            _typeNameTable[31] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[32] = "Projeto_PAP.PasswordsPage";
+            _typeNameTable[33] = "System.Collections.ObjectModel.ObservableCollection`1<Projeto_PAP.PasswordItem>";
+            _typeNameTable[34] = "System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>";
+            _typeNameTable[35] = "Projeto_PAP.PasswordItem";
+            _typeNameTable[36] = "MongoDB.Bson.ObjectId";
+            _typeNameTable[37] = "Projeto_PAP.SettingsPage";
+            _typeNameTable[38] = "Projeto_PAP.Setup2FADialog";
+            _typeNameTable[39] = "Projeto_PAP.Setup2FAPage";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[41] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[42] = "Int32";
 
-            _typeTable = new global::System.Type[40];
+            _typeTable = new global::System.Type[43];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -280,35 +283,38 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeTable[8] = typeof(global::Projeto_PAP.AddPasswordDialog);
             _typeTable[9] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
             _typeTable[10] = typeof(global::System.String);
-            _typeTable[11] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
-            _typeTable[12] = typeof(global::Projeto_PAP.CreateAccount);
-            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[14] = typeof(global::Projeto_PAP.LoginPage);
-            _typeTable[15] = typeof(global::Projeto_PAP.MainPage);
-            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
-            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
-            _typeTable[18] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
-            _typeTable[19] = typeof(global::System.Enum);
-            _typeTable[20] = typeof(global::System.ValueType);
-            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBar);
-            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
-            _typeTable[28] = typeof(global::Projeto_PAP.MainWindow);
-            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[30] = typeof(global::Projeto_PAP.PasswordsPage);
-            _typeTable[31] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>);
-            _typeTable[32] = typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>);
-            _typeTable[33] = typeof(global::Projeto_PAP.PasswordItem);
-            _typeTable[34] = typeof(global::MongoDB.Bson.ObjectId);
-            _typeTable[35] = typeof(global::Projeto_PAP.Setup2FADialog);
-            _typeTable[36] = typeof(global::Projeto_PAP.Setup2FAPage);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[38] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[39] = typeof(global::System.Int32);
+            _typeTable[11] = typeof(global::Projeto_PAP.ChangePasswordPage);
+            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
+            _typeTable[14] = typeof(global::Projeto_PAP.CreateAccount);
+            _typeTable[15] = typeof(global::Projeto_PAP.HomePage);
+            _typeTable[16] = typeof(global::Projeto_PAP.LoginPage);
+            _typeTable[17] = typeof(global::Projeto_PAP.MainPage);
+            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
+            _typeTable[20] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
+            _typeTable[21] = typeof(global::System.Enum);
+            _typeTable[22] = typeof(global::System.ValueType);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBar);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource);
+            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[30] = typeof(global::Projeto_PAP.MainWindow);
+            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[32] = typeof(global::Projeto_PAP.PasswordsPage);
+            _typeTable[33] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>);
+            _typeTable[34] = typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>);
+            _typeTable[35] = typeof(global::Projeto_PAP.PasswordItem);
+            _typeTable[36] = typeof(global::MongoDB.Bson.ObjectId);
+            _typeTable[37] = typeof(global::Projeto_PAP.SettingsPage);
+            _typeTable[38] = typeof(global::Projeto_PAP.Setup2FADialog);
+            _typeTable[39] = typeof(global::Projeto_PAP.Setup2FAPage);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[41] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[42] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -346,44 +352,50 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
         private object Activate_8_AddPasswordDialog() { return new global::Projeto_PAP.AddPasswordDialog(); }
-        private object Activate_12_CreateAccount() { return new global::Projeto_PAP.CreateAccount(); }
-        private object Activate_14_LoginPage() { return new global::Projeto_PAP.LoginPage(); }
-        private object Activate_15_MainPage() { return new global::Projeto_PAP.MainPage(); }
-        private object Activate_16_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
-        private object Activate_21_TitleBar() { return new global::Microsoft.UI.Xaml.Controls.TitleBar(); }
-        private object Activate_25_TitleBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings(); }
-        private object Activate_26_ImageIconSource() { return new global::Microsoft.UI.Xaml.Controls.ImageIconSource(); }
-        private object Activate_28_MainWindow() { return new global::Projeto_PAP.MainWindow(); }
-        private object Activate_30_PasswordsPage() { return new global::Projeto_PAP.PasswordsPage(); }
-        private object Activate_31_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>(); }
-        private object Activate_32_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>(); }
-        private object Activate_33_PasswordItem() { return new global::Projeto_PAP.PasswordItem(); }
-        private object Activate_36_Setup2FAPage() { return new global::Projeto_PAP.Setup2FAPage(); }
-        private object Activate_37_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_11_ChangePasswordPage() { return new global::Projeto_PAP.ChangePasswordPage(); }
+        private object Activate_14_CreateAccount() { return new global::Projeto_PAP.CreateAccount(); }
+        private object Activate_15_HomePage() { return new global::Projeto_PAP.HomePage(); }
+        private object Activate_16_LoginPage() { return new global::Projeto_PAP.LoginPage(); }
+        private object Activate_17_MainPage() { return new global::Projeto_PAP.MainPage(); }
+        private object Activate_18_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
+        private object Activate_23_TitleBar() { return new global::Microsoft.UI.Xaml.Controls.TitleBar(); }
+        private object Activate_27_TitleBarTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings(); }
+        private object Activate_28_ImageIconSource() { return new global::Microsoft.UI.Xaml.Controls.ImageIconSource(); }
+        private object Activate_30_MainWindow() { return new global::Projeto_PAP.MainWindow(); }
+        private object Activate_32_PasswordsPage() { return new global::Projeto_PAP.PasswordsPage(); }
+        private object Activate_33_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>(); }
+        private object Activate_34_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>(); }
+        private object Activate_35_PasswordItem() { return new global::Projeto_PAP.PasswordItem(); }
+        private object Activate_37_SettingsPage() { return new global::Projeto_PAP.SettingsPage(); }
+        private object Activate_39_Setup2FAPage() { return new global::Projeto_PAP.Setup2FAPage(); }
+        private object Activate_40_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_ProgressBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar).TypeHandle);
         private void StaticInitializer_6_ProgressBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings).TypeHandle);
         private void StaticInitializer_8_AddPasswordDialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.AddPasswordDialog).TypeHandle);
-        private void StaticInitializer_12_CreateAccount() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.CreateAccount).TypeHandle);
-        private void StaticInitializer_14_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.LoginPage).TypeHandle);
-        private void StaticInitializer_15_MainPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainPage).TypeHandle);
-        private void StaticInitializer_16_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
-        private void StaticInitializer_18_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
-        private void StaticInitializer_19_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
-        private void StaticInitializer_20_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
-        private void StaticInitializer_21_TitleBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBar).TypeHandle);
-        private void StaticInitializer_25_TitleBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings).TypeHandle);
-        private void StaticInitializer_26_ImageIconSource() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource).TypeHandle);
-        private void StaticInitializer_28_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainWindow).TypeHandle);
-        private void StaticInitializer_30_PasswordsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordsPage).TypeHandle);
-        private void StaticInitializer_31_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>).TypeHandle);
-        private void StaticInitializer_32_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>).TypeHandle);
-        private void StaticInitializer_33_PasswordItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordItem).TypeHandle);
-        private void StaticInitializer_34_ObjectId() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MongoDB.Bson.ObjectId).TypeHandle);
-        private void StaticInitializer_35_Setup2FADialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FADialog).TypeHandle);
-        private void StaticInitializer_36_Setup2FAPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FAPage).TypeHandle);
-        private void StaticInitializer_37_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_38_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_11_ChangePasswordPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.ChangePasswordPage).TypeHandle);
+        private void StaticInitializer_14_CreateAccount() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.CreateAccount).TypeHandle);
+        private void StaticInitializer_15_HomePage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.HomePage).TypeHandle);
+        private void StaticInitializer_16_LoginPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.LoginPage).TypeHandle);
+        private void StaticInitializer_17_MainPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainPage).TypeHandle);
+        private void StaticInitializer_18_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
+        private void StaticInitializer_20_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
+        private void StaticInitializer_21_Enum() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Enum).TypeHandle);
+        private void StaticInitializer_22_ValueType() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.ValueType).TypeHandle);
+        private void StaticInitializer_23_TitleBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBar).TypeHandle);
+        private void StaticInitializer_27_TitleBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings).TypeHandle);
+        private void StaticInitializer_28_ImageIconSource() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ImageIconSource).TypeHandle);
+        private void StaticInitializer_30_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.MainWindow).TypeHandle);
+        private void StaticInitializer_32_PasswordsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordsPage).TypeHandle);
+        private void StaticInitializer_33_ObservableCollection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>).TypeHandle);
+        private void StaticInitializer_34_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>).TypeHandle);
+        private void StaticInitializer_35_PasswordItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordItem).TypeHandle);
+        private void StaticInitializer_36_ObjectId() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MongoDB.Bson.ObjectId).TypeHandle);
+        private void StaticInitializer_37_SettingsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.SettingsPage).TypeHandle);
+        private void StaticInitializer_38_Setup2FADialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FADialog).TypeHandle);
+        private void StaticInitializer_39_Setup2FAPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FAPage).TypeHandle);
+        private void StaticInitializer_40_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_41_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -391,19 +403,19 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_31_ObservableCollection(object instance, object item)
+        private void VectorAdd_33_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Projeto_PAP.PasswordItem>)instance;
             var newItem = (global::Projeto_PAP.PasswordItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_32_Collection(object instance, object item)
+        private void VectorAdd_34_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Projeto_PAP.PasswordItem>)instance;
             var newItem = (global::Projeto_PAP.PasswordItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_38_IList(object instance, object item)
+        private void VectorAdd_41_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -489,74 +501,90 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Microsoft.UI.Xaml.Controls.Button
+            case 11:   //  Projeto_PAP.ChangePasswordPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_ChangePasswordPage;
+                userType.StaticInitializer = StaticInitializer_11_ChangePasswordPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Projeto_PAP.CreateAccount
-                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_CreateAccount;
-                userType.StaticInitializer = StaticInitializer_12_CreateAccount;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 13:   //  Microsoft.UI.Xaml.Controls.Page
+            case 13:   //  Microsoft.UI.Xaml.Controls.Button
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  Projeto_PAP.LoginPage
+            case 14:   //  Projeto_PAP.CreateAccount
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_LoginPage;
-                userType.StaticInitializer = StaticInitializer_14_LoginPage;
+                userType.Activator = Activate_14_CreateAccount;
+                userType.StaticInitializer = StaticInitializer_14_CreateAccount;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Projeto_PAP.MainPage
+            case 15:   //  Projeto_PAP.HomePage
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_MainPage;
-                userType.StaticInitializer = StaticInitializer_15_MainPage;
+                userType.Activator = Activate_15_HomePage;
+                userType.StaticInitializer = StaticInitializer_15_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
+            case 16:   //  Projeto_PAP.LoginPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_LoginPage;
+                userType.StaticInitializer = StaticInitializer_16_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Projeto_PAP.MainPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_MainPage;
+                userType.StaticInitializer = StaticInitializer_17_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
-                userType.Activator = Activate_16_MicaBackdrop;
-                userType.StaticInitializer = StaticInitializer_16_MicaBackdrop;
+                userType.Activator = Activate_18_MicaBackdrop;
+                userType.StaticInitializer = StaticInitializer_18_MicaBackdrop;
                 userType.AddMemberName("Kind");
                 xamlType = userType;
                 break;
 
-            case 17:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
+            case 19:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
+            case 20:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.StaticInitializer = StaticInitializer_18_MicaKind;
+                userType.StaticInitializer = StaticInitializer_20_MicaKind;
                 userType.AddEnumValue("Base", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base);
                 userType.AddEnumValue("BaseAlt", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt);
                 xamlType = userType;
                 break;
 
-            case 19:   //  System.Enum
+            case 21:   //  System.Enum
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.StaticInitializer = StaticInitializer_19_Enum;
+                userType.StaticInitializer = StaticInitializer_21_Enum;
                 xamlType = userType;
                 break;
 
-            case 20:   //  System.ValueType
+            case 22:   //  System.ValueType
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.StaticInitializer = StaticInitializer_20_ValueType;
+                userType.StaticInitializer = StaticInitializer_22_ValueType;
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.UI.Xaml.Controls.TitleBar
+            case 23:   //  Microsoft.UI.Xaml.Controls.TitleBar
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_21_TitleBar;
-                userType.StaticInitializer = StaticInitializer_21_TitleBar;
+                userType.Activator = Activate_23_TitleBar;
+                userType.StaticInitializer = StaticInitializer_23_TitleBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TitleBar.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Title");
@@ -571,78 +599,78 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.UI.Xaml.Controls.Control
+            case 24:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Microsoft.UI.Xaml.UIElement
+            case 25:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 26:   //  Microsoft.UI.Xaml.Controls.IconSource
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
+            case 27:   //  Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.StaticInitializer = StaticInitializer_25_TitleBarTemplateSettings;
+                userType.StaticInitializer = StaticInitializer_27_TitleBarTemplateSettings;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Microsoft.UI.Xaml.Controls.ImageIconSource
+            case 28:   //  Microsoft.UI.Xaml.Controls.ImageIconSource
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconSource"));
-                userType.Activator = Activate_26_ImageIconSource;
-                userType.StaticInitializer = StaticInitializer_26_ImageIconSource;
+                userType.Activator = Activate_28_ImageIconSource;
+                userType.StaticInitializer = StaticInitializer_28_ImageIconSource;
                 userType.AddMemberName("ImageSource");
                 xamlType = userType;
                 break;
 
-            case 27:   //  Microsoft.UI.Xaml.Media.ImageSource
+            case 29:   //  Microsoft.UI.Xaml.Media.ImageSource
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  Projeto_PAP.MainWindow
+            case 30:   //  Projeto_PAP.MainWindow
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_28_MainWindow;
-                userType.StaticInitializer = StaticInitializer_28_MainWindow;
+                userType.Activator = Activate_30_MainWindow;
+                userType.StaticInitializer = StaticInitializer_30_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Microsoft.UI.Xaml.Window
+            case 31:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  Projeto_PAP.PasswordsPage
+            case 32:   //  Projeto_PAP.PasswordsPage
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_PasswordsPage;
-                userType.StaticInitializer = StaticInitializer_30_PasswordsPage;
+                userType.Activator = Activate_32_PasswordsPage;
+                userType.StaticInitializer = StaticInitializer_32_PasswordsPage;
                 userType.AddMemberName("Passwords");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  System.Collections.ObjectModel.ObservableCollection`1<Projeto_PAP.PasswordItem>
+            case 33:   //  System.Collections.ObjectModel.ObservableCollection`1<Projeto_PAP.PasswordItem>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>"));
-                userType.StaticInitializer = StaticInitializer_31_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_31_ObservableCollection;
+                userType.StaticInitializer = StaticInitializer_33_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_33_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 32:   //  System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>
+            case 34:   //  System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_32_Collection;
-                userType.StaticInitializer = StaticInitializer_32_Collection;
-                userType.CollectionAdd = VectorAdd_32_Collection;
+                userType.Activator = Activate_34_Collection;
+                userType.StaticInitializer = StaticInitializer_34_Collection;
+                userType.CollectionAdd = VectorAdd_34_Collection;
                 xamlType = userType;
                 break;
 
-            case 33:   //  Projeto_PAP.PasswordItem
+            case 35:   //  Projeto_PAP.PasswordItem
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_33_PasswordItem;
-                userType.StaticInitializer = StaticInitializer_33_PasswordItem;
+                userType.Activator = Activate_35_PasswordItem;
+                userType.StaticInitializer = StaticInitializer_35_PasswordItem;
                 userType.AddMemberName("Id");
                 userType.AddMemberName("SiteName");
                 userType.AddMemberName("Email");
@@ -654,33 +682,41 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  MongoDB.Bson.ObjectId
+            case 36:   //  MongoDB.Bson.ObjectId
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.StaticInitializer = StaticInitializer_34_ObjectId;
+                userType.StaticInitializer = StaticInitializer_36_ObjectId;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 35:   //  Projeto_PAP.Setup2FADialog
+            case 37:   //  Projeto_PAP.SettingsPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_37_SettingsPage;
+                userType.StaticInitializer = StaticInitializer_37_SettingsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 38:   //  Projeto_PAP.Setup2FADialog
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.StaticInitializer = StaticInitializer_35_Setup2FADialog;
+                userType.StaticInitializer = StaticInitializer_38_Setup2FADialog;
                 userType.AddMemberName("SecretKeyBase32");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  Projeto_PAP.Setup2FAPage
+            case 39:   //  Projeto_PAP.Setup2FAPage
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_Setup2FAPage;
-                userType.StaticInitializer = StaticInitializer_36_Setup2FAPage;
+                userType.Activator = Activate_39_Setup2FAPage;
+                userType.StaticInitializer = StaticInitializer_39_Setup2FAPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 40:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_37_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_37_TreeViewNode;
+                userType.Activator = Activate_40_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_40_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -692,15 +728,15 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 41:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_38_IList;
-                userType.CollectionAdd = VectorAdd_38_IList;
+                userType.StaticInitializer = StaticInitializer_41_IList;
+                userType.CollectionAdd = VectorAdd_41_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 39:   //  Int32
+            case 42:   //  Int32
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

@@ -227,5 +227,191 @@
 	<data name="DeleteDialog_Success" xml:space="preserve">
   <value>¡Contraseña eliminada con éxito!</value>
 </data>
+
+	<data name="HomePage_Greeting.Text" xml:space="preserve">
+  <value>¡Bienvenido!</value>
+</data>
+	<data name="HomePage_Subtitle.Text" xml:space="preserve">
+  <value>Aquí tienes un resumen de tu bóveda de contraseñas.</value>
+</data>
+	<data name="HomePage_Statistics.Text" xml:space="preserve">
+  <value>Estadísticas</value>
+</data>
+	<data name="HomePage_Total.Text" xml:space="preserve">
+  <value>Total</value>
+</data>
+	<data name="HomePage_Social.Text" xml:space="preserve">
+  <value>Social</value>
+</data>
+	<data name="HomePage_Work.Text" xml:space="preserve">
+  <value>Work</value>
+</data>
+	<data name="HomePage_Bank.Text" xml:space="preserve">
+  <value>Bank</value>
+</data>
+	<data name="HomePage_Other.Text" xml:space="preserve">
+  <value>Other</value>
+</data>
+	<data name="HomePage_SecurityAlerts.Text" xml:space="preserve">
+  <value>Alertas de Seguridad</value>
+</data>
+	<data name="HomePage_WeakPasswords.Text" xml:space="preserve">
+  <value>Contraseñas Débiles</value>
+</data>
+	<data name="HomePage_WeakPasswordsDesc.Text" xml:space="preserve">
+  <value>Contraseñas fáciles de adivinar</value>
+</data>
+	<data name="HomePage_DuplicatePasswords.Text" xml:space="preserve">
+  <value>Contraseñas Duplicadas</value>
+</data>
+	<data name="HomePage_DuplicatePasswordsDesc.Text" xml:space="preserve">
+  <value>Misma contraseña usada en varios sitios</value>
+</data>
+	<data name="HomePage_AllSecure.Text" xml:space="preserve">
+  <value>¡Todas tus contraseñas están seguras!</value>
+</data>
+
+	<data name="HomePage_GreetingWithName" xml:space="preserve">
+  <value>Bienvenido,</value>
+</data>
+
+	<data name="SettingsPage_Title.Text" xml:space="preserve">
+  <value>Configuración</value>
+</data>
+	<data name="SettingsPage_Subtitle.Text" xml:space="preserve">
+  <value>Gestiona las preferencias de tu cuenta.</value>
+</data>
+	<data name="SettingsPage_AccountInfo.Text" xml:space="preserve">
+  <value>Información de la Cuenta</value>
+</data>
+	<data name="SettingsPage_AccountInfoDesc.Text" xml:space="preserve">
+  <value>Tus datos personales</value>
+</data>
+	<data name="SettingsPage_FirstName.Text" xml:space="preserve">
+  <value>Nombre:</value>
+</data>
+	<data name="SettingsPage_LastName.Text" xml:space="preserve">
+  <value>Apellido:</value>
+</data>
+	<data name="SettingsPage_Email.Text" xml:space="preserve">
+  <value>Correo:</value>
+</data>
+	<data name="SettingsPage_Language.Text" xml:space="preserve">
+  <value>Idioma</value>
+</data>
+	<data name="SettingsPage_LanguageDesc.Text" xml:space="preserve">
+  <value>Elige tu idioma preferido</value>
+</data>
+	<data name="SettingsPage_Security.Text" xml:space="preserve">
+  <value>Seguridad</value>
+</data>
+	<data name="SettingsPage_SecurityDesc.Text" xml:space="preserve">
+  <value>Gestiona tu contraseña</value>
+</data>
+	<data name="SettingsPage_ChangePasswordButton.Content" xml:space="preserve">
+  <value>Cambiar Contraseña Maestra</value>
+</data>
+	<data name="SettingsPage_LogoutButton.Text" xml:space="preserve">
+  <value>Cerrar Sesión</value>
+</data>
+	<data name="SettingsPage_DeleteAccountButton.Text" xml:space="preserve">
+  <value>Eliminar Cuenta</value>
+</data>
+	<data name="SettingsPage_RestartTitle" xml:space="preserve">
+  <value>Reinicio Necesario</value>
+</data>
+	<data name="SettingsPage_RestartMessage" xml:space="preserve">
+  <value>La aplicación necesita reiniciarse para aplicar el cambio de idioma.</value>
+</data>
+	<data name="SettingsPage_RestartNow" xml:space="preserve">
+  <value>Reiniciar Ahora</value>
+</data>
+	<data name="SettingsPage_RestartLater" xml:space="preserve">
+  <value>Más Tarde</value>
+</data>
+	<data name="SettingsPage_VerifyIdentity" xml:space="preserve">
+  <value>Verifica Tu Identidad</value>
+</data>
+	<data name="SettingsPage_VerifyIdentityDesc" xml:space="preserve">
+  <value>Introduce tu contraseña maestra y el código de autenticación para continuar.</value>
+</data>
+	<data name="SettingsPage_CurrentPassword" xml:space="preserve">
+  <value>Contraseña Actual:</value>
+</data>
+	<data name="SettingsPage_Continue" xml:space="preserve">
+  <value>Continuar</value>
+</data>
+	<data name="SettingsPage_PasswordRequired" xml:space="preserve">
+  <value>Introduce tu contraseña.</value>
+</data>
+	<data name="SettingsPage_EmailFailed" xml:space="preserve">
+  <value>Error al enviar correo de verificación. Inténtalo de nuevo.</value>
+</data>
+	<data name="SettingsPage_EmailSent" xml:space="preserve">
+  <value>Enviamos un código de verificación a tu correo. Introdúcelo abajo.</value>
+</data>
+	<data name="SettingsPage_EnterEmailCode" xml:space="preserve">
+  <value>Introduce el Código de Verificación</value>
+</data>
+	<data name="SettingsPage_CodeExpired" xml:space="preserve">
+  <value>El código ha expirado. Inténtalo de nuevo.</value>
+</data>
+	<data name="SettingsPage_InvalidCode" xml:space="preserve">
+  <value>Código inválido. Inténtalo de nuevo.</value>
+</data>
+	<data name="SettingsPage_LogoutConfirmTitle" xml:space="preserve">
+  <value>Cerrar Sesión</value>
+</data>
+	<data name="SettingsPage_LogoutConfirmMessage" xml:space="preserve">
+  <value>¿Estás seguro de que quieres cerrar sesión?</value>
+</data>
+	<data name="SettingsPage_DeleteAccountTitle" xml:space="preserve">
+  <value>Eliminar Cuenta</value>
+</data>
+	<data name="SettingsPage_DeleteAccountWarning" xml:space="preserve">
+  <value>Esta acción es permanente y no se puede deshacer. Todos tus datos se perderán.</value>
+</data>
+	<data name="SettingsPage_DeleteAccountConfirm" xml:space="preserve">
+  <value>Introduce tu contraseña y código de autenticación para eliminar la cuenta.</value>
+</data>
+	<data name="SettingsPage_DeleteFailed" xml:space="preserve">
+  <value>Error al eliminar cuenta. Inténtalo de nuevo.</value>
+</data>
+	<data name="SettingsPage_FillAllFields" xml:space="preserve">
+  <value>Rellena todos los campos.</value>
+</data>
+	<data name="SettingsPage_PasswordsNotMatch" xml:space="preserve">
+  <value>Las contraseñas no coinciden.</value>
+</data>
+	<data name="SettingsPage_PasswordTooShort" xml:space="preserve">
+  <value>La contraseña debe tener al menos 8 caracteres.</value>
+</data>
+	<data name="SettingsPage_UpdateFailed" xml:space="preserve">
+  <value>Error al actualizar la contraseña. Inténtalo de nuevo.</value>
+</data>
+	<data name="SettingsPage_PasswordChanged" xml:space="preserve">
+  <value>Contraseña Cambiada</value>
+</data>
+	<data name="SettingsPage_PasswordChangedMessage" xml:space="preserve">
+  <value>Tu contraseña ha sido actualizada. Por favor inicia sesión de nuevo.</value>
+</data>
+	<data name="ChangePassword_Title.Text" xml:space="preserve">
+  <value>Crear Nueva Contraseña</value>
+</data>
+	<data name="ChangePassword_Subtitle.Text" xml:space="preserve">
+  <value>Introduce tu nueva contraseña maestra abajo.</value>
+</data>
+	<data name="ChangePassword_NewPassword.Text" xml:space="preserve">
+  <value>Nueva Contraseña:</value>
+</data>
+	<data name="ChangePassword_ConfirmPassword.Text" xml:space="preserve">
+  <value>Confirmar Contraseña:</value>
+</data>
+	<data name="ChangePassword_SaveButton.Content" xml:space="preserve">
+  <value>Guardar Nueva Contraseña</value>
+</data>
+	<data name="ChangePassword_CancelButton.Content" xml:space="preserve">
+  <value>Cancelar</value>
+</data>
 	
 </root>

@@ -228,4 +228,233 @@
   <value>Palavra-passe apagada com sucesso!</value>
 </data>
 	
+	<data name="HomePage_Greeting.Text" xml:space="preserve">
+  <value>Bem-vindo!</value>
+</data>
+<data name="HomePage_Subtitle.Text" xml:space="preserve">
+  <value>Aqui está um resumo do teu cofre de palavras-passe.</value>
+</data>
+<data name="HomePage_Statistics.Text" xml:space="preserve">
+  <value>Estatísticas</value>
+</data>
+<data name="HomePage_Total.Text" xml:space="preserve">
+  <value>Total</value>
+</data>
+<data name="HomePage_Social.Text" xml:space="preserve">
+  <value>Social</value>
+</data>
+<data name="HomePage_Work.Text" xml:space="preserve">
+  <value>Work</value>
+</data>
+<data name="HomePage_Bank.Text" xml:space="preserve">
+  <value>Bank</value>
+</data>
+<data name="HomePage_Other.Text" xml:space="preserve">
+  <value>Other</value>
+</data>
+<data name="HomePage_SecurityAlerts.Text" xml:space="preserve">
+  <value>Alertas de Segurança</value>
+</data>
+<data name="HomePage_WeakPasswords.Text" xml:space="preserve">
+  <value>Palavras-passe Fracas</value>
+</data>
+<data name="HomePage_WeakPasswordsDesc.Text" xml:space="preserve">
+  <value>Palavras-passe fáceis de adivinhar</value>
+</data>
+<data name="HomePage_DuplicatePasswords.Text" xml:space="preserve">
+  <value>Palavras-passe Duplicadas</value>
+</data>
+<data name="HomePage_DuplicatePasswordsDesc.Text" xml:space="preserve">
+  <value>Mesma palavra-passe usada em vários sites</value>
+</data>
+<data name="HomePage_AllSecure.Text" xml:space="preserve">
+  <value>Todas as tuas palavras-passe estão seguras!</value>
+</data>
+
+	<data name="HomePage_Greeting.Text" xml:space="preserve">
+  <value>Bem-vindo!</value>
+</data>
+	<data name="HomePage_Subtitle.Text" xml:space="preserve">
+  <value>Aqui está um resumo do teu cofre de palavras-passe.</value>
+</data>
+	<data name="HomePage_Statistics.Text" xml:space="preserve">
+  <value>Estatísticas</value>
+</data>
+	<data name="HomePage_Total.Text" xml:space="preserve">
+  <value>Total</value>
+</data>
+	<data name="HomePage_Social.Text" xml:space="preserve">
+  <value>Social</value>
+</data>
+	<data name="HomePage_Work.Text" xml:space="preserve">
+  <value>Work</value>
+</data>
+	<data name="HomePage_Bank.Text" xml:space="preserve">
+  <value>Bank</value>
+</data>
+	<data name="HomePage_Other.Text" xml:space="preserve">
+  <value>Other</value>
+</data>
+	<data name="HomePage_SecurityAlerts.Text" xml:space="preserve">
+  <value>Alertas de Segurança</value>
+</data>
+	<data name="HomePage_WeakPasswords.Text" xml:space="preserve">
+  <value>Palavras-passe Fracas</value>
+</data>
+	<data name="HomePage_WeakPasswordsDesc.Text" xml:space="preserve">
+  <value>Palavras-passe fáceis de adivinhar</value>
+</data>
+	<data name="HomePage_DuplicatePasswords.Text" xml:space="preserve">
+  <value>Palavras-passe Duplicadas</value>
+</data>
+	<data name="HomePage_DuplicatePasswordsDesc.Text" xml:space="preserve">
+  <value>Mesma palavra-passe usada em vários sites</value>
+</data>
+	<data name="HomePage_AllSecure.Text" xml:space="preserve">
+  <value>Todas as tuas palavras-passe estão seguras!</value>
+</data>
+
+	<data name="HomePage_GreetingWithName" xml:space="preserve">
+  <value>Bem-vindo,</value>
+</data>
+
+	<data name="SettingsPage_Title.Text" xml:space="preserve">
+  <value>Definições</value>
+</data>
+	<data name="SettingsPage_Subtitle.Text" xml:space="preserve">
+  <value>Gere as preferências da tua conta.</value>
+</data>
+	<data name="SettingsPage_AccountInfo.Text" xml:space="preserve">
+  <value>Informação da Conta</value>
+</data>
+	<data name="SettingsPage_AccountInfoDesc.Text" xml:space="preserve">
+  <value>Os teus dados pessoais</value>
+</data>
+	<data name="SettingsPage_FirstName.Text" xml:space="preserve">
+  <value>Primeiro Nome:</value>
+</data>
+	<data name="SettingsPage_LastName.Text" xml:space="preserve">
+  <value>Apelido:</value>
+</data>
+	<data name="SettingsPage_Email.Text" xml:space="preserve">
+  <value>Email:</value>
+</data>
+	<data name="SettingsPage_Language.Text" xml:space="preserve">
+  <value>Idioma</value>
+</data>
+	<data name="SettingsPage_LanguageDesc.Text" xml:space="preserve">
+  <value>Escolhe o teu idioma preferido</value>
+</data>
+	<data name="SettingsPage_Security.Text" xml:space="preserve">
+  <value>Segurança</value>
+</data>
+	<data name="SettingsPage_SecurityDesc.Text" xml:space="preserve">
+  <value>Gere a tua palavra-passe</value>
+</data>
+	<data name="SettingsPage_ChangePasswordButton.Content" xml:space="preserve">
+  <value>Alterar Palavra-passe Mestra</value>
+</data>
+	<data name="SettingsPage_LogoutButton.Text" xml:space="preserve">
+  <value>Terminar Sessão</value>
+</data>
+	<data name="SettingsPage_DeleteAccountButton.Text" xml:space="preserve">
+  <value>Apagar Conta</value>
+</data>
+	<data name="SettingsPage_RestartTitle" xml:space="preserve">
+  <value>Reiniciar Necessário</value>
+</data>
+	<data name="SettingsPage_RestartMessage" xml:space="preserve">
+  <value>A aplicação precisa de reiniciar para aplicar a mudança de idioma.</value>
+</data>
+	<data name="SettingsPage_RestartNow" xml:space="preserve">
+  <value>Reiniciar Agora</value>
+</data>
+	<data name="SettingsPage_RestartLater" xml:space="preserve">
+  <value>Mais Tarde</value>
+</data>
+	<data name="SettingsPage_VerifyIdentity" xml:space="preserve">
+  <value>Verifica a Tua Identidade</value>
+</data>
+	<data name="SettingsPage_VerifyIdentityDesc" xml:space="preserve">
+  <value>Introduz a tua palavra-passe mestra e o código de autenticação para continuar.</value>
+</data>
+	<data name="SettingsPage_CurrentPassword" xml:space="preserve">
+  <value>Palavra-passe Atual:</value>
+</data>
+	<data name="SettingsPage_Continue" xml:space="preserve">
+  <value>Continuar</value>
+</data>
+	<data name="SettingsPage_PasswordRequired" xml:space="preserve">
+  <value>Introduz a tua palavra-passe.</value>
+</data>
+	<data name="SettingsPage_EmailFailed" xml:space="preserve">
+  <value>Falha ao enviar email de verificação. Tenta novamente.</value>
+</data>
+	<data name="SettingsPage_EmailSent" xml:space="preserve">
+  <value>Enviámos um código de verificação para o teu email. Introduz-o abaixo.</value>
+</data>
+	<data name="SettingsPage_EnterEmailCode" xml:space="preserve">
+  <value>Introduz o Código de Verificação</value>
+</data>
+	<data name="SettingsPage_CodeExpired" xml:space="preserve">
+  <value>O código expirou. Tenta novamente.</value>
+</data>
+	<data name="SettingsPage_InvalidCode" xml:space="preserve">
+  <value>Código inválido. Tenta novamente.</value>
+</data>
+	<data name="SettingsPage_LogoutConfirmTitle" xml:space="preserve">
+  <value>Terminar Sessão</value>
+</data>
+	<data name="SettingsPage_LogoutConfirmMessage" xml:space="preserve">
+  <value>Tens a certeza que queres terminar sessão?</value>
+</data>
+	<data name="SettingsPage_DeleteAccountTitle" xml:space="preserve">
+  <value>Apagar Conta</value>
+</data>
+	<data name="SettingsPage_DeleteAccountWarning" xml:space="preserve">
+  <value>Esta ação é permanente e não pode ser desfeita. Todos os teus dados serão perdidos.</value>
+</data>
+	<data name="SettingsPage_DeleteAccountConfirm" xml:space="preserve">
+  <value>Introduz a tua palavra-passe e código de autenticação para apagar a conta.</value>
+</data>
+	<data name="SettingsPage_DeleteFailed" xml:space="preserve">
+  <value>Falha ao apagar conta. Tenta novamente.</value>
+</data>
+	<data name="SettingsPage_FillAllFields" xml:space="preserve">
+  <value>Preenche todos os campos.</value>
+</data>
+	<data name="SettingsPage_PasswordsNotMatch" xml:space="preserve">
+  <value>As palavras-passe não coincidem.</value>
+</data>
+	<data name="SettingsPage_PasswordTooShort" xml:space="preserve">
+  <value>A palavra-passe deve ter pelo menos 8 caracteres.</value>
+</data>
+	<data name="SettingsPage_UpdateFailed" xml:space="preserve">
+  <value>Falha ao atualizar a palavra-passe. Tenta novamente.</value>
+</data>
+	<data name="SettingsPage_PasswordChanged" xml:space="preserve">
+  <value>Palavra-passe Alterada</value>
+</data>
+	<data name="SettingsPage_PasswordChangedMessage" xml:space="preserve">
+  <value>A tua palavra-passe foi atualizada. Por favor faz login novamente.</value>
+</data>
+	<data name="ChangePassword_Title.Text" xml:space="preserve">
+  <value>Criar Nova Palavra-passe</value>
+</data>
+	<data name="ChangePassword_Subtitle.Text" xml:space="preserve">
+  <value>Introduz a tua nova palavra-passe mestra abaixo.</value>
+</data>
+	<data name="ChangePassword_NewPassword.Text" xml:space="preserve">
+  <value>Nova Palavra-passe:</value>
+</data>
+	<data name="ChangePassword_ConfirmPassword.Text" xml:space="preserve">
+  <value>Confirmar Palavra-passe:</value>
+</data>
+	<data name="ChangePassword_SaveButton.Content" xml:space="preserve">
+  <value>Guardar Nova Palavra-passe</value>
+</data>
+	<data name="ChangePassword_CancelButton.Content" xml:space="preserve">
+  <value>Cancelar</value>
+</data>
+	
 </root>

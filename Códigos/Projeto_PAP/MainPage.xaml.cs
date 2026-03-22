@@ -1,18 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
 
 namespace Projeto_PAP
 {
@@ -20,7 +9,7 @@ namespace Projeto_PAP
     {
         private PasswordEncrypt _encryptor;
         private string _userEmail;
-        private string _totpSecret;  
+        private string _totpSecret;
 
         public MainPage()
         {
@@ -38,10 +27,22 @@ namespace Projeto_PAP
             {
                 _encryptor = parameters.Encryptor;
                 _userEmail = parameters.UserEmail;
-                _totpSecret = parameters.TotpSecret;  
+                _totpSecret = parameters.TotpSecret;
+
+                // Navegar automaticamente para HomePage
+                var homeParameters = new NavigationsParameters
+                {
+                    Encryptor = _encryptor,
+                    UserEmail = _userEmail,
+                    TotpSecret = _totpSecret
+                };
+                ContentFrame.Navigate(typeof(HomePage), homeParameters);
             }
         }
 
+        // ═══════════════════════════════════════════════════════════════
+        // MENU TOGGLE
+        // ═══════════════════════════════════════════════════════════════
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
             SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
@@ -61,15 +62,40 @@ namespace Projeto_PAP
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
+        // ═══════════════════════════════════════════════════════════════
+        // NAVEGAÇÃO
+        // ═══════════════════════════════════════════════════════════════
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new NavigationsParameters
+            {
+                Encryptor = _encryptor,
+                UserEmail = _userEmail,
+                TotpSecret = _totpSecret
+            };
+            ContentFrame.Navigate(typeof(HomePage), parameters);
+        }
+
         private void PasswordsButton_Click(object sender, RoutedEventArgs e)
         {
             var parameters = new NavigationsParameters
             {
                 Encryptor = _encryptor,
                 UserEmail = _userEmail,
-                TotpSecret = _totpSecret  
+                TotpSecret = _totpSecret
             };
             ContentFrame.Navigate(typeof(PasswordsPage), parameters);
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new NavigationsParameters
+            {
+                Encryptor = _encryptor,
+                UserEmail = _userEmail,
+                TotpSecret = _totpSecret
+            };
+            ContentFrame.Navigate(typeof(SettingsPage), parameters);
         }
     }
 }
