@@ -124,26 +124,12 @@ namespace Projeto_PAP
 
             try
             {
-                byte[] salt = new byte[16];
-                RandomNumberGenerator.Fill(salt);
+                // Usar o MESMO método de hash que o CreateAccount usa
+                var hashedPassword = PasswordHash.HashPassword(newPassword);
 
-                var argon2 = new Konscious.Security.Cryptography.Argon2id(
-                    System.Text.Encoding.UTF8.GetBytes(newPassword));
-                argon2.Salt = salt;
-                argon2.DegreeOfParallelism = 2;
-                argon2.MemorySize = 65536;
-                argon2.Iterations = 4;
-
-                byte[] hash = argon2.GetBytes(32);
-
-                byte[] combined = new byte[salt.Length + hash.Length];
-                Buffer.BlockCopy(salt, 0, combined, 0, salt.Length);
-                Buffer.BlockCopy(hash, 0, combined, salt.Length, hash.Length);
-
-                string base64Hash = Convert.ToBase64String(combined);
-
+                // Atualizar no MongoDB
                 var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
-                var update = Builders<Account>.Update.Set(a => a.Password, base64Hash);
+                var update = Builders<Account>.Update.Set(a => a.Password, hashedPassword);
 
                 var result = await collection.UpdateOneAsync(filter, update);
 
@@ -168,6 +154,75 @@ namespace Projeto_PAP
                 var result = await collection.DeleteOneAsync(filter);
 
                 return result.DeletedCount > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        internal static async Task<bool> VerifySecurityAnswers(string email, string maleNameAnswer, string femaleNameAnswer)
+        {
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+            try
+            {
+                var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
+                var user = await collection.Find(filter).FirstOrDefaultAsync();
+
+                if (user == null) return false;
+
+                // Verificar as respostas com hash (mesmo método que a password)
+                bool maleCorrect = PasswordHash.VerifyPassword(maleNameAnswer.Trim().ToLower(), user.SecurityAnswerMale);
+                bool femaleCorrect = PasswordHash.VerifyPassword(femaleNameAnswer.Trim().ToLower(), user.SecurityAnswerFemale);
+
+                return maleCorrect && femaleCorrect;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        internal static async Task<bool> EmailExists(string email)
+        {
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+            try
+            {
+                var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
+                var user = await collection.Find(filter).FirstOrDefaultAsync();
+                return user != null;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        internal static async Task<bool> UpdateSecurityAnswers(string email, string newMaleAnswer, string newFemaleAnswer)
+        {
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+            try
+            {
+                // Hash das novas respostas
+                var hashedMale = PasswordHash.HashPassword(newMaleAnswer.Trim().ToLower());
+                var hashedFemale = PasswordHash.HashPassword(newFemaleAnswer.Trim().ToLower());
+
+                var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
+                var update = Builders<Account>.Update
+                    .Set(a => a.SecurityAnswerMale, hashedMale)
+                    .Set(a => a.SecurityAnswerFemale, hashedFemale);
+
+                var result = await collection.UpdateOneAsync(filter, update);
+                return result.ModifiedCount > 0;
             }
             catch (Exception)
             {

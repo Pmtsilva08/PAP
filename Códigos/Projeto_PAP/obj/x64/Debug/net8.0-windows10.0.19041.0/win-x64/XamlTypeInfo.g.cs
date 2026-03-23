@@ -226,7 +226,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[43];
+            _typeNameTable = new string[44];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -264,14 +264,15 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeNameTable[34] = "System.Collections.ObjectModel.Collection`1<Projeto_PAP.PasswordItem>";
             _typeNameTable[35] = "Projeto_PAP.PasswordItem";
             _typeNameTable[36] = "MongoDB.Bson.ObjectId";
-            _typeNameTable[37] = "Projeto_PAP.SettingsPage";
-            _typeNameTable[38] = "Projeto_PAP.Setup2FADialog";
-            _typeNameTable[39] = "Projeto_PAP.Setup2FAPage";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[41] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[42] = "Int32";
+            _typeNameTable[37] = "Projeto_PAP.QuickUnlockPage";
+            _typeNameTable[38] = "Projeto_PAP.SettingsPage";
+            _typeNameTable[39] = "Projeto_PAP.Setup2FADialog";
+            _typeNameTable[40] = "Projeto_PAP.Setup2FAPage";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[42] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[43] = "Int32";
 
-            _typeTable = new global::System.Type[43];
+            _typeTable = new global::System.Type[44];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -309,12 +310,13 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             _typeTable[34] = typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>);
             _typeTable[35] = typeof(global::Projeto_PAP.PasswordItem);
             _typeTable[36] = typeof(global::MongoDB.Bson.ObjectId);
-            _typeTable[37] = typeof(global::Projeto_PAP.SettingsPage);
-            _typeTable[38] = typeof(global::Projeto_PAP.Setup2FADialog);
-            _typeTable[39] = typeof(global::Projeto_PAP.Setup2FAPage);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[41] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[42] = typeof(global::System.Int32);
+            _typeTable[37] = typeof(global::Projeto_PAP.QuickUnlockPage);
+            _typeTable[38] = typeof(global::Projeto_PAP.SettingsPage);
+            _typeTable[39] = typeof(global::Projeto_PAP.Setup2FADialog);
+            _typeTable[40] = typeof(global::Projeto_PAP.Setup2FAPage);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[43] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -366,9 +368,10 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private object Activate_33_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Projeto_PAP.PasswordItem>(); }
         private object Activate_34_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>(); }
         private object Activate_35_PasswordItem() { return new global::Projeto_PAP.PasswordItem(); }
-        private object Activate_37_SettingsPage() { return new global::Projeto_PAP.SettingsPage(); }
-        private object Activate_39_Setup2FAPage() { return new global::Projeto_PAP.Setup2FAPage(); }
-        private object Activate_40_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_37_QuickUnlockPage() { return new global::Projeto_PAP.QuickUnlockPage(); }
+        private object Activate_38_SettingsPage() { return new global::Projeto_PAP.SettingsPage(); }
+        private object Activate_40_Setup2FAPage() { return new global::Projeto_PAP.Setup2FAPage(); }
+        private object Activate_41_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_ProgressBar() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBar).TypeHandle);
         private void StaticInitializer_6_ProgressBarTemplateSettings() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings).TypeHandle);
@@ -391,11 +394,12 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
         private void StaticInitializer_34_Collection() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.ObjectModel.Collection<global::Projeto_PAP.PasswordItem>).TypeHandle);
         private void StaticInitializer_35_PasswordItem() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.PasswordItem).TypeHandle);
         private void StaticInitializer_36_ObjectId() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MongoDB.Bson.ObjectId).TypeHandle);
-        private void StaticInitializer_37_SettingsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.SettingsPage).TypeHandle);
-        private void StaticInitializer_38_Setup2FADialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FADialog).TypeHandle);
-        private void StaticInitializer_39_Setup2FAPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FAPage).TypeHandle);
-        private void StaticInitializer_40_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_41_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_37_QuickUnlockPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.QuickUnlockPage).TypeHandle);
+        private void StaticInitializer_38_SettingsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.SettingsPage).TypeHandle);
+        private void StaticInitializer_39_Setup2FADialog() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FADialog).TypeHandle);
+        private void StaticInitializer_40_Setup2FAPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Projeto_PAP.Setup2FAPage).TypeHandle);
+        private void StaticInitializer_41_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_42_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -415,7 +419,7 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
             var newItem = (global::Projeto_PAP.PasswordItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_41_IList(object instance, object item)
+        private void VectorAdd_42_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -689,34 +693,42 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 37:   //  Projeto_PAP.SettingsPage
+            case 37:   //  Projeto_PAP.QuickUnlockPage
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_37_SettingsPage;
-                userType.StaticInitializer = StaticInitializer_37_SettingsPage;
+                userType.Activator = Activate_37_QuickUnlockPage;
+                userType.StaticInitializer = StaticInitializer_37_QuickUnlockPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  Projeto_PAP.Setup2FADialog
+            case 38:   //  Projeto_PAP.SettingsPage
+                userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_38_SettingsPage;
+                userType.StaticInitializer = StaticInitializer_38_SettingsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 39:   //  Projeto_PAP.Setup2FADialog
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
-                userType.StaticInitializer = StaticInitializer_38_Setup2FADialog;
+                userType.StaticInitializer = StaticInitializer_39_Setup2FADialog;
                 userType.AddMemberName("SecretKeyBase32");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  Projeto_PAP.Setup2FAPage
+            case 40:   //  Projeto_PAP.Setup2FAPage
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_Setup2FAPage;
-                userType.StaticInitializer = StaticInitializer_39_Setup2FAPage;
+                userType.Activator = Activate_40_Setup2FAPage;
+                userType.StaticInitializer = StaticInitializer_40_Setup2FAPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 41:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_40_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_40_TreeViewNode;
+                userType.Activator = Activate_41_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_41_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -728,15 +740,15 @@ namespace Projeto_PAP.Projeto_PAP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 41:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 42:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_41_IList;
-                userType.CollectionAdd = VectorAdd_41_IList;
+                userType.StaticInitializer = StaticInitializer_42_IList;
+                userType.CollectionAdd = VectorAdd_42_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Int32
+            case 43:   //  Int32
                 xamlType = new global::Projeto_PAP.Projeto_PAP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

@@ -54,7 +54,7 @@ namespace Projeto_PAP
                 return;
             }
 
-            // Atualizar password
+            // Atualizar password no MongoDB
             bool updated = await LoginQuery.UpdatePassword(_userEmail, newPassword);
 
             if (!updated)
@@ -62,6 +62,9 @@ namespace Projeto_PAP
                 ShowError(resourceLoader.GetString("SettingsPage_UpdateFailed"));
                 return;
             }
+
+            // Enviar email informativo
+            _ = EmailService.SendPasswordChangedNotificationAsync(_userEmail);
 
             // Sucesso
             ContentDialog successDialog = new ContentDialog()
@@ -74,9 +77,11 @@ namespace Projeto_PAP
 
             await successDialog.ShowAsync();
 
-            // Logout
+            // Limpar encryptor
             _encryptor?.Clear();
-            Frame.Navigate(typeof(LoginPage));
+
+            // Usar o Frame principal
+            App.MainFrame.Navigate(typeof(LoginPage));
         }
 
         private void ShowError(string message)

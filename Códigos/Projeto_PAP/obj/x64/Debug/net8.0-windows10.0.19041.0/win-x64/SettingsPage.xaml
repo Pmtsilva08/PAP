@@ -47,7 +47,7 @@
                         <TextBlock x:Uid="SettingsPage_FirstName" Text="First Name" 
                                    FontSize="12" Foreground="#888888"/>
                         <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
-                            <TextBlock x:ConnectionId='8' x:Name="FirstNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                            <TextBlock x:ConnectionId='9' x:Name="FirstNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
                         </Border>
                     </StackPanel>
 
@@ -56,7 +56,7 @@
                         <TextBlock x:Uid="SettingsPage_LastName" Text="Last Name" 
                                    FontSize="12" Foreground="#888888"/>
                         <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
-                            <TextBlock x:ConnectionId='7' x:Name="LastNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                            <TextBlock x:ConnectionId='8' x:Name="LastNameText" Text="" FontSize="14" Foreground="#1a1a2e"/>
                         </Border>
                     </StackPanel>
 
@@ -65,7 +65,7 @@
                         <TextBlock x:Uid="SettingsPage_Email" Text="Email" 
                                    FontSize="12" Foreground="#888888"/>
                         <Border Background="#f5f5f5" CornerRadius="8" Padding="15,12">
-                            <TextBlock x:ConnectionId='6' x:Name="EmailText" Text="" FontSize="14" Foreground="#1a1a2e"/>
+                            <TextBlock x:ConnectionId='7' x:Name="EmailText" Text="" FontSize="14" Foreground="#1a1a2e"/>
                         </Border>
                     </StackPanel>
                 </StackPanel>
@@ -89,7 +89,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <ComboBox x:ConnectionId='5' x:Name="LanguageComboBox" 
+                    <ComboBox x:ConnectionId='6' x:Name="LanguageComboBox" 
                               Width="250"
                                                                                   >
                         <ComboBoxItem Content="English" Tag="en-US"/>
@@ -127,6 +127,17 @@
                             Padding="20,12"
                             CornerRadius="8"
                             FontWeight="SemiBold"/>
+
+                    <!-- Alterar Perguntas de Segurança -->
+                    <Button x:ConnectionId='5' x:Uid="SettingsPage_ChangeSecurityQuestionsButton"
+                        Content="Change Security Questions"
+                                                                   
+                        Background="#3498db"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="20,12"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,10,0,0"/>
                 </StackPanel>
             </Border>
 

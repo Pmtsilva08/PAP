@@ -456,5 +456,242 @@
 	<data name="ChangePassword_CancelButton.Content" xml:space="preserve">
   <value>Cancelar</value>
 </data>
+
+	<data name="SettingsPage_LanguageChangeTitle" xml:space="preserve">
+  <value>Mudar Idioma</value>
+</data>
+	<data name="SettingsPage_LanguageChangeMessage" xml:space="preserve">
+  <value>A aplicação irá reiniciar para aplicar o novo idioma.</value>
+</data>
+	<data name="QuickUnlock_Title.Text" xml:space="preserve">
+  <value>Bem-vindo de Volta!</value>
+</data>
+	<data name="QuickUnlock_Password.Text" xml:space="preserve">
+  <value>Palavra-passe Mestra:</value>
+</data>
+	<data name="QuickUnlock_Button.Content" xml:space="preserve">
+  <value>Desbloquear</value>
+</data>
+	<data name="QuickUnlock_DifferentAccount.Content" xml:space="preserve">
+  <value>Usar outra conta</value>
+</data>
+
+	<data name="Login_Email" xml:space="preserve">
+  <value>Endereço de Email</value>
+</data>
+	<data name="Login_EmailPlaceholder" xml:space="preserve">
+  <value>Introduz o teu email...</value>
+</data>
+	<data name="Login_Password" xml:space="preserve">
+  <value>Palavra-passe</value>
+</data>
+	<data name="Login_PasswordPlaceholder" xml:space="preserve">
+  <value>Introduz a tua palavra-passe...</value>
+</data>
+	<data name="Login_ForgotPassword" xml:space="preserve">
+  <value>Esqueceste a tua palavra-passe?</value>
+</data>
+	<data name="Login_Button" xml:space="preserve">
+  <value>Entrar</value>
+</data>
+	<data name="Login_NoAccount" xml:space="preserve">
+  <value>Ainda não tens conta?</value>
+</data>
+	<data name="Login_CreateAccount" xml:space="preserve">
+  <value>Criar Conta</value>
+</data>
+
+	<data name="Login_Error" xml:space="preserve">
+  <value>Erro</value>
+</data>
+	<data name="Login_FillAllFields" xml:space="preserve">
+  <value>Preenche todos os campos!</value>
+</data>
+	<data name="Login_InvalidEmail" xml:space="preserve">
+  <value>Email inválido!</value>
+</data>
+	<data name="Login_EmailNotFound" xml:space="preserve">
+  <value>Email não encontrado!</value>
+</data>
+	<data name="Login_IncorrectPassword" xml:space="preserve">
+  <value>Palavra-passe incorreta!</value>
+</data>
+	<data name="Login_ConnectionError" xml:space="preserve">
+  <value>Ligação à base de dados perdida. Verifica a tua ligação à internet.</value>
+</data>
+	<data name="Login_EnterCode" xml:space="preserve">
+  <value>Introduz o Código</value>
+</data>
+	<data name="Login_Verify" xml:space="preserve">
+  <value>Verificar</value>
+</data>
+	<data name="Login_CodeExpired" xml:space="preserve">
+  <value>O código de verificação expirou. Tenta novamente.</value>
+</data>
+	<data name="Login_InvalidCode" xml:space="preserve">
+  <value>Código de verificação inválido!</value>
+</data>
+	<data name="Login_EmailFailed" xml:space="preserve">
+  <value>Falha ao enviar email de verificação. Tenta novamente.</value>
+</data>
+
+	<data name="CreateAccount_FirstName" xml:space="preserve">
+  <value>Primeiro Nome</value>
+</data>
+	<data name="CreateAccount_FirstNamePlaceholder" xml:space="preserve">
+  <value>Introduz o teu primeiro nome...</value>
+</data>
+	<data name="CreateAccount_LastName" xml:space="preserve">
+  <value>Apelido</value>
+</data>
+	<data name="CreateAccount_LastNamePlaceholder" xml:space="preserve">
+  <value>Introduz o teu apelido...</value>
+</data>
+	<data name="CreateAccount_Email" xml:space="preserve">
+  <value>Endereço de Email</value>
+</data>
+	<data name="CreateAccount_EmailPlaceholder" xml:space="preserve">
+  <value>Introduz o teu email...</value>
+</data>
+	<data name="CreateAccount_Password" xml:space="preserve">
+  <value>Palavra-passe</value>
+</data>
+	<data name="CreateAccount_PasswordPlaceholder" xml:space="preserve">
+  <value>Introduz a tua palavra-passe...</value>
+</data>
+	<data name="CreateAccount_ConfirmPassword" xml:space="preserve">
+  <value>Confirmar Palavra-passe</value>
+</data>
+	<data name="CreateAccount_ConfirmPasswordPlaceholder" xml:space="preserve">
+  <value>Confirma a tua palavra-passe...</value>
+</data>
+	<data name="CreateAccount_SecurityQuestionsTitle" xml:space="preserve">
+  <value>Perguntas de Segurança</value>
+</data>
+	<data name="CreateAccount_SecurityQuestionsSubtitle" xml:space="preserve">
+  <value>Estas ajudarão a recuperar a tua conta</value>
+</data>
+	<data name="CreateAccount_MaleNameQuestion" xml:space="preserve">
+  <value>Qual é o teu nome masculino preferido?</value>
+</data>
+	<data name="CreateAccount_MaleNamePlaceholder" xml:space="preserve">
+  <value>Introduz um nome masculino...</value>
+</data>
+	<data name="CreateAccount_FemaleNameQuestion" xml:space="preserve">
+  <value>Qual é o teu nome feminino preferido?</value>
+</data>
+	<data name="CreateAccount_FemaleNamePlaceholder" xml:space="preserve">
+  <value>Introduz um nome feminino...</value>
+</data>
+	<data name="CreateAccount_Button" xml:space="preserve">
+  <value>Criar Conta</value>
+</data>
+	<data name="CreateAccount_HasAccount" xml:space="preserve">
+  <value>Já tens uma conta?</value>
+</data>
+	<data name="CreateAccount_LoginLink" xml:space="preserve">
+  <value>Entrar</value>
+</data>
+	<data name="CreateAccount_PasswordsNotMatch" xml:space="preserve">
+  <value>As palavras-passe não coincidem!</value>
+</data>
+	<data name="CreateAccount_AttemptsExceeded" xml:space="preserve">
+  <value>Número de tentativas excedido, tenta novamente em 5 minutos!</value>
+</data>
+	<data name="CreateAccount_EmailDuplicate" xml:space="preserve">
+  <value>Este email já está registado!</value>
+</data>
+	<data name="CreateAccount_ConnectionError" xml:space="preserve">
+  <value>Erro de ligação. Tenta novamente.</value>
+</data>
+	<data name="CreateAccount_SecurityQuestionsError" xml:space="preserve">
+  <value>Responde às duas perguntas de segurança!</value>
+</data>
+	<data name="CreateAccount_PasswordWeak" xml:space="preserve">
+  <value>Fraca! Deve ter 8+ caracteres, maiúscula, minúscula, número, caractere especial.</value>
+</data>
+	<data name="CreateAccount_PasswordMedium" xml:space="preserve">
+  <value>Média! Adiciona mais variedade para uma palavra-passe mais forte.</value>
+</data>
+	<data name="CreateAccount_PasswordStrong" xml:space="preserve">
+  <value>Forte</value>
+</data>
+
+	<data name="SettingsPage_DeleteButton" xml:space="preserve">
+  <value>Apagar</value>
+</data>
+
+	<data name="SettingsPage_Logout" xml:space="preserve">
+  <value>Terminar Sessão</value>
+</data>
+
+	<data name="ForgotPassword_Title" xml:space="preserve">
+  <value>Recuperar Palavra-passe</value>
+</data>
+	<data name="ForgotPassword_EnterEmail" xml:space="preserve">
+  <value>Introduz o teu email para recuperar a palavra-passe.</value>
+</data>
+	<data name="ForgotPassword_SecurityQuestions" xml:space="preserve">
+  <value>Responde às perguntas de segurança para verificar a tua identidade.</value>
+</data>
+	<data name="ForgotPassword_WrongAnswers" xml:space="preserve">
+  <value>Respostas incorretas. Tenta novamente.</value>
+</data>
+	<data name="ForgotPassword_CodeSent" xml:space="preserve">
+  <value>Enviámos um código de verificação para o teu email. Introduz-o abaixo.</value>
+</data>
+	<data name="ForgotPassword_CreateNew" xml:space="preserve">
+  <value>Cria a tua nova palavra-passe.</value>
+</data>
+	<data name="ForgotPassword_Success" xml:space="preserve">
+  <value>Palavra-passe Alterada</value>
+</data>
+	<data name="ForgotPassword_SuccessMessage" xml:space="preserve">
+  <value>A tua palavra-passe foi atualizada. Já podes entrar com a nova palavra-passe.</value>
+</data>
+	<data name="SettingsPage_Continue" xml:space="preserve">
+  <value>Continuar</value>
+</data>
+	
+	<data name="ForgotPassword_MonthlyLimit" xml:space="preserve">
+  <value>Só podes recuperar a palavra-passe uma vez por mês. Tenta novamente mais tarde.</value>
+</data>
+	<data name="ForgotPassword_TwoHourLimit" xml:space="preserve">
+  <value>Demasiadas tentativas falhadas. Tenta novamente mais tarde.</value>
+</data>
+	<data name="ForgotPassword_OneAttemptWarning" xml:space="preserve">
+  <value>⚠️ Atenção: Só tens UMA tentativa. Se falhares, tens de esperar 2 horas.</value>
+</data>
+	<data name="ForgotPassword_WrongAnswersBlocked" xml:space="preserve">
+  <value>Respostas incorretas. Por segurança, tens de esperar 2 horas antes de tentar novamente. Foi enviado um email de alerta.</value>
+</data>
+	<data name="ForgotPassword_OneCodeAttempt" xml:space="preserve">
+  <value>⚠️ Só tens UMA tentativa para introduzir o código corretamente.</value>
+</data>
+	<data name="ForgotPassword_WrongCodeBlocked" xml:space="preserve">
+  <value>Código incorreto. Por segurança, o processo foi cancelado e foi enviado um alerta.</value>
+</data>
+	<data name="SettingsPage_ChangeSecurityQuestionsButton.Content" xml:space="preserve">
+  <value>Alterar Perguntas de Segurança</value>
+</data>
+	<data name="SettingsPage_ChangeSecurityQuestions" xml:space="preserve">
+  <value>Alterar Perguntas de Segurança</value>
+</data>
+	<data name="SettingsPage_NewSecurityQuestionsDesc" xml:space="preserve">
+  <value>Introduz as novas respostas às perguntas de segurança abaixo.</value>
+</data>
+	<data name="SettingsPage_SecurityQuestionsChanged" xml:space="preserve">
+  <value>Perguntas de Segurança Alteradas</value>
+</data>
+	<data name="SettingsPage_SecurityQuestionsChangedMessage" xml:space="preserve">
+  <value>As tuas perguntas de segurança foram atualizadas com sucesso.</value>
+</data>
+
+	<data name="ChangePassword_NewPasswordLabel" xml:space="preserve">
+  <value>Nova Palavra-passe:</value>
+</data>
+	<data name="ChangePassword_ConfirmPasswordLabel" xml:space="preserve">
+  <value>Confirmar Palavra-passe:</value>
+</data>
 	
 </root>

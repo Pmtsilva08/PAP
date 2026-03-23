@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Projeto_PAP.QuickUnlockPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projeto_PAP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#f0f0f0">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Background="White" CornerRadius="16" Padding="50" MinWidth="400"
+                BorderBrush="#e0e0e0" BorderThickness="1">
+            <StackPanel Spacing="25">
+
+                <!-- Ícone -->
+                <Border Background="#E8F0FE" CornerRadius="40" Width="80" Height="80" HorizontalAlignment="Center">
+                    <FontIcon Glyph="&#xE72E;" FontSize="36" Foreground="#667eea"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+
+                <!-- Título -->
+                <StackPanel Spacing="5" HorizontalAlignment="Center">
+                    <TextBlock x:Uid="QuickUnlock_Title" Text="Welcome Back!" 
+                               FontSize="24" FontWeight="Bold" Foreground="#1a1a2e"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="EmailText" Text=""
+                               FontSize="14" Foreground="#888888" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Password -->
+                <StackPanel Spacing="8">
+                    <TextBlock x:Uid="QuickUnlock_Password" Text="Master Password:" 
+                               FontSize="13" FontWeight="SemiBold" Foreground="#555"/>
+                    <PasswordBox x:Name="PasswordBox" 
+                                 PlaceholderText="••••••••"
+                                 FontSize="16"
+                                 Padding="15,12"
+                                 CornerRadius="8"/>
+                </StackPanel>
+
+                <!-- Erro -->
+                <Border x:Name="ErrorPanel" Background="#FFEBEE" CornerRadius="8" Padding="15" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE783;" FontSize="16" Foreground="#e74c3c"/>
+                        <TextBlock x:Name="ErrorText" Text="" Foreground="#e74c3c"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Botão Unlock -->
+                <Button x:Name="UnlockButton"
+                        x:Uid="QuickUnlock_Button"
+                        Content="Unlock"
+                        Click="UnlockButton_Click"
+                        Background="#667eea"
+                        Foreground="White"
+                        FontSize="16"
+                        Padding="25,15"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"/>
+
+                <!-- Link para login completo -->
+                <HyperlinkButton x:Uid="QuickUnlock_DifferentAccount" 
+                                 Content="Use a different account"
+                                 Click="DifferentAccount_Click"
+                                 HorizontalAlignment="Center"/>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

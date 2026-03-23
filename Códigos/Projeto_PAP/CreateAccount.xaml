@@ -9,100 +9,167 @@
     mc:Ignorable="d">
 
     <Grid>
-
         <Grid.Resources>
-            <Style x:Key="ButtonStyle"  TargetType="Button"> <!--Aqui são aplicados os estilos-->
+            <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="Background">
                     <Setter.Value>
-                        <!--0                    1
-                        0   ┌────────────────────┐
-                            │                    │
-                            │                    │
-                            │                    │
-                        1   └────────────────────┘-->
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1"> 
-                            <GradientStop Color="#667eea" Offset="0.0"/> <!--Aqui é onde a cor começa-->
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#667eea" Offset="0.0"/>
                             <GradientStop Color="#764ba2" Offset="1.0"/>
-                            <!--Aqui é onde a cor termina e começa outra-->
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="CornerRadius" Value="10"/>
-                
                 <Setter Property="Template">
-                    <!--Como vai ser construido cada botão que utilizar a propriedade style cujo x:Key é igual a x:Key="ButtonStyle"-->
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
                             <Border 
-                                    Background="{TemplateBinding Background}" 
-                                    CornerRadius="{TemplateBinding CornerRadius}"
-                                    Padding="{TemplateBinding Padding}">
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Padding="{TemplateBinding Padding}">
                                 <ContentPresenter 
-                                        Content="{TemplateBinding Content}"
-                                        HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center"/>
+                                    Content="{TemplateBinding Content}"
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <Style x:Key="LanguageButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Padding" Value="15,10"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            </Style>
         </Grid.Resources>
 
-        <StackPanel 
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Background="white"
-        Height="595"
-        Width="460"
-        CornerRadius="13,13,0,0"
-        Orientation="Vertical"
-        Spacing="5">
-            
-            <Image Source="/Assets/Icon_App_Grande.png"
-                   Width="80" 
-                   Height="80" 
-                   HorizontalAlignment="Center"
-                   Margin="0,10,0,20"/>
-            
-            <TextBlock
-            Text="First Name" FontSize="16" HorizontalAlignment="Center" Foreground="Black"/>
-            <TextBox x:Name="FirstNameTextBox" Width="300" PlaceholderText="Enter your first name..." HorizontalAlignment="Center"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical"
+                Spacing="0"
+                Margin="0,20,0,20">
 
-            <TextBlock
-            Text="Last Name" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
-            <TextBox x:Name="LastNameTextBox" Width="300" PlaceholderText="Enter your last name..." HorizontalAlignment="Center"/>
-            
-            <TextBlock
-            Text="Email Address" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
-            <TextBox x:Name="EmailTextBox" Width="300" PlaceholderText="Enter your email..." HorizontalAlignment="Center"/>
+                <!-- Formulário principal -->
+                <StackPanel 
+                    Background="White"
+                    Width="460"
+                    CornerRadius="13,13,0,0"
+                    Padding="30"
+                    Spacing="5">
 
-            <TextBlock
-            Text="Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,20,0,0"/>
-            <PasswordBox x:Name="PasswordBox" Width="300" PlaceholderText="Enter your password..." HorizontalAlignment="Center"/>
-            <TextBlock
-            x:Name="PasswordStrength" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0" Height="auto" Padding="0"/>
+                    <Image Source="/Assets/Icon_App_Grande.png"
+                        Width="70" 
+                        Height="70" 
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,10"/>
 
-            <TextBlock
-            Text="Confirm Password" FontSize="16" HorizontalAlignment="Center" Foreground="Black" Margin="0,5,0,0"/>
-            <PasswordBox x:Name="ConfirmPasswordBox" Width="300" PlaceholderText="Confirm your password..." HorizontalAlignment="Center"/>
+                    <!-- Seletor de Idioma -->
+                    <Button x:Name="LanguageButton"
+                            HorizontalAlignment="Center"
+                            Background="#f5f5f5"
+                            BorderBrush="#e0e0e0"
+                            BorderThickness="1"
+                            CornerRadius="20"
+                            Padding="15,8"
+                            Margin="0,0,0,15">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <TextBlock x:Name="CurrentFlag" Text="🇬🇧" FontSize="18"/>
+                            <TextBlock x:Name="CurrentLanguageName" Text="English" FontSize="14" VerticalAlignment="Center"/>
+                            <FontIcon Glyph="&#xE70D;" FontSize="10" VerticalAlignment="Center" Foreground="#888"/>
+                        </StackPanel>
 
-            <Button
-            x:Name="CreateAccountButton"
-            Content="Create Account"
-            Width="140"
-            Click="CreateAccountClick"
-            HorizontalAlignment="Center"
-            Style="{StaticResource ButtonStyle}"
-            Margin="0,20,0,0"/>
-        </StackPanel>
+                        <Button.Flyout>
+                            <Flyout Placement="Bottom">
+                                <StackPanel Spacing="5" Width="180">
+                                    <Button Style="{StaticResource LanguageButtonStyle}" Tag="en-US" Click="LanguageOption_Click" CornerRadius="8">
+                                        <StackPanel Orientation="Horizontal" Spacing="12">
+                                            <TextBlock Text="🇬🇧" FontSize="20"/>
+                                            <TextBlock Text="English" FontSize="14" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Style="{StaticResource LanguageButtonStyle}" Tag="pt-PT" Click="LanguageOption_Click" CornerRadius="8">
+                                        <StackPanel Orientation="Horizontal" Spacing="12">
+                                            <TextBlock Text="🇵🇹" FontSize="20"/>
+                                            <TextBlock Text="Português" FontSize="14" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Style="{StaticResource LanguageButtonStyle}" Tag="es-ES" Click="LanguageOption_Click" CornerRadius="8">
+                                        <StackPanel Orientation="Horizontal" Spacing="12">
+                                            <TextBlock Text="🇪🇸" FontSize="20"/>
+                                            <TextBlock Text="Español" FontSize="14" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Style="{StaticResource LanguageButtonStyle}" Tag="fr-FR" Click="LanguageOption_Click" CornerRadius="8">
+                                        <StackPanel Orientation="Horizontal" Spacing="12">
+                                            <TextBlock Text="🇫🇷" FontSize="20"/>
+                                            <TextBlock Text="Français" FontSize="14" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
 
-        <StackPanel Background="white" Width="460" Height="70" Orientation="Vertical" HorizontalAlignment="Center" Margin="0, 664, 0, 0" CornerRadius="0,0,13,13">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
-                <TextBlock Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
-                <HyperlinkButton Content="Login" Click="Login_Click" FontSize="14" VerticalAlignment="Center"/>
+                    <!-- First Name -->
+                    <TextBlock x:Name="FirstNameLabel" Text="First Name" FontSize="14" HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBox x:Name="FirstNameTextBox" Width="300" PlaceholderText="Enter your first name..." HorizontalAlignment="Center"/>
+
+                    <!-- Last Name -->
+                    <TextBlock x:Name="LastNameLabel" Text="Last Name" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,15,0,0"/>
+                    <TextBox x:Name="LastNameTextBox" Width="300" PlaceholderText="Enter your last name..." HorizontalAlignment="Center"/>
+
+                    <!-- Email -->
+                    <TextBlock x:Name="EmailLabel" Text="Email Address" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,15,0,0"/>
+                    <TextBox x:Name="EmailTextBox" Width="300" PlaceholderText="Enter your email..." HorizontalAlignment="Center"/>
+
+                    <!-- Password -->
+                    <TextBlock x:Name="PasswordLabel" Text="Password" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,15,0,0"/>
+                    <PasswordBox x:Name="PasswordBox" Width="300" PlaceholderText="Enter your password..." HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="PasswordStrength" FontSize="11" HorizontalAlignment="Center" Margin="0,3,0,0" TextWrapping="Wrap" MaxWidth="300"/>
+
+                    <!-- Confirm Password -->
+                    <TextBlock x:Name="ConfirmPasswordLabel" Text="Confirm Password" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,10,0,0"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox" Width="300" PlaceholderText="Confirm your password..." HorizontalAlignment="Center"/>
+
+                    <!-- Separador -->
+                    <Border Background="#e0e0e0" Height="1" Margin="0,20,0,15"/>
+
+                    <!-- Perguntas de Segurança -->
+                    <TextBlock x:Name="SecurityQuestionsTitle" Text="Security Questions" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="#667eea"/>
+                    <TextBlock x:Name="SecurityQuestionsSubtitle" Text="These will help you recover your account" FontSize="12" HorizontalAlignment="Center" Foreground="#888" Margin="0,0,0,10"/>
+
+                    <!-- Pergunta 1: Nome masculino -->
+                    <TextBlock x:Name="MaleNameLabel" Text="What is your favorite male name?" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,10,0,0"/>
+                    <TextBox x:Name="MaleNameTextBox" Width="300" PlaceholderText="Enter a male name..." HorizontalAlignment="Center"/>
+
+                    <!-- Pergunta 2: Nome feminino -->
+                    <TextBlock x:Name="FemaleNameLabel" Text="What is your favorite female name?" FontSize="14" HorizontalAlignment="Center" Foreground="Black" Margin="0,15,0,0"/>
+                    <TextBox x:Name="FemaleNameTextBox" Width="300" PlaceholderText="Enter a female name..." HorizontalAlignment="Center"/>
+
+                    <!-- Botão Create Account -->
+                    <Button x:Name="CreateAccountButton"
+                        Content="Create Account"
+                        Width="160"
+                        Click="CreateAccountClick"
+                        HorizontalAlignment="Center"
+                        Style="{StaticResource ButtonStyle}"
+                        Margin="0,25,0,0"/>
+                </StackPanel>
+
+                <!-- Link para Login -->
+                <StackPanel Background="White" Width="460" Height="60" CornerRadius="0,0,13,13" Padding="0,10,0,10">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="-8">
+                        <TextBlock x:Name="HasAccountText" Text="Already have an account?" FontSize="14" VerticalAlignment="Center"/>
+                        <HyperlinkButton x:Name="LoginLink" Content="Login" Click="Login_Click" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+
             </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
-    

@@ -85,6 +85,11 @@ namespace Projeto_PAP
             }
         }
 
+        
+        internal byte[] GetKey()
+        {
+            return (byte[])_key.Clone();
+        }
     }
 }
                                       

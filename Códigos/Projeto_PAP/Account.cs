@@ -32,6 +32,12 @@ namespace Projeto_PAP
         [BsonElement("totp_secret")]
         public string? TotpSecret { get; set; } = null; //o ponto de interrogação indica que a propriedade pode ser nula
 
+        [BsonElement("security_answer_male")]
+        public string? SecurityAnswerMale { get; set; }
+
+        [BsonElement("security_answer_female")]
+        public string? SecurityAnswerFemale { get; set; }
+
         [BsonElement("list_passwords")]
         public List<PasswordItem> PasswordItems { get; set; } = new List<PasswordItem>();
     }

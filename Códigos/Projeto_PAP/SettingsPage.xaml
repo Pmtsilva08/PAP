@@ -127,6 +127,17 @@
                             Padding="20,12"
                             CornerRadius="8"
                             FontWeight="SemiBold"/>
+
+                    <!-- Alterar Perguntas de Segurança -->
+                    <Button x:Uid="SettingsPage_ChangeSecurityQuestionsButton"
+                        Content="Change Security Questions"
+                        Click="ChangeSecurityQuestionsButton_Click"
+                        Background="#3498db"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="20,12"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,10,0,0"/>
                 </StackPanel>
             </Border>
 

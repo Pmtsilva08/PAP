@@ -1,41 +1,131 @@
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.UI;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using MongoDB.Driver;
 using System.Net.Mail;
 using System.Security.Cryptography;
-using Windows.Storage;
 using System.Text.Json;
-using Microsoft.UI;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+using Windows.ApplicationModel.Resources;
+using Windows.ApplicationModel.Resources.Core;
+using Windows.Globalization;
+using Windows.Storage;
 
 namespace Projeto_PAP
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class CreateAccount : Page
     {
+        private ResourceLoader _resourceLoader;
+        private ResourceMap _resourceMap;
+        private ResourceContext _context;
+
+        // Strings de erro
+        private string _errorTitle;
+        private string _errorFillAllFields;
+        private string _errorInvalidEmail;
+        private string _errorPasswordsNotMatch;
+        private string _errorAttemptsExceeded;
+        private string _errorCodeExpired;
+        private string _errorInvalidCode;
+        private string _errorEmailFailed;
+        private string _errorEmailDuplicate;
+        private string _errorConnection;
+        private string _errorSecurityQuestions;
+        private string _enterCode;
+        private string _verify;
+        private string _cancelButton;
+
+        // Strings de força da password
+        private string _passwordWeak;
+        private string _passwordMedium;
+        private string _passwordStrong;
+
         public CreateAccount()
         {
             InitializeComponent();
+            LoadCurrentLanguage();
+            LoadStrings();
+            SetupPasswordStrengthChecker();
+        }
 
-            var color_red = new SolidColorBrush(Colors.Red);
-            var color_orange = new SolidColorBrush(Colors.Orange);
-            var color_green = new SolidColorBrush(Colors.Green);
+        // ═══════════════════════════════════════════════════════════════
+        // CARREGAMENTO DE STRINGS
+        // ═══════════════════════════════════════════════════════════════
+        private void LoadStrings()
+        {
+            _context = new ResourceContext();
+            _context.QualifierValues["Language"] = ApplicationLanguages.PrimaryLanguageOverride;
+
+            _resourceMap = ResourceManager.Current.MainResourceMap.GetSubtree("Resources");
+
+            // Strings da UI
+            FirstNameLabel.Text = GetString("CreateAccount_FirstName", "First Name");
+            FirstNameTextBox.PlaceholderText = GetString("CreateAccount_FirstNamePlaceholder", "Enter your first name...");
+            LastNameLabel.Text = GetString("CreateAccount_LastName", "Last Name");
+            LastNameTextBox.PlaceholderText = GetString("CreateAccount_LastNamePlaceholder", "Enter your last name...");
+            EmailLabel.Text = GetString("CreateAccount_Email", "Email Address");
+            EmailTextBox.PlaceholderText = GetString("CreateAccount_EmailPlaceholder", "Enter your email...");
+            PasswordLabel.Text = GetString("CreateAccount_Password", "Password");
+            PasswordBox.PlaceholderText = GetString("CreateAccount_PasswordPlaceholder", "Enter your password...");
+            ConfirmPasswordLabel.Text = GetString("CreateAccount_ConfirmPassword", "Confirm Password");
+            ConfirmPasswordBox.PlaceholderText = GetString("CreateAccount_ConfirmPasswordPlaceholder", "Confirm your password...");
+
+            // Perguntas de segurança
+            SecurityQuestionsTitle.Text = GetString("CreateAccount_SecurityQuestionsTitle", "Security Questions");
+            SecurityQuestionsSubtitle.Text = GetString("CreateAccount_SecurityQuestionsSubtitle", "These will help you recover your account");
+            MaleNameLabel.Text = GetString("CreateAccount_MaleNameQuestion", "What is your favorite male name?");
+            MaleNameTextBox.PlaceholderText = GetString("CreateAccount_MaleNamePlaceholder", "Enter a male name...");
+            FemaleNameLabel.Text = GetString("CreateAccount_FemaleNameQuestion", "What is your favorite female name?");
+            FemaleNameTextBox.PlaceholderText = GetString("CreateAccount_FemaleNamePlaceholder", "Enter a female name...");
+
+            // Botões e links
+            CreateAccountButton.Content = GetString("CreateAccount_Button", "Create Account");
+            HasAccountText.Text = GetString("CreateAccount_HasAccount", "Already have an account?");
+            LoginLink.Content = GetString("CreateAccount_LoginLink", "Login");
+
+            // Strings de erro
+            _errorTitle = GetString("Login_Error", "Error");
+            _errorFillAllFields = GetString("Login_FillAllFields", "Please fill in all fields!");
+            _errorInvalidEmail = GetString("Login_InvalidEmail", "Invalid email!");
+            _errorPasswordsNotMatch = GetString("CreateAccount_PasswordsNotMatch", "The passwords do not match!");
+            _errorAttemptsExceeded = GetString("CreateAccount_AttemptsExceeded", "Number of attempts per email exceeded, try again in 5 minutes!");
+            _errorCodeExpired = GetString("Login_CodeExpired", "The verification code has expired. Please try again.");
+            _errorInvalidCode = GetString("Login_InvalidCode", "Invalid verification code!");
+            _errorEmailFailed = GetString("Login_EmailFailed", "Failed to send verification email. Please try again.");
+            _errorEmailDuplicate = GetString("CreateAccount_EmailDuplicate", "This email is already registered!");
+            _errorConnection = GetString("CreateAccount_ConnectionError", "Connection error. Please try again.");
+            _errorSecurityQuestions = GetString("CreateAccount_SecurityQuestionsError", "Please answer both security questions!");
+            _enterCode = GetString("Login_EnterCode", "Enter Code");
+            _verify = GetString("Login_Verify", "Verify");
+            _cancelButton = GetString("CancelButton", "Cancel");
+
+            // Strings de força da password
+            _passwordWeak = GetString("CreateAccount_PasswordWeak", "Weak! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.");
+            _passwordMedium = GetString("CreateAccount_PasswordMedium", "Medium! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.");
+            _passwordStrong = GetString("CreateAccount_PasswordStrong", "Strong");
+
+            _resourceLoader = ResourceLoader.GetForViewIndependentUse();
+        }
+
+        private string GetString(string key, string defaultValue)
+        {
+            var value = _resourceMap.GetValue(key, _context)?.ValueAsString;
+            return string.IsNullOrEmpty(value) ? defaultValue : value;
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // VERIFICADOR DE FORÇA DA PASSWORD
+        // ═══════════════════════════════════════════════════════════════
+        private void SetupPasswordStrengthChecker()
+        {
+            var colorRed = new SolidColorBrush(Colors.Red);
+            var colorOrange = new SolidColorBrush(Colors.Orange);
+            var colorGreen = new SolidColorBrush(Colors.Green);
 
             PasswordBox.PasswordChanged += (s, args) =>
             {
@@ -47,7 +137,7 @@ namespace Projeto_PAP
                 if (password.Any(char.IsUpper)) score++;
                 if (password.Any(char.IsLower)) score++;
                 if (password.Any(char.IsDigit)) score++;
-                if (password.Any(c => !char.IsLetterOrDigit(c))) score++; 
+                if (password.Any(c => !char.IsLetterOrDigit(c))) score++;
 
                 if (password.Length == 0)
                 {
@@ -55,348 +145,298 @@ namespace Projeto_PAP
                 }
                 else if (score <= 3)
                 {
-                    PasswordStrength.Foreground = color_red;
-                    PasswordStrength.Text = "Weak! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.";
+                    PasswordStrength.Foreground = colorRed;
+                    PasswordStrength.Text = _passwordWeak;
                 }
                 else if (score == 4)
                 {
-                    PasswordStrength.Foreground = color_orange;
-                    PasswordStrength.Text = "Medium! Your password must contain at least 8 characters.\nAn uppercase, lowercase letter, a number, and at least one special character.";
+                    PasswordStrength.Foreground = colorOrange;
+                    PasswordStrength.Text = _passwordMedium;
                 }
                 else
                 {
-                    PasswordStrength.Foreground = color_green;
-                    PasswordStrength.Text = "Strong";
+                    PasswordStrength.Foreground = colorGreen;
+                    PasswordStrength.Text = _passwordStrong;
                 }
             };
         }
 
+        // ═══════════════════════════════════════════════════════════════
+        // IDIOMA
+        // ═══════════════════════════════════════════════════════════════
+        private void LoadCurrentLanguage()
+        {
+            string currentLanguage = ApplicationLanguages.PrimaryLanguageOverride;
 
+            switch (currentLanguage)
+            {
+                case "pt-PT":
+                    CurrentFlag.Text = "🇵🇹";
+                    CurrentLanguageName.Text = "Português";
+                    break;
+                case "es-ES":
+                    CurrentFlag.Text = "🇪🇸";
+                    CurrentLanguageName.Text = "Español";
+                    break;
+                case "fr-FR":
+                    CurrentFlag.Text = "🇫🇷";
+                    CurrentLanguageName.Text = "Français";
+                    break;
+                default:
+                    CurrentFlag.Text = "🇬🇧";
+                    CurrentLanguageName.Text = "English";
+                    break;
+            }
+        }
+
+        private void LanguageOption_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is string newLanguage)
+            {
+                if (newLanguage != ApplicationLanguages.PrimaryLanguageOverride)
+                {
+                    ApplicationLanguages.PrimaryLanguageOverride = newLanguage;
+                    ResourceContext.SetGlobalQualifierValue("Language", newLanguage);
+
+                    LoadCurrentLanguage();
+                    LoadStrings();
+
+                    LanguageButton.Flyout.Hide();
+                }
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // CRIAR CONTA
+        // ═══════════════════════════════════════════════════════════════
         private async void CreateAccountClick(object sender, RoutedEventArgs e)
         {
+            // Validar campos vazios
             if (string.IsNullOrWhiteSpace(FirstNameTextBox.Text) ||
                 string.IsNullOrWhiteSpace(LastNameTextBox.Text) ||
                 string.IsNullOrWhiteSpace(EmailTextBox.Text) ||
                 string.IsNullOrWhiteSpace(PasswordBox.Password) ||
                 string.IsNullOrWhiteSpace(ConfirmPasswordBox.Password))
             {
-                ContentDialog erroNullTextBox = new ContentDialog()
-                {
-                    Title = "Error",
-                    Content = "Please fill in all fields!",
-                    CloseButtonText = "OK",
-                    XamlRoot = this.XamlRoot
-                };
-                await erroNullTextBox.ShowAsync();
-                return; //sai do m�todo se algum campo estiver vazio
-            }
-
-            try
-            {
-                MailAddress mailAddress = new MailAddress(EmailTextBox.Text);
-
-            }
-            catch (Exception)
-            {
-                ContentDialog erroMailAddress = new ContentDialog()
-                {
-                    Title = "Error",
-                    Content = "Invalid email!",
-                    CloseButtonText = "OK",
-                    XamlRoot = this.XamlRoot
-                };
-                await erroMailAddress.ShowAsync();
+                await ShowErrorDialog(_errorFillAllFields);
                 return;
             }
 
-            string local_folder = ApplicationData.Current.LocalFolder.Path;
-            string path_file = Path.Combine(local_folder, "email_attempts.json"); 
+            // Validar perguntas de segurança
+            if (string.IsNullOrWhiteSpace(MaleNameTextBox.Text) ||
+                string.IsNullOrWhiteSpace(FemaleNameTextBox.Text))
+            {
+                await ShowErrorDialog(_errorSecurityQuestions);
+                return;
+            }
+
+            // Validar email
+            try
+            {
+                MailAddress mailAddress = new MailAddress(EmailTextBox.Text);
+            }
+            catch (Exception)
+            {
+                await ShowErrorDialog(_errorInvalidEmail);
+                return;
+            }
+
+            // Rate limiting
+            string localFolder = ApplicationData.Current.LocalFolder.Path;
+            string pathFile = Path.Combine(localFolder, "email_attempts.json");
             Dictionary<string, List<DateTime>>? emails = new Dictionary<string, List<DateTime>>();
-            bool new_email = false;
-            bool add_time_for_email = false;
+            bool newEmail = false;
+            bool addTimeForEmail = false;
 
-            if (!File.Exists(path_file))
+            if (!File.Exists(pathFile))
             {
-                File.Create(path_file).Close();
+                File.Create(pathFile).Close();
             }
 
-            DateTime last_modified = File.GetLastWriteTime(path_file);
-
-            if ((DateTime.Now - last_modified).TotalSeconds > 3600)
+            DateTime lastModified = File.GetLastWriteTime(pathFile);
+            if ((DateTime.Now - lastModified).TotalSeconds > 3600)
             {
-                File.WriteAllText(path_file, "");
+                File.WriteAllText(pathFile, "");
             }
 
-            string json_content = File.ReadAllText(path_file);
-            if (!string.IsNullOrWhiteSpace(json_content))
+            string jsonContent = File.ReadAllText(pathFile);
+            if (!string.IsNullOrWhiteSpace(jsonContent))
             {
-                emails = JsonSerializer.Deserialize<Dictionary<string, List<DateTime>>>(json_content);
+                emails = JsonSerializer.Deserialize<Dictionary<string, List<DateTime>>>(jsonContent);
             }
-            
+
             if (emails.ContainsKey(EmailTextBox.Text))
             {
-                int amount_email_dateTime = emails[EmailTextBox.Text].Count;
-                DateTime last_time_email = emails[EmailTextBox.Text].Last();
-                if (amount_email_dateTime >= 5 && (DateTime.Now - last_time_email).TotalSeconds < 300)
+                int amountEmailDateTime = emails[EmailTextBox.Text].Count;
+                DateTime lastTimeEmail = emails[EmailTextBox.Text].Last();
+                if (amountEmailDateTime >= 5 && (DateTime.Now - lastTimeEmail).TotalSeconds < 300)
                 {
-                    ContentDialog erroAttempts = new ContentDialog()
-                    {
-                        Title = "Error",
-                        Content = "Number of attempts per email exceeded, try again in 5 minutes!",
-                        CloseButtonText = "OK",
-                        XamlRoot = this.XamlRoot
-                    };
-                    await erroAttempts.ShowAsync();
+                    await ShowErrorDialog(_errorAttemptsExceeded);
                     return;
                 }
                 else
                 {
-                    add_time_for_email = true;
+                    addTimeForEmail = true;
                 }
             }
             else
             {
-                new_email = true;
+                newEmail = true;
             }
 
+            // Validar passwords
             if (ConfirmPasswordBox.Password != PasswordBox.Password)
             {
-                ContentDialog erroMessage = new ContentDialog()
-                {
-                    Title = "Error",
-                    Content = "The passwords do not match!",
-                    CloseButtonText = "OK",
-                    XamlRoot = this.XamlRoot
-                };
-                await erroMessage.ShowAsync();
+                await ShowErrorDialog(_errorPasswordsNotMatch);
                 PasswordBox.Password = string.Empty;
                 ConfirmPasswordBox.Password = string.Empty;
-                return; //sai do m�todo se as passwords n�o coincidirem
+                return;
             }
-            
-            string codeVerification = RandomNumberGenerator.GetInt32(10000000, 100000000).ToString(); //Gera um n�mero aleat�rio de 8 d�gitos para verifica��o por email
-            bool result = await EmailService.SendVerificationCodeAsync(EmailTextBox.Text.Trim(), codeVerification); //envia o c�digo de verifica��o para o email do utilizador
 
-            if (result) 
+            // Enviar código de verificação
+            string codeVerification = RandomNumberGenerator.GetInt32(10000000, 100000000).ToString();
+            bool result = await EmailService.SendVerificationCodeAsync(EmailTextBox.Text.Trim(), codeVerification);
+
+            if (result)
             {
-                if (add_time_for_email)
+                if (addTimeForEmail)
                 {
                     emails[EmailTextBox.Text].Add(DateTime.Now);
                 }
-                else if (new_email)
+                else if (newEmail)
                 {
                     emails[EmailTextBox.Text] = new List<DateTime> { DateTime.Now };
                 }
 
-                    DateTime timeCode = DateTime.Now;
-                TextBox num1 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num2 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num3 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num4 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num5 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num6 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num7 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
-                TextBox num8 = new TextBox() { MaxLength = 1, Width = 10, TextAlignment = TextAlignment.Center };
+                DateTime timeCode = DateTime.Now;
 
-                num1.TextChanged += (s, args) => //TextChanged � um evento que ocorre sempre que o texto de um TextBox � alterado
-                //o += serve para adicionar uma fun��o ao evento TextChanged
-                //O "s" � o remetente do evento (quem "acionou" o evento) (neste caso, o TextBox num1) e "args" s�o os argumentos do evento (informa��es adicionais sobre o evento, que neste caso n�o s�o usadas). Neste caso n�o precisamos de args, mas colocar isso � obrigat�rio na sintaxe
+                // Criar TextBoxes para o código
+                TextBox[] boxes = new TextBox[8];
+                StackPanel panel = new StackPanel()
                 {
-                    if (num1.Text.Length == 1)
-                    {
-                        num2.Focus(FocusState.Programmatic); // .Focus muda o foco para o pr�ximo TextBox. FocusState.Programmatic indica que o foco foi alterado por c�digo (programaticamente) e n�o pelo utilizador
-                    }
+                    Orientation = Orientation.Horizontal,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    Spacing = 5
                 };
 
-                //Uma fun��o lambda � uma fun��o sem nome que eu crio ao mesmo tempo que a uso. Serve para poupar tempo e c�digo quando precisas de uma fun��o pequena que s� usas uma vez.
-
-                num2.TextChanged += (s, args) =>
+                for (int i = 0; i < 8; i++)
                 {
-                    if (num2.Text.Length == 1)
+                    boxes[i] = new TextBox()
                     {
-                        num3.Focus(FocusState.Programmatic);
-                    }
-                };
+                        MaxLength = 1,
+                        Width = 45,
+                        FontSize = 22,
+                        TextAlignment = TextAlignment.Center,
+                    };
 
-                num3.TextChanged += (s, args) =>
-                {
-                    if (num3.Text.Length == 1)
+                    int index = i;
+                    boxes[i].TextChanged += (s, args) =>
                     {
-                        num4.Focus(FocusState.Programmatic);
-                    }
-                };
+                        if (boxes[index].Text.Length == 1 && index < 7)
+                        {
+                            boxes[index + 1].Focus(FocusState.Programmatic);
+                        }
+                    };
 
-                num4.TextChanged += (s, args) =>
+                    panel.Children.Add(boxes[i]);
+                }
+
+                ContentDialog codeDialog = new ContentDialog()
                 {
-                    if (num4.Text.Length == 1)
-                    {
-                        num5.Focus(FocusState.Programmatic);
-                    }
-                };
-
-                num5.TextChanged += (s, args) =>
-                {
-                    if (num5.Text.Length == 1)
-                    {
-                        num6.Focus(FocusState.Programmatic);
-                    }
-                };
-
-                num6.TextChanged += (s, args) =>
-                {
-                    if (num6.Text.Length == 1)
-                    {
-                        num7.Focus(FocusState.Programmatic);
-                    }
-                };
-
-                num7.TextChanged += (s, args) =>
-                {
-                    if (num7.Text.Length == 1)
-                    {
-                        num8.Focus(FocusState.Programmatic);
-                    }
-                };
-
-
-                StackPanel panel = new StackPanel() { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Center, Spacing = 5 };
-
-                panel.Children.Add(num1);
-                panel.Children.Add(num2);
-                panel.Children.Add(num3);
-                panel.Children.Add(num4);
-                panel.Children.Add(num5);
-                panel.Children.Add(num6);
-                panel.Children.Add(num7);
-                panel.Children.Add(num8);
-
-                ContentDialog verificationCode = new ContentDialog()
-                {
-                    Title = "Enter Code",
+                    Title = _enterCode,
                     Content = panel,
-                    CloseButtonText = "Cancel",
-                    PrimaryButtonText = "Verify",
+                    CloseButtonText = _cancelButton,
+                    PrimaryButtonText = _verify,
                     DefaultButton = ContentDialogButton.Primary,
                     XamlRoot = this.XamlRoot
                 };
-                verificationCode.Resources["ContentDialogMinWidth"] = 600;
-                
-                ContentDialogResult resultCode = await verificationCode.ShowAsync();
+
+                codeDialog.Resources["ContentDialogMinWidth"] = 600;
+
+                ContentDialogResult resultCode = await codeDialog.ShowAsync();
+
                 if (resultCode == ContentDialogResult.Primary)
                 {
                     if ((DateTime.Now - timeCode).TotalSeconds > 300)
                     {
-                        ContentDialog erroTimeCode = new ContentDialog()
-                        {
-                            Title = "Error",
-                            Content = "The verification code has expired. Please try again.",
-                            CloseButtonText = "OK",
-                            XamlRoot = this.XamlRoot
-                        };
-                        await erroTimeCode.ShowAsync();
+                        await ShowErrorDialog(_errorCodeExpired);
                         return;
                     }
-                    else
-                    {                         
-                        string enteredCode = num1.Text + num2.Text + num3.Text + num4.Text + num5.Text + num6.Text + num7.Text + num8.Text;
-                        if (enteredCode == codeVerification)
-                        {
-                            var hashedPassword = PasswordHash.HashPassword(PasswordBox.Password);
-                            var client = new MongoClient(DataBaseConfig.ConnectionString);
-                            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
-                            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName); //Quando eu ler documentos ou inserir documentos nesta cole��o vou usar a classe Account como molde 
-                            var user = new Account
-                            {
-                                FirstName = FirstNameTextBox.Text.Trim(),
-                                Lastname = LastNameTextBox.Text.Trim(),
-                                EmailAddress = EmailTextBox.Text.Trim().ToLower(),
-                                Password = hashedPassword
-                            };
 
-                            try
-                            {
-                                collection.InsertOne(user);
-                                var current_user = new Account
-                                {
-                                    FirstName = user.FirstName,
-                                    Lastname = user.Lastname,
-                                    EmailAddress = user.EmailAddress
-                                };
-                                ActiveProfile.current_user = current_user;
-                                Frame.Navigate(typeof(LoginPage));
-                                emails.Remove(EmailTextBox.Text);
-                                json_content = JsonSerializer.Serialize(emails);
-                                File.WriteAllText(path_file, json_content);
-                            }
-                            catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey) //Erro de escrita do MongoDB (MongoWriteException) � guardado na vari�vel "ex", mas s� quando (when) a categoria do erro for igual a um erro de duplica��o de chaves (ex.WriteError.Category == ServerErrorCategory.DuplicateKey). Na minha base de dados � se o email for repetido
-                            {
-                                ContentDialog erroEmailDuplicate = new ContentDialog()
-                                {
-                                    Title = "Error",
-                                    Content = "This email is already registered!",
-                                    CloseButtonText = "OK",
-                                    XamlRoot = this.XamlRoot
-                                };
-                                EmailTextBox.Text = string.Empty;
-                                await erroEmailDuplicate.ShowAsync();
-                                return;
-                            }
-                            catch (Exception) //um outro erro qualquer
-                            {
-                                ContentDialog erroMessage = new ContentDialog()
-                                {
-                                    Title = "Error",
-                                    Content = "Connection error. Please try again.",
-                                    CloseButtonText = "OK",
-                                    XamlRoot = this.XamlRoot
-                                };
-                                await erroMessage.ShowAsync();
-                                return;
-                            }
+                    string enteredCode = "";
+                    foreach (var box in boxes)
+                    {
+                        enteredCode += box.Text;
+                    }
+
+                    if (enteredCode == codeVerification)
+                    {
+                        var hashedPassword = PasswordHash.HashPassword(PasswordBox.Password);
+                        var client = new MongoClient(DataBaseConfig.ConnectionString);
+                        var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+                        var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+                        var hashedMaleName = PasswordHash.HashPassword(MaleNameTextBox.Text.Trim().ToLower());
+                        var hashedFemaleName = PasswordHash.HashPassword(FemaleNameTextBox.Text.Trim().ToLower());
+
+                        var user = new Account
+                        {
+                            FirstName = FirstNameTextBox.Text.Trim(),
+                            Lastname = LastNameTextBox.Text.Trim(),
+                            EmailAddress = EmailTextBox.Text.Trim().ToLower(),
+                            Password = hashedPassword,
+                            SecurityAnswerMale = hashedMaleName,
+                            SecurityAnswerFemale = hashedFemaleName
+                        };
+
+                        try
+                        {
+                            collection.InsertOne(user);
+                            emails.Remove(EmailTextBox.Text);
+                            jsonContent = JsonSerializer.Serialize(emails);
+                            File.WriteAllText(pathFile, jsonContent);
+                            Frame.Navigate(typeof(LoginPage));
                         }
-                        else
+                        catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
                         {
-                            ContentDialog erroCodeVerification = new ContentDialog()
-                            {
-                                Title = "Error",
-                                Content = "Invalid verification code!",
-                                CloseButtonText = "OK",
-                                XamlRoot = this.XamlRoot
-                            };
-                            json_content = JsonSerializer.Serialize(emails);
-                            File.WriteAllText(path_file, json_content);
-                            await erroCodeVerification.ShowAsync();
+                            EmailTextBox.Text = string.Empty;
+                            await ShowErrorDialog(_errorEmailDuplicate);
                             return;
-
+                        }
+                        catch (Exception)
+                        {
+                            await ShowErrorDialog(_errorConnection);
+                            return;
                         }
                     }
-                    
+                    else
+                    {
+                        jsonContent = JsonSerializer.Serialize(emails);
+                        File.WriteAllText(pathFile, jsonContent);
+                        await ShowErrorDialog(_errorInvalidCode);
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
-
-
-
             }
             else
             {
-                ContentDialog erroemail = new ContentDialog()
-                {
-                    Title = "Error",
-                    Content = "Failed to send verification email. Please try again.",
-                    CloseButtonText = "OK",
-                    XamlRoot = this.XamlRoot
-                };
-                await erroemail.ShowAsync();
-                return;
+                await ShowErrorDialog(_errorEmailFailed);
             }
-
         }
-        
 
-        private void Login_Click(object sender,  RoutedEventArgs e)
+        private async System.Threading.Tasks.Task ShowErrorDialog(string message)
+        {
+            ContentDialog dialog = new ContentDialog()
+            {
+                Title = _errorTitle,
+                Content = message,
+                CloseButtonText = "OK",
+                XamlRoot = this.XamlRoot
+            };
+            await dialog.ShowAsync();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(LoginPage));
         }

@@ -27,6 +27,7 @@
     <None Remove="LoginPage.xaml" />
     <None Remove="MainPage.xaml" />
     <None Remove="PasswordPage.xaml" />
+    <None Remove="QuickUnlockPage.xaml" />
     <None Remove="SettingsPage.xaml" />
     <None Remove="Setup2FAPage.xaml" />
   </ItemGroup>
@@ -74,6 +75,11 @@
     <Content Update="Assets\Icon_App_Grande.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="QuickUnlockPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ChangePasswordPage.xaml">
