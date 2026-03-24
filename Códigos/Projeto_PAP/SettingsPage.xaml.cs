@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml.Navigation;
 using OtpNet;
 using System;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 using Windows.Globalization;
 
 namespace Projeto_PAP
@@ -14,6 +15,8 @@ namespace Projeto_PAP
         private PasswordEncrypt _encryptor;
         private string _userEmail;
         private string _totpSecret;
+        private bool _requireVerification;
+        private bool _isLoadingSettings = true;
 
         public SettingsPage()
         {
@@ -36,6 +39,19 @@ namespace Projeto_PAP
 
             // Carregar idioma atual
             LoadCurrentLanguage();
+
+            // Carregar preferência de verificação
+            await LoadVerificationSetting();
+        }
+
+        private async System.Threading.Tasks.Task LoadVerificationSetting()
+        {
+            _isLoadingSettings = true;
+
+            _requireVerification = await LoginQuery.GetRequireVerificationSetting(_userEmail);
+            RequireVerificationToggle.IsOn = _requireVerification;
+
+            _isLoadingSettings = false;
         }
 
         // ═══════════════════════════════════════════════════════════════
@@ -51,6 +67,185 @@ namespace Projeto_PAP
                 LastNameText.Text = userData.Value.LastName ?? "";
                 EmailText.Text = userData.Value.Email ?? "";
             }
+        }
+
+        private async void RequireVerificationToggle_Toggled(object sender, RoutedEventArgs e)
+        {
+            // Ignorar durante o carregamento inicial
+            if (_isLoadingSettings) return;
+
+            bool newValue = RequireVerificationToggle.IsOn;
+
+            // Só continua se o valor realmente mudou
+            if (newValue == _requireVerification) return;
+
+            // Reverter temporariamente enquanto pede verificação
+            _isLoadingSettings = true;
+            RequireVerificationToggle.IsOn = _requireVerification;
+            _isLoadingSettings = false;
+
+            // Pedir verificação (password + TOTP)
+            bool verified = await VerifyIdentityForToggle();
+
+            if (!verified)
+            {
+                // Falhou - manter o valor anterior
+                return;
+            }
+
+            // Verificado com sucesso - atualizar na base de dados
+            bool updated = await LoginQuery.UpdateRequireVerificationSetting(_userEmail, newValue);
+
+            if (updated)
+            {
+                _requireVerification = newValue;
+
+                _isLoadingSettings = true;
+                RequireVerificationToggle.IsOn = newValue;
+                _isLoadingSettings = false;
+            }
+        }
+
+        private async Task<bool> VerifyIdentityForToggle()
+        {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
+
+            var content = new StackPanel() { Spacing = 15, MinWidth = 300 };
+
+            // Título
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("SettingsPage_VerifyIdentity"),
+                FontSize = 16,
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold,
+                HorizontalAlignment = HorizontalAlignment.Center
+            });
+
+            // Instruções
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("SettingsPage_VerifyToChangeSettings"),
+                FontSize = 13,
+                Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 136, 136, 136)),
+                TextWrapping = TextWrapping.Wrap,
+                TextAlignment = TextAlignment.Center
+            });
+
+            // Separador
+            content.Children.Add(new Border()
+            {
+                Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 240, 240, 240)),
+                Height = 1,
+                Margin = new Thickness(0, 5, 0, 5)
+            });
+
+            // Password
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("TOTP_PasswordLabel"),
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold
+            });
+            var passwordBox = new PasswordBox()
+            {
+                PlaceholderText = "••••••••",
+                CornerRadius = new CornerRadius(8),
+                Padding = new Thickness(12, 10, 12, 10)
+            };
+            content.Children.Add(passwordBox);
+
+            // TOTP
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("TOTP_CodeLabel"),
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold,
+                Margin = new Thickness(0, 10, 0, 0)
+            });
+            var totpBox = new TextBox()
+            {
+                PlaceholderText = "000000",
+                MaxLength = 6,
+                FontFamily = new FontFamily("Consolas"),
+                FontSize = 18,
+                TextAlignment = TextAlignment.Center,
+                CornerRadius = new CornerRadius(8),
+                Padding = new Thickness(12, 10, 12, 10)
+            };
+            content.Children.Add(totpBox);
+
+            // Erro
+            var errorText = new TextBlock()
+            {
+                Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 231, 76, 60)),
+                Visibility = Visibility.Collapsed,
+                TextWrapping = TextWrapping.Wrap,
+                Margin = new Thickness(0, 10, 0, 0)
+            };
+            content.Children.Add(errorText);
+
+            ContentDialog dialog = new ContentDialog()
+            {
+                Title = resourceLoader.GetString("SettingsPage_ChangeSecuritySettings"),
+                Content = content,
+                PrimaryButtonText = resourceLoader.GetString("TOTP_VerifyButton"),
+                CloseButtonText = resourceLoader.GetString("CancelButton"),
+                DefaultButton = ContentDialogButton.Primary,
+                XamlRoot = this.XamlRoot
+            };
+
+            bool verified = false;
+
+            dialog.PrimaryButtonClick += async (s, args) =>
+            {
+                var deferral = args.GetDeferral();
+
+                // Validar campos vazios
+                if (string.IsNullOrEmpty(passwordBox.Password))
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_PasswordRequired");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(totpBox.Text) || totpBox.Text.Length != 6)
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidCode");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                // Verificar password
+                var loginResult = await LoginQuery.LoginVerification(_userEmail, passwordBox.Password);
+                if (!loginResult.Success)
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidPassword");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                // Verificar TOTP
+                byte[] secretKey = Base32Encoding.ToBytes(_totpSecret);
+                var totp = new Totp(secretKey);
+                if (!totp.VerifyTotp(totpBox.Text.Trim(), out long timeStepMatched, new VerificationWindow(previous: 0, future: 0)))
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidCode");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                verified = true;
+                deferral.Complete();
+            };
+
+            await dialog.ShowAsync();
+            return verified;
         }
 
         // ═══════════════════════════════════════════════════════════════

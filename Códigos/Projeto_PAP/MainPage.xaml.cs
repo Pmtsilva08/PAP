@@ -10,6 +10,7 @@ namespace Projeto_PAP
         private PasswordEncrypt _encryptor;
         private string _userEmail;
         private string _totpSecret;
+        private bool _requireVerification;
 
         public MainPage()
         {
@@ -19,7 +20,7 @@ namespace Projeto_PAP
             TextSettings.Visibility = Visibility.Collapsed;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
@@ -28,16 +29,19 @@ namespace Projeto_PAP
                 _encryptor = parameters.Encryptor;
                 _userEmail = parameters.UserEmail;
                 _totpSecret = parameters.TotpSecret;
-
-                // Navegar automaticamente para HomePage
-                var homeParameters = new NavigationsParameters
-                {
-                    Encryptor = _encryptor,
-                    UserEmail = _userEmail,
-                    TotpSecret = _totpSecret
-                };
-                ContentFrame.Navigate(typeof(HomePage), homeParameters);
             }
+
+            // Carregar preferência de verificação da base de dados
+            _requireVerification = await LoginQuery.GetRequireVerificationSetting(_userEmail);
+
+            // Navegar para HomePage por defeito
+            ContentFrame.Navigate(typeof(HomePage), new NavigationsParameters
+            {
+                Encryptor = _encryptor,
+                UserEmail = _userEmail,
+                TotpSecret = _totpSecret,
+                RequireVerificationForActions = _requireVerification
+            });
         }
 
         // ═══════════════════════════════════════════════════════════════
@@ -71,7 +75,8 @@ namespace Projeto_PAP
             {
                 Encryptor = _encryptor,
                 UserEmail = _userEmail,
-                TotpSecret = _totpSecret
+                TotpSecret = _totpSecret,
+                RequireVerificationForActions = _requireVerification  // ← ADICIONA
             };
             ContentFrame.Navigate(typeof(HomePage), parameters);
         }
@@ -82,7 +87,8 @@ namespace Projeto_PAP
             {
                 Encryptor = _encryptor,
                 UserEmail = _userEmail,
-                TotpSecret = _totpSecret
+                TotpSecret = _totpSecret,
+                RequireVerificationForActions = _requireVerification  // ← ADICIONA
             };
             ContentFrame.Navigate(typeof(PasswordsPage), parameters);
         }
@@ -93,7 +99,8 @@ namespace Projeto_PAP
             {
                 Encryptor = _encryptor,
                 UserEmail = _userEmail,
-                TotpSecret = _totpSecret
+                TotpSecret = _totpSecret,
+                RequireVerificationForActions = _requireVerification  // ← ADICIONA
             };
             ContentFrame.Navigate(typeof(SettingsPage), parameters);
         }

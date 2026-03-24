@@ -11,5 +11,6 @@ namespace Projeto_PAP
         internal PasswordEncrypt Encryptor { get; set; }
         internal string UserEmail { get; set; }
         public string TotpSecret { get; set; }
+        public bool RequireVerificationForActions { get; set; }
     }
 }

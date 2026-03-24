@@ -29,6 +29,7 @@ namespace Projeto_PAP
         private string _userEmail;
         private string _totpSecret;
         private PasswordQuery _passwordQuery;
+        private bool _requireVerification;
 
         public PasswordsPage()
         {
@@ -47,8 +48,10 @@ namespace Projeto_PAP
             {
                 _encryptor = parameters.Encryptor;
                 _userEmail = parameters.UserEmail;
-                _totpSecret = parameters.TotpSecret;  // ADICIONAR
+                _totpSecret = parameters.TotpSecret;
             }
+
+            _requireVerification = await LoginQuery.GetRequireVerificationSetting(_userEmail);
 
             await LoadPasswordsFromDatabase();
         }
@@ -370,9 +373,12 @@ namespace Projeto_PAP
             var passwordItem = button?.DataContext as PasswordItem;
             if (passwordItem == null) return;
 
-            // Pedir código TOTP
-            bool verified = await VerifyTotpAndPassword();
-            if (!verified) return;
+            if (_requireVerification)
+            {
+                bool verified = await VerifyTotpAndPassword();
+                if (!verified) return;
+            }
+            
 
             // Desencriptar password
             string decryptedPassword = _encryptor.Decrypt(passwordItem.EncryptedPassword);
@@ -518,9 +524,12 @@ namespace Projeto_PAP
             var passwordItem = button?.DataContext as PasswordItem;
             if (passwordItem == null) return;
 
-            // Pedir código TOTP
-            bool verified = await VerifyTotpAndPassword();
-            if (!verified) return;
+            if (_requireVerification)
+            {
+                bool verified = await VerifyTotpAndPassword();
+                if (!verified) return;
+            }
+            
 
             // Desencriptar e copiar
             string decryptedPassword = _encryptor.Decrypt(passwordItem.EncryptedPassword);
@@ -557,10 +566,12 @@ namespace Projeto_PAP
             var passwordItem = button?.DataContext as PasswordItem;
             if (passwordItem == null) return;
 
-            // Pedir código TOTP
-            bool verified = await VerifyTotpAndPassword();
-            if (!verified) return;
-
+            if (_requireVerification)
+            {
+                bool verified = await VerifyTotpAndPassword();
+                if (!verified) return;
+            }
+             
             // Desencriptar password atual
             string decryptedPassword = _encryptor.Decrypt(passwordItem.EncryptedPassword);
 
@@ -628,9 +639,12 @@ namespace Projeto_PAP
             var passwordItem = button?.DataContext as PasswordItem;
             if (passwordItem == null) return;
 
-            // Pedir código TOTP diretamente
-            bool verified = await VerifyTotpAndPassword();
-            if (!verified) return;
+            if (_requireVerification)
+            {
+                bool verified = await VerifyTotpAndPassword();
+                if (!verified) return;
+            }
+            
 
             // Apagar do MongoDB
             bool success = await _passwordQuery.DeletePasswordAsync(_userEmail, passwordItem.Id);
@@ -747,6 +761,109 @@ namespace Projeto_PAP
         private void CategoryFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ApplyFilters();
+        }
+
+        private async Task<bool> VerifyUserIdentity()
+        {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForViewIndependentUse();
+
+            var content = new StackPanel() { Spacing = 15, MinWidth = 300 };
+
+            // Password
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("TOTP_PasswordLabel"),
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold
+            });
+            var passwordBox = new PasswordBox() { PlaceholderText = "••••••••" };
+            content.Children.Add(passwordBox);
+
+            // TOTP
+            content.Children.Add(new TextBlock()
+            {
+                Text = resourceLoader.GetString("TOTP_CodeLabel"),
+                FontWeight = Microsoft.UI.Text.FontWeights.SemiBold
+            });
+            var totpBox = new TextBox()
+            {
+                PlaceholderText = "000000",
+                MaxLength = 6,
+                FontFamily = new FontFamily("Consolas"),
+                TextAlignment = TextAlignment.Center
+            };
+            content.Children.Add(totpBox);
+
+            var errorText = new TextBlock()
+            {
+                Foreground = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 231, 76, 60)),
+                Visibility = Visibility.Collapsed
+            };
+            content.Children.Add(errorText);
+
+            ContentDialog dialog = new ContentDialog()
+            {
+                Title = resourceLoader.GetString("TOTP_DialogTitle"),
+                Content = content,
+                PrimaryButtonText = resourceLoader.GetString("TOTP_VerifyButton"),
+                CloseButtonText = resourceLoader.GetString("CancelButton"),
+                DefaultButton = ContentDialogButton.Primary,
+                XamlRoot = this.XamlRoot
+            };
+
+            bool verified = false;
+
+            dialog.PrimaryButtonClick += async (s, args) =>
+            {
+                var deferral = args.GetDeferral();
+
+                // Validar campos vazios
+                if (string.IsNullOrEmpty(passwordBox.Password))
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_PasswordRequired");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(totpBox.Text) || totpBox.Text.Length != 6)
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidCode");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                // Verificar password
+                var loginResult = await LoginQuery.LoginVerification(_userEmail, passwordBox.Password);
+                if (!loginResult.Success)
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidPassword");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                // Verificar TOTP
+                byte[] secretKey = OtpNet.Base32Encoding.ToBytes(_totpSecret);
+                var totp = new OtpNet.Totp(secretKey);
+                if (!totp.VerifyTotp(totpBox.Text.Trim(), out long timeStepMatched, new OtpNet.VerificationWindow(previous: 0, future: 0)))
+                {
+                    errorText.Text = resourceLoader.GetString("TOTP_InvalidCode");
+                    errorText.Visibility = Visibility.Visible;
+                    args.Cancel = true;
+                    deferral.Complete();
+                    return;
+                }
+
+                verified = true;
+                deferral.Complete();
+            };
+
+            await dialog.ShowAsync();
+            return verified;
         }
     }
 }

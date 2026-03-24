@@ -32,6 +32,9 @@ namespace Projeto_PAP
         [BsonElement("totp_secret")]
         public string? TotpSecret { get; set; } = null; //o ponto de interrogação indica que a propriedade pode ser nula
 
+        [BsonElement("require_verification_for_actions")]
+        public bool RequireVerificationForActions { get; set; } = false;  // Default: desativado
+
         [BsonElement("security_answer_male")]
         public string? SecurityAnswerMale { get; set; }
 

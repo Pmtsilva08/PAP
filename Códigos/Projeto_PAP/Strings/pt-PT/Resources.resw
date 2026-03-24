@@ -693,5 +693,19 @@
 	<data name="ChangePassword_ConfirmPasswordLabel" xml:space="preserve">
   <value>Confirmar Palavra-passe:</value>
 </data>
+
+	<data name="SettingsPage_RequireVerification.Text" xml:space="preserve">
+  <value>Exigir verificação para ações sensíveis</value>
+</data>
+	<data name="SettingsPage_RequireVerificationDesc.Text" xml:space="preserve">
+  <value>Pedir palavra-passe e código de autenticação para ver, copiar, editar ou apagar palavras-passe</value>
+</data>
+
+	<data name="SettingsPage_VerifyToChangeSettings" xml:space="preserve">
+  <value>Introduz a tua palavra-passe e código de autenticação para alterar esta definição.</value>
+</data>
+	<data name="SettingsPage_ChangeSecuritySettings" xml:space="preserve">
+  <value>Alterar Definições de Segurança</value>
+</data>
 	
 </root>

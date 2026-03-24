@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <Source>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</Source>
+    <SmallTileSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</SmallTileSource>
+    <MediumTileSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</MediumTileSource>
+    <WideTileSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</WideTileSource>
+    <LargeTileSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</LargeTileSource>
+    <AppIconSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</AppIconSource>
+    <SplashScreenSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\pedro\OneDrive - Agrupamento de Escolas Templários\12P\PAP\Imagens\Icon_App_Grande.png</PackageLogoSource>
+  </PropertyGroup>
   <ItemGroup>
     <Page Update="AddPasswordDialog.xaml">
       <SubType>Designer</SubType>
@@ -50,6 +59,9 @@
       <SubType>Designer</SubType>
     </PRIResource>
     <PRIResource Update="Strings\es-ES\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <PRIResource Update="Strings\fr-FR\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
   </ItemGroup>

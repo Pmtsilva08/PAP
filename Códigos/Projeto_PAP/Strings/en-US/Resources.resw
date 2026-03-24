@@ -650,5 +650,19 @@
 	<data name="ChangePassword_ConfirmPasswordLabel" xml:space="preserve">
   <value>Confirm Password:</value>
 </data>
+
+	<data name="SettingsPage_RequireVerification.Text" xml:space="preserve">
+  <value>Require verification for sensitive actions</value>
+</data>
+	<data name="SettingsPage_RequireVerificationDesc.Text" xml:space="preserve">
+  <value>Ask for password and authenticator code to view, copy, edit or delete passwords</value>
+</data>
+
+	<data name="SettingsPage_VerifyToChangeSettings" xml:space="preserve">
+  <value>Enter your password and authenticator code to change this setting.</value>
+</data>
+	<data name="SettingsPage_ChangeSecuritySettings" xml:space="preserve">
+  <value>Change Security Settings</value>
+</data>
 	
 </root>

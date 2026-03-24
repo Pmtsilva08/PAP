@@ -101,45 +101,83 @@
             </Border>
 
             <!-- ═══════════════════════════════════════════════════════════════ -->
-            <!-- SEGURANÇA - MUDAR PASSWORD -->
+            <!-- SEGURANÇA -->
             <!-- ═══════════════════════════════════════════════════════════════ -->
             <Border Background="White" CornerRadius="12" Padding="25" BorderBrush="#e0e0e0" BorderThickness="1">
                 <StackPanel Spacing="15">
+
+                    <!-- Título da secção -->
                     <StackPanel Orientation="Horizontal" Spacing="12">
                         <Border Background="#FFF3E0" CornerRadius="10" Width="45" Height="45">
                             <FontIcon Glyph="&#xE8D7;" FontSize="20" Foreground="#e67e22"
-                                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                          HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <StackPanel VerticalAlignment="Center">
                             <TextBlock x:Uid="SettingsPage_Security" Text="Security" 
-                                       FontSize="16" FontWeight="SemiBold" Foreground="#1a1a2e"/>
+                           FontSize="16" FontWeight="SemiBold" Foreground="#1a1a2e"/>
                             <TextBlock x:Uid="SettingsPage_SecurityDesc" Text="Manage your account security"
-                                       FontSize="12" Foreground="#888888"/>
+                           FontSize="12" Foreground="#888888"/>
                         </StackPanel>
                     </StackPanel>
 
-                    <Button x:Name="ChangePasswordButton"
-                            x:Uid="SettingsPage_ChangePasswordButton"
-                            Content="Change Master Password"
-                            Click="ChangePasswordButton_Click"
-                            Background="#667eea"
-                            Foreground="White"
-                            Padding="20,12"
-                            CornerRadius="8"
-                            FontWeight="SemiBold"/>
+                    <!-- Toggle para verificação extra -->
+                    <Border Background="#f8f9fa" CornerRadius="10" Padding="15" Margin="0,5,0,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
 
-                    <!-- Alterar Perguntas de Segurança -->
+                            <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="3">
+                                <TextBlock x:Uid="SettingsPage_RequireVerification" 
+                               Text="Require verification for sensitive actions" 
+                               FontSize="14" 
+                               FontWeight="SemiBold"
+                               Foreground="#1a1a2e"/>
+                                <TextBlock x:Uid="SettingsPage_RequireVerificationDesc" 
+                               Text="Ask for password and authenticator code to view, copy, edit or delete passwords" 
+                               FontSize="12" 
+                               Foreground="#888"
+                               TextWrapping="Wrap"
+                               MaxWidth="300"/>
+                            </StackPanel>
+
+                            <ToggleSwitch x:Name="RequireVerificationToggle"
+                              Grid.Column="1"
+                              VerticalAlignment="Center"
+                              Margin="10,0,0,0"
+                              Toggled="RequireVerificationToggle_Toggled"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Separador -->
+                    <Border Background="#e0e0e0" Height="1" Margin="0,5,0,5"/>
+
+                    <!-- Botão Alterar Password -->
+                    <Button x:Name="ChangePasswordButton"
+                x:Uid="SettingsPage_ChangePasswordButton"
+                Content="Change Master Password"
+                Click="ChangePasswordButton_Click"
+                Background="#667eea"
+                Foreground="White"
+                Padding="20,12"
+                CornerRadius="8"
+                FontWeight="SemiBold"
+                HorizontalAlignment="Stretch"/>
+
+                    <!-- Botão Alterar Perguntas de Segurança -->
                     <Button x:Uid="SettingsPage_ChangeSecurityQuestionsButton"
-                        Content="Change Security Questions"
-                        Click="ChangeSecurityQuestionsButton_Click"
-                        Background="#3498db"
-                        Foreground="White"
-                        CornerRadius="8"
-                        Padding="20,12"
-                        HorizontalAlignment="Stretch"
-                        Margin="0,10,0,0"/>
+                Content="Change Security Questions"
+                Click="ChangeSecurityQuestionsButton_Click"
+                Background="#3498db"
+                Foreground="White"
+                CornerRadius="8"
+                Padding="20,12"
+                HorizontalAlignment="Stretch"/>
+
                 </StackPanel>
             </Border>
+            
 
             <!-- ═══════════════════════════════════════════════════════════════ -->
             <!-- LOGOUT E APAGAR CONTA -->

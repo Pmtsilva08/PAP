@@ -229,5 +229,45 @@ namespace Projeto_PAP
                 return false;
             }
         }
+
+        // Obter preferência de verificação
+        internal static async Task<bool> GetRequireVerificationSetting(string email)
+        {
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+            try
+            {
+                var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
+                var user = await collection.Find(filter).FirstOrDefaultAsync();
+                return user?.RequireVerificationForActions ?? false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        // Atualizar preferência de verificação
+        internal static async Task<bool> UpdateRequireVerificationSetting(string email, bool requireVerification)
+        {
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var collection = database.GetCollection<Account>(DataBaseConfig.CollectionName);
+
+            try
+            {
+                var filter = Builders<Account>.Filter.Eq(a => a.EmailAddress, email);
+                var update = Builders<Account>.Update.Set(a => a.RequireVerificationForActions, requireVerification);
+
+                var result = await collection.UpdateOneAsync(filter, update);
+                return result.ModifiedCount > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

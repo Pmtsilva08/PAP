@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_PAP
 {
     internal static class DataBaseConfig
     {
-        // Connection string num só lugar
-        public static string ConnectionString => "mongodb+srv://Pmtsilva08:008421Apmcjmo!@cluster0.quvshkk.mongodb.net/?appName=Cluster0";
+        // Connection string lida da variável de ambiente
+        public static string ConnectionString =>
+            Environment.GetEnvironmentVariable("MONGODB_CONNECTION_STRING")
+            ?? throw new InvalidOperationException("MONGODB_CONNECTION_STRING environment variable is not set!");
 
         // Nome da base de dados
         public static string DatabaseName => "PAP";

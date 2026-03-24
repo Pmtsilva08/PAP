@@ -395,7 +395,35 @@ namespace Projeto_PAP
                             emails.Remove(EmailTextBox.Text);
                             jsonContent = JsonSerializer.Serialize(emails);
                             File.WriteAllText(pathFile, jsonContent);
-                            Frame.Navigate(typeof(LoginPage));
+
+                            // ═══════════════════════════════════════════════════════════════
+                            // DERIVAR CHAVE DE ENCRIPTAÇÃO E IR PARA SETUP 2FA
+                            // ═══════════════════════════════════════════════════════════════
+
+                            // Extrair o salt do hash (primeiros 16 bytes do Base64)
+                            byte[] fullHash = Convert.FromBase64String(hashedPassword);
+                            byte[] salt = new byte[16];
+                            Array.Copy(fullHash, 0, salt, 0, 16);
+
+                            // Derivar a chave de encriptação com PBKDF2
+                            byte[] encryptionKey = Rfc2898DeriveBytes.Pbkdf2(
+                                PasswordBox.Password,
+                                salt,
+                                100000,
+                                HashAlgorithmName.SHA256,
+                                32
+                            );
+
+                            // Criar o encriptador
+                            var encryptor = new PasswordEncrypt(encryptionKey);
+
+                            // Navegar para Setup2FAPage
+                            // Navegar para Setup2FAPage
+                            Frame.Navigate(typeof(Setup2FAPage), new Setup2FAParameters
+                            {
+                                Encryptor = encryptor,
+                                UserEmail = EmailTextBox.Text.Trim().ToLower()
+                            });
                         }
                         catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
                         {
