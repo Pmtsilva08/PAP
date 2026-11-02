@@ -1,0 +1,9 @@
+# Visual Studio / build output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+
+# Secrets (Gmail API OAuth)
+credentials.json
+token/

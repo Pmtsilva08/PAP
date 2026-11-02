@@ -15,7 +15,8 @@ namespace Projeto_PAP
     {
         private static readonly string[] Scopes = { GmailService.Scope.GmailSend };
         private static readonly string ApplicationName = "PasswordSecurityApp";
-        private static readonly string SenderEmail = "manager.pass.secure.app@gmail.com";
+        // Conta Gmail que envia os emails (tem de ser a mesma que autoriza o OAuth no credentials.json)
+        private static readonly string SenderEmail = Environment.GetEnvironmentVariable("PAP_SENDER_EMAIL") ?? string.Empty;
         private static readonly string SenderName = "Password Security";
 
         // ═══════════════════════════════════════════════════════════════
