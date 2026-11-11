@@ -10,7 +10,7 @@ namespace Projeto_PAP
 {
     internal static class LoginQuery
     {
-        // ALTERADO: Adicionado TotpSecret ao retorno
+   
         internal static async Task<(bool Success, string Message, byte[] Salt, string? TotpSecret)> LoginVerification(string email, string password)
         {
             var client = new MongoClient(DataBaseConfig.ConnectionString);
