@@ -1,4 +1,0 @@
-ficheiros que precisam de comunicação com database:
-create account;
-login query;
-passwordquery.

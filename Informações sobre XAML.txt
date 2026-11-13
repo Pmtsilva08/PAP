@@ -1,4 +1,0 @@
-Informações sobre XAML
-
-
-https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studiohttps://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studiohttps://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio
